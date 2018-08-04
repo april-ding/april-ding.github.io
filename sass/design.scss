@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
+
+
+// =========================================================
+// Variables
+// =========================================================
+
+// =========================================================
+// Grid Variables
+// =========================================================
+$grid--column-width: 60px;
+$grid--gutter-width: 20px;
+$grid--unit:         ($grid--column-width + $grid--gutter-width);
+
+// =========================================================
+// Breakpoints
+// =========================================================
+$breakpoint--laptop: $grid--unit * 12 + 64;
+$breakpoint--tablet: $grid--unit * 9 + 48;
+$breakpoint--mobile: $grid--unit * 5 + 25;
+
+
+//actual scss
+
+body {
+   img{
+      width: 1440px;
+   }
+
+
+
+}

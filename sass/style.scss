@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
+
+
+// =========================================================
+// Variables
+// =========================================================
+$header--font-family: 'Passion One', sans-serif;
+$header--font-weight: 400;
+$header--font-size: 36px;
+$text-color: black;
+
+$nav--font-family: 'Josefin Sans', sans-serif;
+$nav--font-weight: 600;
+
+$include-logo-container--margin-top-laptop: 2vw;
+$include-logo-container--margin-left-laptop: 3vw;
+$include-logo-container--margin-top-tablet: 3vw;
+$include-logo-container--margin-left-tablet: 4vw;
+$include-logo-container--margin-top-mobile: 8vw;
+$include-logo-container--margin-left-mobile: 8vw;
+$about--offset-top: 28%;
+$about--offset-left: -.3vw;
+
+$nav-offset-left-laptop-l: 4.5vw;
+$nav-offset-left-laptop-r: 6vw;
+$nav-offset-left-tablet: 8vw;
+$nav-offset-left-mobile: 15vw;
+// =========================================================
+// Grid Variables
+// =========================================================
+$grid--column-width: 60px;
+$grid--gutter-width: 20px;
+$grid--unit:         ($grid--column-width + $grid--gutter-width);
+
+// =========================================================
+// Breakpoints
+// =========================================================
+$breakpoint--laptop: $grid--unit * 12 + 64;
+$breakpoint--tablet: $grid--unit * 9 + 48;
+$breakpoint--mobile: $grid--unit * 5 + 25;
+
+
+//actual scss
+
+body {
+   display:flex;
+   // background: white url("../img/bg.png") no-repeat fixed 0 0/cover;
+   width: 100vw;
+   height: 100vh;
+   margin: auto;
+   overflow: hidden;
+
+
+     .bg {
+       width: 100%;
+       height: 100%;
+
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: -1;
+
+       background: url("../img/bg.png") no-repeat center center;
+       background-size: cover;
+
+       transform: scale(2);
+     }
+
+
+   #include-logo {
+      position: relative;
+      @media (min-width: $breakpoint--laptop + 1) {
+         margin-top: $include-logo-container--margin-top-laptop;
+         margin-left: $include-logo-container--margin-left-laptop;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         margin-top: $include-logo-container--margin-top-tablet;
+         margin-left: $include-logo-container--margin-left-tablet;
+      }
+      @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
+         margin-top: $include-logo-container--margin-top-tablet;
+         margin-left: $include-logo-container--margin-left-tablet;
+      }
+      @media (max-width: $breakpoint--mobile){
+         margin-top: $include-logo-container--margin-top-mobile;
+         margin-left: $include-logo-container--margin-left-mobile;
+      }
+
+      width: 40%;
+
+      img{
+         width: 65px;
+      }
+
+      #about-container {
+         position: absolute;
+         top: $about--offset-top;
+         left: $about--offset-left;
+         -webkit-transform: rotate(-90deg);
+         a{
+            font-family: $nav--font-family;
+            font-weight: $nav--font-weight;
+            color: red;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px;
+
+         }
+      }
+
+
+      h1{
+         position: absolute;
+         top: 2vw;
+         // left: $nav-offset-left;
+         @media (min-width: $breakpoint--laptop + 1) {
+            left: $nav-offset-left-laptop-l;
+         }
+         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+            left: $nav-offset-left-laptop-r;
+         }
+         @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
+            left: $nav-offset-left-tablet;
+         }
+         @media (max-width: $breakpoint--mobile){
+           left: $nav-offset-left-mobile;
+         }
+         a{
+            text-decoration: none;
+            color: $text-color;
+            font-family: $header--font-family;
+            font-weight: $header--font-weight;
+            font-size: $header--font-size;
+
+         }
+
+      }
+
+
+
+      nav {
+         position: absolute;
+         top: 110px;
+         // left: $nav-offset-left;
+         @media (min-width: $breakpoint--laptop + 1) {
+            left: $nav-offset-left-laptop-l;
+         }
+         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+            left: $nav-offset-left-laptop-r;
+         }
+         @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
+            left: $nav-offset-left-tablet;
+         }
+         @media (max-width: $breakpoint--mobile){
+           left: $nav-offset-left-mobile;
+         }
+
+         a {
+            font-family: $nav--font-family;
+            font-weight: $nav--font-weight;
+            color: $text-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 43px;
+
+            &:link {
+               font-size: 18px;
+            }
+            &:hover{
+               font-size: 16px;
+               color:grey;
+            }
+         }
+      }
+
+
+
+   }
+
+   .particle {
+   	position: absolute;
+    	border-radius: 50%;
+   }
+
+   @for $i from 1 through 30 {
+   	@keyframes particle-animation-#{$i} {
+   		100% {
+   			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+   		}
+   	}
+
+   	.particle:nth-child(#{$i}){
+   		animation: particle-animation-#{$i} 60s infinite;
+   		$size: random(10) + 5 + px;
+   		opacity: random(100)/100;
+   		height: $size;
+   		width: $size;
+   		animation-delay: -$i * .5s;
+   		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+   		background: red;
+   	}
+   }
+
+
+
+
+
+}
