@@ -1,3 +1,11 @@
+/***** ISSUES TO BE FIXED
+1. logo needs to link to the home page
+2. remove .html extensions
+3. make ABOUT red
+4. possibly make the bottom an animation and remove the jquery when its not laptop format
+5. responsive issues - the relationship between april ding and nav (and li widths)
+*****/
+
 @import url("https://fonts.googleapis.com/css?family=Passion+One");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
 
@@ -13,19 +21,22 @@ $text-color: black;
 $nav--font-family: 'Josefin Sans', sans-serif;
 $nav--font-weight: 600;
 
-$include-logo-container--margin-top-laptop: 2vw;
-$include-logo-container--margin-left-laptop: 3vw;
-$include-logo-container--margin-top-tablet: 3vw;
-$include-logo-container--margin-left-tablet: 4vw;
-$include-logo-container--margin-top-mobile: 8vw;
-$include-logo-container--margin-left-mobile: 8vw;
-$about--offset-top: 28%;
-$about--offset-left: -.3vw;
+$header--margin-top-laptop: 1.5vw;
+$header--margin-left-laptop: 3vw;
+$header--margin-top-tablet: 3vw;
+$header--margin-left-tablet: 4vw;
+$header--margin-top-mobile: 8vw;
+$header--margin-left-mobile: 8vw;
 
-$nav-offset-left-laptop-l: 4.5vw;
-$nav-offset-left-laptop-r: 6vw;
-$nav-offset-left-tablet: 8vw;
-$nav-offset-left-mobile: 15vw;
+$name--margin-left-laptop-l: 2vw;
+$name--margin-left-laptop-r: 2.5vw;
+$name--margin-left-tablet: 3.5vw;
+$name--margin-left-mobile: 6.5vw;
+
+$nav--margin-left-laptop-l: 53vw;
+$nav--margin-left-laptop-r: 37vw;
+$nav--margin-left-tablet: 17vw;
+$nav--margin-left-mobile: 33vw;
 // =========================================================
 // Grid Variables
 // =========================================================
@@ -36,95 +47,80 @@ $grid--unit:         ($grid--column-width + $grid--gutter-width);
 // =========================================================
 // Breakpoints
 // =========================================================
-$breakpoint--laptop: $grid--unit * 12 + 64;
-$breakpoint--tablet: $grid--unit * 9 + 48;
-$breakpoint--mobile: $grid--unit * 5 + 25;
+$breakpoint--laptop-l: $grid--unit * 17 + 40;//1400
+$breakpoint--laptop-r: $grid--unit * 12 + 64;//1024
+$breakpoint--tablet: $grid--unit * 9 + 48; //768
+$breakpoint--mobile: $grid--unit * 5 + 25; //425
 
 
 //actual scss
 
 body {
-   display:flex;
-   // background: white url("../img/bg.png") no-repeat fixed 0 0/cover;
    width: 100vw;
    height: 100vh;
    margin: auto;
    overflow: hidden;
 
 
-     .bg {
-       width: 100%;
-       height: 100%;
+  .bg {
+    width: 100%;
+    height: 100%;
 
-       position: absolute;
-       top: 0;
-       left: 0;
-       z-index: -1;
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    z-index: -2;
 
-       background: url("../img/bg.png") no-repeat center center;
-       background-size: cover;
+    background: url("../img/bg1.png") no-repeat center center;
+    background-size: cover;
 
-       transform: scale(2);
-     }
+    transform: scale(1.1);
+  }
 
 
-   #include-logo {
-      position: relative;
-      @media (min-width: $breakpoint--laptop + 1) {
-         margin-top: $include-logo-container--margin-top-laptop;
-         margin-left: $include-logo-container--margin-left-laptop;
+   header {
+      width: 100%;
+      display: flex;
+
+      //adjust top and left margin based on the viewport size
+      @media (min-width: $breakpoint--laptop-r + 1) {
+         margin-top: $header--margin-top-laptop;
+         margin-left: $header--margin-left-laptop;
       }
-      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
-         margin-top: $include-logo-container--margin-top-tablet;
-         margin-left: $include-logo-container--margin-left-tablet;
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+         margin-top: $header--margin-top-tablet;
+         margin-left: $header--margin-left-tablet;
       }
       @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
-         margin-top: $include-logo-container--margin-top-tablet;
-         margin-left: $include-logo-container--margin-left-tablet;
+         margin-top: $header--margin-top-tablet;
+         margin-left: $header--margin-left-tablet;
       }
       @media (max-width: $breakpoint--mobile){
-         margin-top: $include-logo-container--margin-top-mobile;
-         margin-left: $include-logo-container--margin-left-mobile;
+         margin-top: $header--margin-top-mobile;
+         margin-left: $header--margin-left-mobile;
       }
 
-      width: 40%;
 
       img{
-         width: 65px;
-      }
-
-      #about-container {
-         position: absolute;
-         top: $about--offset-top;
-         left: $about--offset-left;
-         -webkit-transform: rotate(-90deg);
-         a{
-            font-family: $nav--font-family;
-            font-weight: $nav--font-weight;
-            color: red;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 14px;
-
-         }
+         width: 35px;
+         height: 73px;
       }
 
 
       h1{
-         position: absolute;
-         top: 2vw;
-         // left: $nav-offset-left;
-         @media (min-width: $breakpoint--laptop + 1) {
-            left: $nav-offset-left-laptop-l;
+         margin-top: 1.5vw;
+         width: 40%;
+         @media (min-width: $breakpoint--laptop-r + 1) {
+            margin-left: $name--margin-left-laptop-l;
          }
-         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
-            left: $nav-offset-left-laptop-r;
+         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+            margin-left: $name--margin-left-laptop-r;
          }
          @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
-            left: $nav-offset-left-tablet;
+            margin-left: $name--margin-left-tablet;
          }
          @media (max-width: $breakpoint--mobile){
-           left: $nav-offset-left-mobile;
+            margin-left: $name--margin-left-mobile;
          }
          a{
             text-decoration: none;
@@ -140,42 +136,87 @@ body {
 
 
       nav {
-         position: absolute;
-         top: 110px;
-         // left: $nav-offset-left;
-         @media (min-width: $breakpoint--laptop + 1) {
-            left: $nav-offset-left-laptop-l;
+         width: 100%;
+         margin-top: 2.5vw;
+
+         @media (min-width: $breakpoint--laptop-r + 1) {
+            margin-left: $nav--margin-left-laptop-l;
          }
-         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
-            left: $nav-offset-left-laptop-r;
+         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+            margin-left: $nav--margin-left-laptop-r;
          }
          @media (min-width: $breakpoint--mobile) and (max-width: $breakpoint--tablet) {
-            left: $nav-offset-left-tablet;
+            margin-left: $nav--margin-left-tablet;
          }
          @media (max-width: $breakpoint--mobile){
-           left: $nav-offset-left-mobile;
+           margin-left: $nav--margin-left-mobile;
          }
 
-         a {
-            font-family: $nav--font-family;
-            font-weight: $nav--font-weight;
-            color: $text-color;
-            text-transform: uppercase;
-            text-decoration: none;
-            line-height: 43px;
-
-            &:link {
-               font-size: 18px;
+         ul{
+            display: flex;
+            @media (max-width: $breakpoint--mobile){
+              display: block;
             }
-            &:hover{
-               font-size: 16px;
-               color:grey;
+            list-style-type: none;
+            width: 100%;
+            margin: auto;
+
+            &:nth-child(4){
+               a{
+                  color:red;
+               }
+            }
+
+
+            li{
+               text-align: center;
+               @media (max-width: $breakpoint--mobile){
+                 text-align: right;
+                 line-height: 1.5;
+               }
+
+               width: 100px;
+               // @media (max-width: $breakpoint--tablet){
+               //   width: 100px;
+               // }
+
+
+
+               a {
+                  font-family: $nav--font-family;
+                  font-weight: $nav--font-weight;
+                  color: $text-color;
+
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  line-height: solid;
+
+                  font-size: 16px;
+                  @media (max-width: $breakpoint--mobile){
+                    font-size: 12px;
+                  }
+
+                  &:hover{
+                     color:grey;
+                  }
+
+
+               }
+
+
+
+
             }
          }
+
+
       }
 
 
 
+   }
+   #particle-container {
+      z-index: -1;
    }
 
    .particle {
@@ -183,7 +224,7 @@ body {
     	border-radius: 50%;
    }
 
-   @for $i from 1 through 30 {
+   @for $i from 1 through 25 {
    	@keyframes particle-animation-#{$i} {
    		100% {
    			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
@@ -192,12 +233,12 @@ body {
 
    	.particle:nth-child(#{$i}){
    		animation: particle-animation-#{$i} 60s infinite;
-   		$size: random(10) + 5 + px;
+   		$size: random(7) + 5 + px;
    		opacity: random(100)/100;
    		height: $size;
    		width: $size;
    		animation-delay: -$i * .5s;
-   		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+   		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 3px));
    		background: red;
    	}
    }
