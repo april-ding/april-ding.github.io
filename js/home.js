@@ -1,4 +1,4 @@
-if ( $(window).width() > 1020) {
+
     var lFollowX = 0,
        lFollowY = 0,
        x = 0,
@@ -28,6 +28,6 @@ if ( $(window).width() > 1020) {
      // lFollowY = (10 * lMouseY) / 100;
 
     });
-
+    if ( $(window).width() > 1020) {
     moveBackground();
-}
+    }
