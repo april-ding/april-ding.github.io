@@ -84,7 +84,10 @@ body {
     background: url("../img/bg1.png") no-repeat center center;
     background-size: cover;
 
-    transform: scale(1.1);
+    @media (min-width: $breakpoint--laptop-r - 20) {
+      transform: scale(1.1);
+    }
+    // transform: scale(1.1);
   }
 
 
@@ -181,11 +184,6 @@ body {
             width: 100%;
             margin: auto;
 
-            &:nth-child(4){
-               a{
-                  color:red;
-               }
-            }
 
 
             li{
@@ -211,6 +209,9 @@ body {
                }
 
 
+
+
+
                a {
                   font-family: $nav--font-family;
                   font-weight: $nav--font-weight;
@@ -233,9 +234,12 @@ body {
                }
 
 
-
-
             }
+
+            li:last-child a{
+               color: red;
+            }
+
          }
 
 
@@ -244,6 +248,8 @@ body {
 
 
    }
+
+
    #particle-container {
       z-index: -1;
    }
