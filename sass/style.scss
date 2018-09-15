@@ -58,7 +58,6 @@ $grid--unit:         ($grid--column-width + $grid--gutter-width);
 
 $breakpoint--laptop-r: $grid--unit * 15;//1200
 $breakpoint--tablet: $grid--unit * 10; //800
-// $breakpoint--mobile: $grid--unit * 5 + 25; //425
 $breakpoint--mobile-r: $grid--unit * 5 + 25; //425
 $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 
