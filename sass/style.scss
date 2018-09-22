@@ -80,7 +80,9 @@ body {
     left: 0;
     z-index: -2;
 
-    background: url("../img/bg1.png") no-repeat center center;
+    //background: url("../img/bg1.png") no-repeat center center;
+    background: url("../img/asset-9.png") no-repeat center center;
+
     background-size: cover;
 
     @media (min-width: $breakpoint--laptop-r - 20) {
@@ -146,6 +148,7 @@ body {
             font-family: $header--font-family;
             font-weight: $header--font-weight;
             font-size: $header--font-size;
+
 
          }
 
@@ -268,7 +271,7 @@ body {
    	.particle:nth-child(#{$i}){
    		animation: particle-animation-#{$i} 60s infinite;
    		$size: random(7) + 5 + px;
-   		opacity: random(100)/100;
+   		opacity: random(50)/100;
    		height: $size;
    		width: $size;
    		animation-delay: -$i * .5s;
