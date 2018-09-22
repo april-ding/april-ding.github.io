@@ -2,15 +2,32 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 body {
+  top: 0;
+  left: 0;
+}
+body .bg {
+  width: 100vw;
+  height: 100vh;
   background-color: white;
+  background: url("../img/asset-9.png") no-repeat center center;
+  opacity: 0.2;
+  z-index: -1;
+  position: fixed;
 }
 body nav {
-  width: 15%;
+  background-color: white;
+  width: 17%;
+  height: 70vh;
   position: fixed;
   margin-left: 60px;
 }
-body nav #nav-logo img {
-  height: 90vh;
+@media (max-width: 425px) {
+  body nav {
+    visibility: hidden;
+  }
+}
+body nav #nav-text {
+  margin-left: 20px;
 }
 body nav #nav-text h1.page-title {
   padding-bottom: 20px;
@@ -61,6 +78,7 @@ body main {
   width: 50%;
   margin-left: 25%;
   margin-top: 20px;
+  background-color: white;
 }
 
 #this-page--title-description {
@@ -96,6 +114,7 @@ body main {
   width: 100%;
   margin: auto;
   padding-top: 4vh;
+  padding-left: 10px;
   padding-bottom: 4vh;
   border-bottom: 1px dotted lightgrey;
 }
@@ -106,7 +125,7 @@ body main {
 .one-project .thumbnail .thumbnail-img {
   width: 100%;
 }
-.one-project .project-title {
+.one-project .project-title a {
   margin-bottom: 10px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
@@ -116,6 +135,9 @@ body main {
   line-height: 35px;
   letter-spacing: .4rem;
   font-size: 20px;
+}
+.one-project .project-title a:hover {
+  color: grey;
 }
 .one-project .project-description {
   font-family: 'Open Sans', sans-serif;

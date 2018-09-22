@@ -35,13 +35,31 @@ $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 //actual scss
 
 body {
+   top: 0;
+   left: 0;
 
-   background-color: white;
+   .bg{
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      background: url("../img/asset-9.png") no-repeat center center;
+      opacity: 0.2;
+      z-index: -1;
+      position: fixed;
+   }
+
+
    // margin: auto;
 
    nav{
-      width: 15%;
+      background-color: white;
+      width: 17%;
+      height: 70vh;
       position: fixed;
+
+      @media (max-width: $breakpoint--mobile-r){
+         visibility: hidden;
+      }
 
 
       //adjust top and left margin based on the viewport size
@@ -64,13 +82,9 @@ body {
 
       margin-left: 60px;
 
-      #nav-logo{
-         img{
-            height: 90vh;
-         }
-      }
 
       #nav-text{
+         margin-left: 20px;
 
          h1.page-title{
             padding-bottom: 20px;
@@ -145,6 +159,7 @@ body {
       width: 50%;
       margin-left: 25%;
       margin-top: 20px;
+      background-color: white;
 
 
       // border: 1px solid red;
@@ -190,6 +205,7 @@ body {
    width: 100%;
    margin: auto;
    padding-top: 4vh;
+   padding-left: 10px;
    padding-bottom: 4vh;
    border-bottom: 1px dotted lightgrey;
    .thumbnail{
@@ -203,18 +219,23 @@ body {
 
 
    .project-title{
+      a{
+         margin-bottom: 10px;
+         font-family: $nav--font-family;
+         font-weight: 600;
+         color: crimson;
 
-      margin-bottom: 10px;
-      font-family: $nav--font-family;
-      font-weight: 600;
-      color: crimson;
+         text-transform: uppercase;
+         text-decoration: none;
+         line-height: 35px;
+         letter-spacing: .4rem;
 
-      text-transform: uppercase;
-      text-decoration: none;
-      line-height: 35px;
-      letter-spacing: .4rem;
+         font-size: 20px;
+         &:hover{
+            color: grey;
+         }
+      }
 
-      font-size: 20px;
    }
    .project-description{
       font-family: 'Open Sans', sans-serif;
