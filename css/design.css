@@ -10,7 +10,7 @@ body .bg {
   height: 100vh;
   background-color: white;
   background: url("../img/asset-9.png") no-repeat center center;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
   position: fixed;
 }
