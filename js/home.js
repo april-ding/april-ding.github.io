@@ -1,33 +1,58 @@
+//p5
+var canvas;
+let rectX = 0;
+let rectY = 0;
+//var time = millis();
 
-    var lFollowX = 0,
-       lFollowY = 0,
-       x = 0,
-       y = 0,
-       friction = 1 / 30;
+function setup(){
+    canvas = createCanvas(windowWidth, windowHeight);
 
-    function moveBackground() {
-     x += (lFollowX - x) * friction;
-     y += (lFollowY - y) * friction;
+}
+function timeIt(){
+    rectX = 30*random(0, windowWidth/30);
+    rectY = 30*random(0, windowHeight/30);
+}
 
-     translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+function draw() {
+    stroke(255, 216, 230);
+    strokeWeight(2);
+    //draw grid
+    for (var x = 30; x <= windowWidth; x += 30){
+        line(x, 0, x, windowHeight);
+    }
+    for (var y = 30; y <= windowHeight; y += 30){
+        line(0, y, windowWidth, y);
+    }
+    noStroke();
+    fill(255, 216, 230);
 
-     $('.bg').css({
-       '-webit-transform': translate,
-       '-moz-transform': translate,
-       'transform': translate
-     });
+    if (frameCount % 60 == 0) {
+        timeIt();
+    }
+    // rect(rectX, rectY, 30, 30);
+    // rect(rectX + 30, rectY, 30, 30);
+    // rect(rectX + 30, rectY + 30, 30, 30);
 
-     window.requestAnimationFrame(moveBackground);
+
+
+
+}//end of draw
+
+
+// var mouseX = event.clientX;
+// var mouseY = event.clientY;
+/*
+window.onMouseMove = function() {
+    var mouseX = event.pageX;
+    var mouseY = event.pageY;
+    var element = document.getElementById('image-hover');
+    console.log(mouseX);
+
+    if (mouseX > 0.5*$(window).width()) {
+        element.style.opacity = "1";
+    }else{
+        element.style.opacity = "0";
     }
 
-    $(window).on('mousemove click', function(e) {
-
-     var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-     var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-     lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-     // lFollowY = (10 * lMouseY) / 100;
-
-    });
-    if ( $(window).width() > 1020) {
-    moveBackground();
-    }
+};
+*/

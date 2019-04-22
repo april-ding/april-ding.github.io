@@ -1,22 +1,29 @@
-=========================================================
+//=========================================================
 // Questions
 // =========================================================
 /*
-   1. Which positioning should i use for contents inside of main?
-
+   1. Which positioning should i use for contents inside of main
+   2. Transferring responsiveness from Figma to code
+   3. Best way to do the moving squares
 
 */
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Oswald'); // =========================================================
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+// =========================================================
 // Variables
 // =========================================================
-$header--font-family: 'Oswald;', sans-serif;
-$header--font-weight: 600; //bold
-$header--font-size: 64px;
+$header--font-family: 'Dosis', sans-serif;
+$header--font-weight: 800; //bold
+$header--font-size: 60px;
 $text-color: black;
-$nav--font-family: "Oswald", sans-serif;
-$nav--font-weight: 400;
-$nav--font-size: 16px;
+$nav--font-family: 'Dosis', sans-serif;
+$nav--font-weight: 600;
+$nav--font-size: 20px;
+$main--font-weight: 800;
+$main--font-size: 24px;
 $header--margin-top-laptop: 1.5vw;
 $header--margin-left-laptop: 3vw;
 $header--margin-top-tablet: 3vw;
@@ -56,17 +63,19 @@ body {
    overflow: hidden;
    position: fixed;
 
+   /*
    #bg {
       position: fixed;
       width: 100%;
       height: 100%;
-      opacity: 0.3;
+      opacity: 0.2;
       background: url("../img/bg.png") no-repeat center center;
       background-size: cover;
       // @media (min-width: $breakpoint--laptop-r - 20) {
       //   transform: scale(1.1);
       // }
    }
+   */
 
    #particle-container {
       z-index: -1;
@@ -233,7 +242,7 @@ nav {
    height: 45px;
    position: fixed;
    -webkit-transform-origin: left top;
-   -webkit-transform: rotate(90deg) translateX(50px) translateY(-1400px);
+   -webkit-transform: rotate(90deg) translateX(50px) translateY(-1370px);
    /****breakpoints
    @media (min-width: $breakpoint--laptop-r + 1) {
       margin-left: $nav--margin-left-laptop-l;
@@ -332,11 +341,11 @@ main {
 
          a {
             font-family: $nav--font-family;
-            font-weight: 700;
+            font-weight: $main--font-weight;
             color: $text-color;
             text-decoration: none;
-            letter-spacing: 10px;
-            font-size: 36px;
+            letter-spacing: 5px;
+            font-size: $main--font-size;
             // @media (max-width: $breakpoint--tablet){
             //   font-size: 12px;
             // }
@@ -344,20 +353,31 @@ main {
                color: grey;
             }
          }
+         .empty-hover{
+            width: 100vw;
+            height: 12vh;
+            margin-top: -10vh;
+            margin-left: 20vw;
+            position: absolute;
+            z-index: 2;
+         }
 
-         .image-hover {
-            img {
-               position: absolute;
-               margin-left: 35vw;
-               margin-top: -10vh;
-               width: 467px;
-               height: 664px;
-            }
 
-            p {
-               position: absolute;
-               margin-left: 20vw;
-               margin-top: -12vh;
+         .thumbnail-flex {
+            position: absolute;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            left: 30vw;
+            top: -2vh;
+            width: 40vw;
+            li{
+               img{
+                  width: 250px;
+                  height: 250px;
+               }
+
             }
             opacity: 0;
             transition: opacity 1s ease-in-out;
@@ -365,7 +385,37 @@ main {
             -webkit-transition: opacity 1s ease-in-out;
          }
 
-         a:hover + .image-hover {
+
+         .thumbnail-flex-2 {
+            position: absolute;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            left: 30vw;
+            top: -2vh;
+            width: 40vw;
+            li{
+               img{
+                  width: 250px;
+                  height: 250px;
+               }
+
+            }
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -webkit-transition: opacity 1s ease-in-out;
+         }
+
+         a:hover + .thumbnail-flex {
+            opacity: 1.0;
+            transition: opacity 0.55s ease-in-out;
+            -moz-transition: opacity 0.55s ease-in-out;
+            -webkit-transition: opacity 0.55s ease-in-out;
+         }
+
+         .empty-hover:hover + .thumbnail-flex-2 {
             opacity: 1.0;
             transition: opacity 0.55s ease-in-out;
             -moz-transition: opacity 0.55s ease-in-out;
