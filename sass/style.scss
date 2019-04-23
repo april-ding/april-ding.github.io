@@ -416,12 +416,13 @@ main {
 
    /************************ Flex Boxes ************************/
 
-   .thumbnail-flex {
+   .thumbnail-flex-three-d {
       background-color: white;
       z-index: 2;
       position: absolute;
       margin: auto;
       display: flex;
+
       flex-flow: row wrap;
       justify-content: space-around;
       left: 30vw;
@@ -434,12 +435,58 @@ main {
          height: 250px;
       }
 
+      opacity: 0;
+      // transition: opacity 1s ease-in-out;
+      // -moz-transition: opacity 1s ease-in-out;
+      // -webkit-transition: opacity 1s ease-in-out;
+   }
+   .thumbnail-flex-gd {
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+      display: flex;
 
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 250px;
+         height: 250px;
+      }
 
       opacity: 0;
-      transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -webkit-transition: opacity 1s ease-in-out;
+      // transition: opacity 1s ease-in-out;
+      // -moz-transition: opacity 1s ease-in-out;
+      // -webkit-transition: opacity 1s ease-in-out;
+   }
+   .thumbnail-flex-mg {
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+      display: flex;
+
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 250px;
+         height: 250px;
+      }
+
+      opacity: 0;
+      // transition: opacity 1s ease-in-out;
+      // -moz-transition: opacity 1s ease-in-out;
+      // -webkit-transition: opacity 1s ease-in-out;
    }
    #about-flex {
       //background-color: white;
@@ -471,37 +518,38 @@ main {
 
    /************************ Hover React Boxes ************************/
 
-   #empty-three-d:hover + .thumbnail-flex {
-      opacity: 1.0;
-      transition: opacity 0.55s ease-in-out;
-      -moz-transition: opacity 0.55s ease-in-out;
-      -webkit-transition: opacity 0.55s ease-in-out;
-   }
+   // #empty-three-d:hover + .thumbnail-flex {
+   //    opacity: 1.0;
+   //    transition: opacity 0.55s ease-in-out;
+   //    -moz-transition: opacity 0.55s ease-in-out;
+   //    -webkit-transition: opacity 0.55s ease-in-out;
+   // }
+   //
+   // #empty-gd:hover + .thumbnail-flex {
+   //
+   //    opacity: 1.0;
+   //    transition: opacity 0.55s ease-in-out;
+   //    -moz-transition: opacity 0.55s ease-in-out;
+   //    -webkit-transition: opacity 0.55s ease-in-out;
+   // }
+   //
+   // #empty-mg:hover + .thumbnail-flex {
+   //
+   //    opacity: 1.0;
+   //    transition: opacity 0.55s ease-in-out;
+   //    -moz-transition: opacity 0.55s ease-in-out;
+   //    -webkit-transition: opacity 0.55s ease-in-out;
+   // }
+   //
+   // #empty-about:hover + #about-flex {
+   //
+   //       opacity: 1.0;
+   //       transition: opacity 0.55s ease-in-out;
+   //       -moz-transition: opacity 0.55s ease-in-out;
+   //       -webkit-transition: opacity 0.55s ease-in-out;
+   //
+   // }
 
-   #empty-gd:hover + .thumbnail-flex {
-
-      opacity: 1.0;
-      transition: opacity 0.55s ease-in-out;
-      -moz-transition: opacity 0.55s ease-in-out;
-      -webkit-transition: opacity 0.55s ease-in-out;
-   }
-
-   #empty-mg:hover + .thumbnail-flex {
-
-      opacity: 1.0;
-      transition: opacity 0.55s ease-in-out;
-      -moz-transition: opacity 0.55s ease-in-out;
-      -webkit-transition: opacity 0.55s ease-in-out;
-   }
-
-   #empty-about:hover + #about-flex {
-
-         opacity: 1.0;
-         transition: opacity 0.55s ease-in-out;
-         -moz-transition: opacity 0.55s ease-in-out;
-         -webkit-transition: opacity 0.55s ease-in-out;
-
-   }
    .thumbnail-flex-2:hover{
 
       display: flex;
