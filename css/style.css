@@ -86,13 +86,13 @@ header #april {
 
       breakpoints******/
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   left: 30vw;
   text-decoration: none;
   color: coral;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 200px;
+  font-size: 220px;
   letter-spacing: 10px;
 }
 header #ding {
@@ -103,7 +103,7 @@ header #ding {
   color: coral;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 200px;
+  font-size: 220px;
   letter-spacing: 10px;
 }
 
@@ -246,7 +246,10 @@ main #three-d a {
 main #three-d a:hover {
   color: grey;
 }
-main #gd {
+main #three-d a:after {
+  text-decoration: none;
+}
+main #gd a {
   position: absolute;
   top: 2vh;
   left: 80vw;
@@ -256,11 +259,16 @@ main #gd {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 34px;
+  line-height: 50px;
+  z-index: 4;
 }
-main #gd:hover {
+main #gd a:hover {
   color: grey;
 }
-main #mg {
+main #gd a:after {
+  text-decoration: none;
+}
+main #mg a {
   position: absolute;
   top: 90vh;
   left: 3vw;
@@ -270,9 +278,13 @@ main #mg {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 34px;
+  z-index: 4;
 }
-main #mg:hover {
+main #mg a:hover {
   color: grey;
+}
+main #mg a:after {
+  text-decoration: none;
 }
 main #about {
   position: absolute;
@@ -376,18 +388,22 @@ main .thumbnail-flex-2 img {
 main #about-flex {
   z-index: 2;
   position: absolute;
+  display: block;
   left: 30vw;
   top: 15vh;
   width: 45vw;
   height: 45vw;
-  color: black;
-  font-family: "Dosis", sans-serif;
-  font-size: 20px;
-  padding-bottom: 10px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
+}
+main #about-flex .about-text {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 10px;
 }
 main #empty-three-d:hover + .thumbnail-flex-2 {
   opacity: 1.0;
@@ -407,7 +423,7 @@ main #empty-mg:hover + .thumbnail-flex-2 {
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
 }
-main #empty-about:hover + #about-text {
+main #empty-about:hover + #about-flex {
   opacity: 1.0;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
