@@ -430,15 +430,19 @@ main {
       width: 45vw;
       height: 45vw;
 
-      img {
-         width: 250px;
-         height: 250px;
+      a{
+         img {
+            width: 250px;
+            height: 250px;
+         }
       }
 
+
+
       opacity: 0;
-      // transition: opacity 1s ease-in-out;
-      // -moz-transition: opacity 1s ease-in-out;
-      // -webkit-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
    }
    .thumbnail-flex-gd {
       background-color: white;
@@ -460,9 +464,9 @@ main {
       }
 
       opacity: 0;
-      // transition: opacity 1s ease-in-out;
-      // -moz-transition: opacity 1s ease-in-out;
-      // -webkit-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
    }
    .thumbnail-flex-mg {
       background-color: white;
@@ -478,15 +482,17 @@ main {
       width: 45vw;
       height: 45vw;
 
-      img {
-         width: 250px;
-         height: 250px;
+      a{
+         img {
+            width: 250px;
+            height: 250px;
+         }
       }
 
       opacity: 0;
-      // transition: opacity 1s ease-in-out;
-      // -moz-transition: opacity 1s ease-in-out;
-      // -webkit-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
    }
    #about-flex {
       //background-color: white;

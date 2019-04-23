@@ -295,8 +295,11 @@ main .thumbnail-flex-three-d {
   width: 45vw;
   height: 45vw;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex-three-d img {
+main .thumbnail-flex-three-d a img {
   width: 250px;
   height: 250px;
 }
@@ -313,6 +316,9 @@ main .thumbnail-flex-gd {
   width: 45vw;
   height: 45vw;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
 }
 main .thumbnail-flex-gd img {
   width: 250px;
@@ -331,8 +337,11 @@ main .thumbnail-flex-mg {
   width: 45vw;
   height: 45vw;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex-mg img {
+main .thumbnail-flex-mg a img {
   width: 250px;
   height: 250px;
 }
