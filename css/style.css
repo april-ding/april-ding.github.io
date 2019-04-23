@@ -32,360 +32,6 @@ body {
 body #particle-container {
   z-index: -1;
 }
-body .particle {
-  position: absolute;
-  border-radius: 50%;
-}
-@keyframes particle-animation-1 {
-  100% {
-    transform: translate3d(38vw, 37vh, 29px);
-  }
-}
-body .particle:nth-child(1) {
-  animation: particle-animation-1 60s infinite;
-  opacity: 0.15;
-  height: 7px;
-  width: 7px;
-  animation-delay: -0.5s;
-  transform: translate3d(67vw, 61vh, 120px);
-  background: red;
-}
-@keyframes particle-animation-2 {
-  100% {
-    transform: translate3d(3vw, 15vh, 41px);
-  }
-}
-body .particle:nth-child(2) {
-  animation: particle-animation-2 60s infinite;
-  opacity: 0.42;
-  height: 12px;
-  width: 12px;
-  animation-delay: -1s;
-  transform: translate3d(34vw, 14vh, 255px);
-  background: red;
-}
-@keyframes particle-animation-3 {
-  100% {
-    transform: translate3d(24vw, 52vh, 3px);
-  }
-}
-body .particle:nth-child(3) {
-  animation: particle-animation-3 60s infinite;
-  opacity: 0.28;
-  height: 6px;
-  width: 6px;
-  animation-delay: -1.5s;
-  transform: translate3d(34vw, 75vh, 114px);
-  background: red;
-}
-@keyframes particle-animation-4 {
-  100% {
-    transform: translate3d(82vw, 67vh, 2px);
-  }
-}
-body .particle:nth-child(4) {
-  animation: particle-animation-4 60s infinite;
-  opacity: 0.32;
-  height: 12px;
-  width: 12px;
-  animation-delay: -2s;
-  transform: translate3d(1vw, 15vh, 150px);
-  background: red;
-}
-@keyframes particle-animation-5 {
-  100% {
-    transform: translate3d(90vw, 23vh, 20px);
-  }
-}
-body .particle:nth-child(5) {
-  animation: particle-animation-5 60s infinite;
-  opacity: 0.41;
-  height: 11px;
-  width: 11px;
-  animation-delay: -2.5s;
-  transform: translate3d(89vw, 89vh, 66px);
-  background: red;
-}
-@keyframes particle-animation-6 {
-  100% {
-    transform: translate3d(75vw, 88vh, 95px);
-  }
-}
-body .particle:nth-child(6) {
-  animation: particle-animation-6 60s infinite;
-  opacity: 0.27;
-  height: 11px;
-  width: 11px;
-  animation-delay: -3s;
-  transform: translate3d(47vw, 69vh, 33px);
-  background: red;
-}
-@keyframes particle-animation-7 {
-  100% {
-    transform: translate3d(53vw, 73vh, 18px);
-  }
-}
-body .particle:nth-child(7) {
-  animation: particle-animation-7 60s infinite;
-  opacity: 0.15;
-  height: 12px;
-  width: 12px;
-  animation-delay: -3.5s;
-  transform: translate3d(85vw, 86vh, 273px);
-  background: red;
-}
-@keyframes particle-animation-8 {
-  100% {
-    transform: translate3d(3vw, 14vh, 42px);
-  }
-}
-body .particle:nth-child(8) {
-  animation: particle-animation-8 60s infinite;
-  opacity: 0.46;
-  height: 6px;
-  width: 6px;
-  animation-delay: -4s;
-  transform: translate3d(16vw, 87vh, 117px);
-  background: red;
-}
-@keyframes particle-animation-9 {
-  100% {
-    transform: translate3d(5vw, 28vh, 28px);
-  }
-}
-body .particle:nth-child(9) {
-  animation: particle-animation-9 60s infinite;
-  opacity: 0.25;
-  height: 10px;
-  width: 10px;
-  animation-delay: -4.5s;
-  transform: translate3d(80vw, 90vh, 126px);
-  background: red;
-}
-@keyframes particle-animation-10 {
-  100% {
-    transform: translate3d(55vw, 82vh, 8px);
-  }
-}
-body .particle:nth-child(10) {
-  animation: particle-animation-10 60s infinite;
-  opacity: 0.4;
-  height: 10px;
-  width: 10px;
-  animation-delay: -5s;
-  transform: translate3d(56vw, 23vh, 237px);
-  background: red;
-}
-@keyframes particle-animation-11 {
-  100% {
-    transform: translate3d(57vw, 49vh, 59px);
-  }
-}
-body .particle:nth-child(11) {
-  animation: particle-animation-11 60s infinite;
-  opacity: 0.34;
-  height: 12px;
-  width: 12px;
-  animation-delay: -5.5s;
-  transform: translate3d(81vw, 57vh, 39px);
-  background: red;
-}
-@keyframes particle-animation-12 {
-  100% {
-    transform: translate3d(57vw, 89vh, 77px);
-  }
-}
-body .particle:nth-child(12) {
-  animation: particle-animation-12 60s infinite;
-  opacity: 0.38;
-  height: 6px;
-  width: 6px;
-  animation-delay: -6s;
-  transform: translate3d(28vw, 9vh, 126px);
-  background: red;
-}
-@keyframes particle-animation-13 {
-  100% {
-    transform: translate3d(72vw, 13vh, 15px);
-  }
-}
-body .particle:nth-child(13) {
-  animation: particle-animation-13 60s infinite;
-  opacity: 0.47;
-  height: 9px;
-  width: 9px;
-  animation-delay: -6.5s;
-  transform: translate3d(88vw, 29vh, 252px);
-  background: red;
-}
-@keyframes particle-animation-14 {
-  100% {
-    transform: translate3d(81vw, 26vh, 74px);
-  }
-}
-body .particle:nth-child(14) {
-  animation: particle-animation-14 60s infinite;
-  opacity: 0.01;
-  height: 11px;
-  width: 11px;
-  animation-delay: -7s;
-  transform: translate3d(57vw, 73vh, 294px);
-  background: red;
-}
-@keyframes particle-animation-15 {
-  100% {
-    transform: translate3d(32vw, 75vh, 61px);
-  }
-}
-body .particle:nth-child(15) {
-  animation: particle-animation-15 60s infinite;
-  opacity: 0.3;
-  height: 10px;
-  width: 10px;
-  animation-delay: -7.5s;
-  transform: translate3d(34vw, 9vh, 36px);
-  background: red;
-}
-@keyframes particle-animation-16 {
-  100% {
-    transform: translate3d(8vw, 12vh, 56px);
-  }
-}
-body .particle:nth-child(16) {
-  animation: particle-animation-16 60s infinite;
-  opacity: 0.3;
-  height: 8px;
-  width: 8px;
-  animation-delay: -8s;
-  transform: translate3d(20vw, 35vh, 93px);
-  background: red;
-}
-@keyframes particle-animation-17 {
-  100% {
-    transform: translate3d(61vw, 25vh, 98px);
-  }
-}
-body .particle:nth-child(17) {
-  animation: particle-animation-17 60s infinite;
-  opacity: 0.14;
-  height: 7px;
-  width: 7px;
-  animation-delay: -8.5s;
-  transform: translate3d(76vw, 65vh, 51px);
-  background: red;
-}
-@keyframes particle-animation-18 {
-  100% {
-    transform: translate3d(32vw, 38vh, 76px);
-  }
-}
-body .particle:nth-child(18) {
-  animation: particle-animation-18 60s infinite;
-  opacity: 0.37;
-  height: 8px;
-  width: 8px;
-  animation-delay: -9s;
-  transform: translate3d(69vw, 50vh, 93px);
-  background: red;
-}
-@keyframes particle-animation-19 {
-  100% {
-    transform: translate3d(89vw, 33vh, 80px);
-  }
-}
-body .particle:nth-child(19) {
-  animation: particle-animation-19 60s infinite;
-  opacity: 0.18;
-  height: 9px;
-  width: 9px;
-  animation-delay: -9.5s;
-  transform: translate3d(29vw, 40vh, 291px);
-  background: red;
-}
-@keyframes particle-animation-20 {
-  100% {
-    transform: translate3d(7vw, 32vh, 60px);
-  }
-}
-body .particle:nth-child(20) {
-  animation: particle-animation-20 60s infinite;
-  opacity: 0.06;
-  height: 11px;
-  width: 11px;
-  animation-delay: -10s;
-  transform: translate3d(86vw, 56vh, 276px);
-  background: red;
-}
-@keyframes particle-animation-21 {
-  100% {
-    transform: translate3d(73vw, 33vh, 26px);
-  }
-}
-body .particle:nth-child(21) {
-  animation: particle-animation-21 60s infinite;
-  opacity: 0.48;
-  height: 11px;
-  width: 11px;
-  animation-delay: -10.5s;
-  transform: translate3d(18vw, 14vh, 291px);
-  background: red;
-}
-@keyframes particle-animation-22 {
-  100% {
-    transform: translate3d(66vw, 73vh, 51px);
-  }
-}
-body .particle:nth-child(22) {
-  animation: particle-animation-22 60s infinite;
-  opacity: 0.27;
-  height: 9px;
-  width: 9px;
-  animation-delay: -11s;
-  transform: translate3d(6vw, 69vh, 129px);
-  background: red;
-}
-@keyframes particle-animation-23 {
-  100% {
-    transform: translate3d(15vw, 24vh, 22px);
-  }
-}
-body .particle:nth-child(23) {
-  animation: particle-animation-23 60s infinite;
-  opacity: 0.36;
-  height: 11px;
-  width: 11px;
-  animation-delay: -11.5s;
-  transform: translate3d(32vw, 3vh, 141px);
-  background: red;
-}
-@keyframes particle-animation-24 {
-  100% {
-    transform: translate3d(52vw, 35vh, 50px);
-  }
-}
-body .particle:nth-child(24) {
-  animation: particle-animation-24 60s infinite;
-  opacity: 0.04;
-  height: 12px;
-  width: 12px;
-  animation-delay: -12s;
-  transform: translate3d(23vw, 5vh, 156px);
-  background: red;
-}
-@keyframes particle-animation-25 {
-  100% {
-    transform: translate3d(5vw, 6vh, 71px);
-  }
-}
-body .particle:nth-child(25) {
-  animation: particle-animation-25 60s infinite;
-  opacity: 0.26;
-  height: 11px;
-  width: 11px;
-  animation-delay: -12.5s;
-  transform: translate3d(4vw, 37vh, 81px);
-  background: red;
-}
 
 .animated-header {
   -webkit-animation-duration: 1s;
@@ -443,26 +89,24 @@ header #april {
 
       breakpoints******/
   position: absolute;
-  top: -10vh;
-  left: 0;
+  top: 20vh;
+  left: 30vw;
   text-decoration: none;
-  opacity: 0.8;
-  color: crimson;
+  color: coral;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 500px;
+  font-size: 200px;
   letter-spacing: 10px;
 }
 header #ding {
   position: absolute;
-  top: 40vh;
-  left: 42.5vw;
+  top: 50vh;
+  left: 40vw;
   text-decoration: none;
-  opacity: 0.8;
-  color: crimson;
+  color: coral;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 500px;
+  font-size: 200px;
   letter-spacing: 10px;
 }
 
@@ -580,14 +224,25 @@ nav ul li p {
 }
 
 main {
-  left: 10vw;
-  top: 20vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
+         /*.thumbnail-flex-2:hover{
+   display;
+flex:display;
+1:opacity;
+opacity 0.55s ease-in-out:transition;
+opacity 0.55s ease-in-out:-moz-transition;
+opacity 0.55s ease-in-out:-webkit-transition
 }
-main ul li {
-  line-height: 100px;
+*/
 }
-main ul li a {
+main #three-d {
+  position: absolute;
+  top: 2vh;
+  left: 3vw;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
   color: black;
@@ -595,67 +250,219 @@ main ul li a {
   letter-spacing: 5px;
   font-size: 34px;
 }
-main ul li a:hover {
+main #three-d:hover {
   color: grey;
 }
-main ul li .empty-hover {
-  width: 100vw;
-  height: 12vh;
-  margin-top: -10vh;
-  margin-left: 20vw;
+main #gd {
+  position: absolute;
+  top: 2vh;
+  left: 80vw;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 34px;
+}
+main #gd:hover {
+  color: grey;
+}
+main #mg {
+  position: absolute;
+  top: 90vh;
+  left: 3vw;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 34px;
+}
+main #mg:hover {
+  color: grey;
+}
+main #about {
+  position: absolute;
+  top: 90vh;
+  left: 90vw;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 34px;
+}
+main #about:hover {
+  color: grey;
+}
+main #empty-three-d {
+  width: 50vw;
+  height: 50vh;
   position: absolute;
   z-index: 3;
 }
-main ul li .thumbnail-flex {
+main #empty-three-d:hover {
+  background-color: lightpink;
+  opacity: 0.1;
+}
+main #empty-gd {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  left: 50vw;
+  z-index: 3;
+}
+main #empty-gd:hover {
+  background-color: lightpink;
+  opacity: 0.1;
+}
+main #empty-mg {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: 50vh;
+  z-index: 3;
+}
+main #empty-mg:hover {
+  background-color: lightpink;
+  opacity: 0.1;
+}
+main #empty-about {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  z-index: 3;
+}
+main #empty-about:hover {
+  background-color: lightpink;
+  opacity: 0.1;
+}
+main .thumbnail-flex {
+  background-color: white;
   z-index: 2;
   position: absolute;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   left: 30vw;
-  top: 3vh;
-  width: 40vw;
+  top: 15vh;
+  width: 45vw;
+  height: 45vw;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main ul li .thumbnail-flex li img {
+main .thumbnail-flex img {
   width: 250px;
   height: 250px;
 }
-main ul li .thumbnail-flex-2 {
+main .thumbnail-flex-2 {
+  background-color: white;
   z-index: 2;
   position: absolute;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   left: 30vw;
-  top: 3vh;
-  width: 40vw;
+  top: 15vh;
+  width: 45vw;
+  height: 45vw;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main ul li .thumbnail-flex-2 li img {
+main .thumbnail-flex-2 img {
   width: 250px;
   height: 250px;
 }
-main ul li a:hover + .thumbnail-flex {
+main #about-flex {
+  z-index: 2;
+  position: absolute;
+  left: 30vw;
+  top: 15vh;
+  width: 45vw;
+  height: 45vw;
+}
+main #about-flex p {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  padding-bottom: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+main #about-flex-2 {
+  z-index: 2;
+  position: absolute;
+  left: 30vw;
+  top: 15vh;
+  width: 45vw;
+  height: 45vw;
+}
+main #about-flex-2 p {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  padding-bottom: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+main #three-d:hover + .thumbnail-flex {
   opacity: 1.0;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
 }
-main ul li .empty-hover:hover + .thumbnail-flex-2 {
+main #gd:hover + .thumbnail-flex {
   opacity: 1.0;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
 }
-main ul li .thumbnail-flex-2:hover {
-  opacity: 1;
+main #mg:hover + .thumbnail-flex {
+  opacity: 1.0;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+main #about:hover + #about-text p {
+  opacity: 1.0;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+main #empty-three-d:hover + .thumbnail-flex-2 {
+  display: flex;
+  opacity: 1.0;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+main #empty-gd:hover + .thumbnail-flex-2 {
+  display: flex;
+  opacity: 1.0;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+main #empty-mg:hover + .thumbnail-flex-2 {
+  display: flex;
+  opacity: 1.0;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+main #empty-about:hover + #about-text p {
+  opacity: 1.0;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
@@ -711,7 +518,7 @@ html.lb-disable-scrolling {
   margin: 0 auto;
   border-radius: 4px;
   /* Background color behind image.
-     This is visible during transitions. */
+    This is visible during transitions. */
   background-color: pink;
 }
 
@@ -736,7 +543,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+  background: url("../images/loading.gif") no-repeat;
 }
 
 .lb-nav {
@@ -757,7 +564,8 @@ html.lb-disable-scrolling {
   background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 }
 
-.lb-prev, .lb-next {
+.lb-next,
+.lb-prev {
   height: 100%;
   cursor: pointer;
   display: block;
@@ -767,7 +575,7 @@ html.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
+  background: url("../images/prev.png") left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -785,7 +593,7 @@ html.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 48% no-repeat;
+  background: url("../images/next.png") right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -849,7 +657,7 @@ html.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;
-  background: url(../images/close.png) top right no-repeat;
+  background: url("../images/close.png") top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
