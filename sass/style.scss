@@ -503,7 +503,6 @@ main {
       //    width: 250px;
       //    height: 250px;
       // }
-      p {
 
          color: black;
          font-family: "Dosis", sans-serif;
@@ -513,7 +512,7 @@ main {
          transition: opacity 1s ease-in-out;
          -moz-transition: opacity 1s ease-in-out;
          -webkit-transition: opacity 1s ease-in-out;
-      }
+
    }
 
    // #about-flex-2 {
@@ -598,12 +597,12 @@ main {
    }
 
    #empty-about:hover + #about-text {
-      p {
+
          opacity: 1.0;
          transition: opacity 0.55s ease-in-out;
          -moz-transition: opacity 0.55s ease-in-out;
          -webkit-transition: opacity 0.55s ease-in-out;
-      }
+
    }
          /*.thumbnail-flex-2:hover{
    display;

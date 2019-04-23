@@ -388,8 +388,6 @@ main #about-flex {
   top: 15vh;
   width: 45vw;
   height: 45vw;
-}
-main #about-flex p {
   color: black;
   font-family: "Dosis", sans-serif;
   font-size: 20px;
@@ -417,7 +415,7 @@ main #empty-mg:hover + .thumbnail-flex-2 {
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
 }
-main #empty-about:hover + #about-text p {
+main #empty-about:hover + #about-text {
   opacity: 1.0;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
