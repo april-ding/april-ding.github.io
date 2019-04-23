@@ -1,67 +1,58 @@
-/***** ISSUES TO BE FIXED
-1. logo needs to link to the home page
-2. remove .html extensions
-3. make ABOUT red
-4. possibly make the bottom an animation and remove the jquery when its not laptop format
-5. responsive issues - the relationship between april ding and nav (and li widths)
-6. add $nav--margin-left-mobile-s: VALUEvw;
-*****/
-
-@import url("https://fonts.googleapis.com/css?family=Passion+One");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
-
-
+//=========================================================
+// Questions
 // =========================================================
+/*
+   1. Which positioning should i use for contents inside of main
+   2. Transferring responsiveness from Figma to code
+   3. Best way to do the moving squares
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Dosis'); // =========================================================
 // Variables
 // =========================================================
-$header--font-family: 'Passion One', sans-serif;
-$header--font-weight: 400;
-$header--font-size: 36px;
+$header--font-family: 'Dosis', sans-serif;
+$header--font-weight: 800; //bold
+$header--font-size: 200px;
 $text-color: black;
-
-$nav--font-family: 'Josefin Sans', sans-serif;
+$nav--font-family: 'Dosis', sans-serif;
 $nav--font-weight: 600;
-
+$nav--font-size: 20px;
+$main--font-weight: 800;
+$main--font-size: 34px;
 $header--margin-top-laptop: 1.5vw;
 $header--margin-left-laptop: 3vw;
 $header--margin-top-tablet: 3vw;
 $header--margin-left-tablet: 4vw;
 $header--margin-top-mobile: 8vw;
 $header--margin-left-mobile: 8vw;
-
 $name--margin-left-laptop-l: 2vw;
 $name--margin-left-laptop-r: 2.5vw;
 $name--margin-left-tablet: 3.5vw;
 $name--margin-left-mobile: 6.5vw;
-
 $nav--margin-left-laptop-l: 41vw;
 $nav--margin-left-laptop-r: 25vw;
 $nav--margin-left-tablet: 10vw;
 $nav--margin-left-mobile-r: 30vw;
-$nav--margin-left-mobile-s: 20vw;
-
-// =========================================================
+$nav--margin-left-mobile-s: 20vw; // =========================================================
 // Grid Variables
 // =========================================================
 $grid--column-width: 60px;
 $grid--gutter-width: 20px;
-$grid--unit:         ($grid--column-width + $grid--gutter-width);
-
-// =========================================================
+$grid--unit: ($grid--column-width + $grid--gutter-width); // =========================================================
 // Breakpoints
 // =========================================================
 // $breakpoint--laptop-l: $grid--unit * 17 + 40;//1400
 // $breakpoint--laptop-r: $grid--unit * 12 + 64;//1024
 // $breakpoint--tablet: $grid--unit * 9 + 48; //768
 // $breakpoint--mobile: $grid--unit * 5 + 25; //425
-
-
-$breakpoint--laptop-r: $grid--unit * 15;//1200
+$breakpoint--laptop-r: $grid--unit * 15; //1200
 $breakpoint--tablet: $grid--unit * 10; //800
 $breakpoint--mobile-r: $grid--unit * 5 + 25; //425
 $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
-
-
 //actual scss
 
 body {
@@ -69,219 +60,777 @@ body {
    height: 100vh;
    margin: auto;
    overflow: hidden;
-
-
-  .bg {
-    width: 100%;
-    height: 100%;
-
-    position: fixed;
-    top: 40vh;
-    left: 0;
-    z-index: -2;
-
-    //background: url("../img/bg1.png") no-repeat center center;
-    background: url("../img/asset-9.png") no-repeat center center;
-
-    background-size: cover;
-
-    @media (min-width: $breakpoint--laptop-r - 20) {
-      transform: scale(1.1);
-    }
-    // transform: scale(1.1);
-  }
-
-
-   header {
+   position: fixed;
+   /*
+   #bg {
+      position: fixed;
       width: 100%;
-      display: flex;
-      margin: auto;
-
-      //adjust top and left margin based on the viewport size
-      @media (min-width: $breakpoint--laptop-r + 1) {
-         margin-top: $header--margin-top-laptop;
-         margin-left: $header--margin-left-laptop;
-      }
-      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-         margin-top: $header--margin-top-tablet;
-         margin-left: $header--margin-left-tablet;
-      }
-      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-         margin-top: $header--margin-top-tablet;
-         margin-left: $header--margin-left-tablet;
-      }
-      @media (max-width: $breakpoint--mobile-r){
-         margin-top: $header--margin-top-mobile;
-         margin-left: $header--margin-left-mobile;
-      }
-
-
-      img{
-         width: 35px;
-         height: 73px;
-      }
-
-
-      h1{
-         margin-top: 1.5vw;
-         // width: 40%;
-
-         @media (min-width: $breakpoint--laptop-r + 1) {
-            margin-left: $name--margin-left-laptop-l;
-            width: 50%;
-         }
-         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-            margin-left: $name--margin-left-laptop-r;
-            width: 50%;
-         }
-         @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-            margin-left: $name--margin-left-tablet;
-            width: 30%;
-         }
-         @media (max-width: $breakpoint--mobile-r){
-            margin-left: $name--margin-left-mobile;
-            width: 30%;
-         }
-         a{
-            text-decoration: none;
-            color: $text-color;
-            font-family: $header--font-family;
-            font-weight: $header--font-weight;
-            font-size: $header--font-size;
-
-
-         }
-
-      }
-
-
-
-      nav {
-         width: 100%;
-         margin-top: 2.5vw;
-
-         @media (min-width: $breakpoint--laptop-r + 1) {
-            margin-left: $nav--margin-left-laptop-l;
-         }
-         @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-            margin-left: $nav--margin-left-laptop-r;
-         }
-
-         @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-            margin-left: $nav--margin-left-tablet;
-         }
-         @media (min-width: $breakpoint--mobile-s) and (max-width: $breakpoint--mobile-r){
-           margin-left: $nav--margin-left-mobile-r;
-         }
-         @media (max-width: $breakpoint--mobile-s) {
-           margin-left: $nav--margin-left-mobile-s;
-         }
-
-         ul{
-            display: flex;
-            @media (max-width: $breakpoint--mobile-r){
-              display: block;
-            }
-            list-style-type: none;
-            width: 100%;
-            margin: auto;
-
-
-
-            li{
-               text-align: center;
-               @media (max-width: $breakpoint--mobile-r){
-                 text-align: right;
-                 line-height: 1.5;
-               }
-
-               // width: 100px;
-               @media (min-width: $breakpoint--laptop-r + 1) {
-                  width: 8vw;
-               }
-               @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-                  width: 10.5vw;
-               }
-
-               @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-                  width: 14vw;
-               }
-               @media (max-width: $breakpoint--mobile-r){
-                  width: 100px;
-               }
-
-
-
-
-
-               a {
-                  font-family: $nav--font-family;
-                  font-weight: $nav--font-weight;
-                  color: $text-color;
-
-                  text-transform: uppercase;
-                  text-decoration: none;
-                  line-height: solid;
-
-                  font-size: 16px;
-                  @media (max-width: $breakpoint--tablet){
-                    font-size: 12px;
-                  }
-
-                  &:hover{
-                     color:grey;
-                  }
-
-
-               }
-
-
-            }
-
-            li:last-child a{
-               color: red;
-            }
-
-         }
-
-
-      }
-
-
-
+      height: 100%;
+      opacity: 0.2;
+      background: url("../img/bg.png") no-repeat center center;
+      background-size: cover;
+      // @media (min-width: $breakpoint--laptop-r - 20) {
+      //   transform: scale(1.1);
+      // }
    }
-
-
+   */
    #particle-container {
       z-index: -1;
    }
+}
+//end of body
+// =========================================================
+// Header
+// =========================================================
 
-   .particle {
-   	position: absolute;
-    	border-radius: 50%;
+.animated-header {
+   //animation fade in on load
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInTop {
+   0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50px);
    }
 
-   @for $i from 1 through 25 {
-   	@keyframes particle-animation-#{$i} {
-   		100% {
-   			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
-   		}
-   	}
-
-   	.particle:nth-child(#{$i}){
-   		animation: particle-animation-#{$i} 60s infinite;
-   		$size: random(7) + 5 + px;
-   		opacity: random(50)/100;
-   		height: $size;
-   		width: $size;
-   		animation-delay: -$i * .5s;
-   		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 3px));
-   		background: red;
-   	}
+   100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+   }
+}
+@keyframes fadeInTop {
+   0% {
+      opacity: 0;
+      transform: translateY(-50px);
    }
 
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.fadeInTop {
+   -webkit-animation-name: fadeInTop;
+   animation-name: fadeInTop;
+}
+
+header {
+   //margin: 3vw auto auto 10vw;
+   position: absolute;
+   //adjust top and left margin based on the viewport size
+   // @media (min-width: $breakpoint--laptop-r + 1) {
+   //    margin-top: $header--margin-top-laptop;
+   //    margin-left: $header--margin-left-laptop;
+   // }
+   // @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+   //    margin-top: $header--margin-top-tablet;
+   //    margin-left: $header--margin-left-tablet;
+   // }
+   // @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+   //    margin-top: $header--margin-top-tablet;
+   //    margin-left: $header--margin-left-tablet;
+   // }
+   // @media (max-width: $breakpoint--mobile-r){
+   //    margin-top: $header--margin-top-mobile;
+   //    margin-left: $header--margin-left-mobile;
+   // }
+   #april {
+      // width: 40%;
+      /******* breakpoints
+      @media (min-width: $breakpoint--laptop-r + 1) {
+         margin-left: $name--margin-left-laptop-l;
+         width: 50%;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+         margin-left: $name--margin-left-laptop-r;
+         width: 50%;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         margin-left: $name--margin-left-tablet;
+         width: 30%;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         margin-left: $name--margin-left-mobile;
+         width: 30%;
+      }
+
+      breakpoints******/
+      position: absolute;
+      top: 20vh;
+      left: 30vw;
+      text-decoration: none;
+      color: coral;
+      font-family: $header--font-family;
+      font-weight: $header--font-weight;
+      font-size: $header--font-size;
+      letter-spacing: 10px;
+   }
+
+   #ding {
+      position: absolute;
+      top: 50vh;
+      left: 40vw;
+      text-decoration: none;
+      color: coral;
+      font-family: $header--font-family;
+      font-weight: $header--font-weight;
+      font-size: $header--font-size;
+      letter-spacing: 10px;
+   }
+   //end of h1
+}
+//end of header
+// =========================================================
+// Nav
+// =========================================================
+
+.animated-nav {
+   //animation fade in on load
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50px);
+   }
+
+   100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+   }
+}
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateY(-50px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.fadeInRight {
+   -webkit-animation-name: fadeInRight;
+   animation-name: fadeInRight;
+}
+
+nav {
+   z-index: 5;
+   margin-top: 3vh;
+   width: 100vh;
+   height: 45px;
+   position: fixed;
+   -webkit-transform-origin: left top;
+   -webkit-transform: rotate(90deg) translateX(50px) translateY(-1370px);
+   /****breakpoints
+   @media (min-width: $breakpoint--laptop-r + 1) {
+      margin-left: $nav--margin-left-laptop-l;
+   }
+   @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
+      margin-left: $nav--margin-left-laptop-r;
+   }
+
+   @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+      margin-left: $nav--margin-left-tablet;
+   }
+   @media (min-width: $breakpoint--mobile-s) and (max-width: $breakpoint--mobile-r){
+     margin-left: $nav--margin-left-mobile-r;
+   }
+   @media (max-width: $breakpoint--mobile-s) {
+     margin-left: $nav--margin-left-mobile-s;
+   }
+   *****/
+   ul {
+      li {
+         margin-right: 20px;
+         float: left;
+         height: 100%;
+         line-height: 45px;
+
+         a {
+            font-family: $nav--font-family;
+            font-weight: $nav--font-weight;
+            color: $text-color;
+            text-decoration: none;
+            line-height: solid;
+            letter-spacing: 5px;
+            font-size: 16px;
+            // @media (max-width: $breakpoint--tablet){
+            //   font-size: 12px;
+            // }
+            &:hover {
+               color: grey;
+            }
+         }
+
+         p {
+            letter-spacing: -5px;
+         }
+      }
+   }
+}
+//end of nav
+// =========================================================
+// Main
+// =========================================================
+
+.animated-main {
+   //animation fade in on load
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      -webkit-transform: translateY(50px);
+   }
+
+   100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+   }
+}
+@keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(50px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.fadeInBottom {
+   -webkit-animation-name: fadeInBottom;
+   animation-name: fadeInBottom;
+}
+
+main {
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+
+   #three-d {
+      position: absolute;
+      top: 2vh;
+      left: 3vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      text-decoration: none;
+      letter-spacing: 5px;
+      font-size: $main--font-size;
+      // @media (max-width: $breakpoint--tablet){
+      //   font-size: 12px;
+      // }
+      &:hover {
+         color: grey;
+      }
+   }
+
+   #gd {
+      position: absolute;
+      top: 2vh;
+      left: 80vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      text-decoration: none;
+      letter-spacing: 5px;
+      font-size: $main--font-size;
+      // @media (max-width: $breakpoint--tablet){
+      //   font-size: 12px;
+      // }
+      &:hover {
+         color: grey;
+      }
+   }
+
+   #mg {
+      position: absolute;
+      top: 90vh;
+      left: 3vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      text-decoration: none;
+      letter-spacing: 5px;
+      font-size: $main--font-size;
+      // @media (max-width: $breakpoint--tablet){
+      //   font-size: 12px;
+      // }
+      &:hover {
+         color: grey;
+      }
+   }
+
+   #about {
+      position: absolute;
+      top: 90vh;
+      left: 90vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      text-decoration: none;
+      letter-spacing: 5px;
+      font-size: $main--font-size;
+      // @media (max-width: $breakpoint--tablet){
+      //   font-size: 12px;
+      // }
+      &:hover {
+         color: grey;
+      }
+   }
+
+   #empty-three-d {
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      z-index: 3;
+
+      &:hover {
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+
+   #empty-gd {
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      left: 50vw;
+      z-index: 3;
+
+      &:hover {
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+
+   #empty-mg {
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      top: 50vh;
+      z-index: 3;
+
+      &:hover {
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+
+   #empty-about {
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      z-index: 3;
+
+      &:hover {
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+
+   .thumbnail-flex {
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 250px;
+         height: 250px;
+      }
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+
+   .thumbnail-flex-2 {
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 250px;
+         height: 250px;
+      }
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+
+   #about-flex {
+      //background-color: white;
+      z-index: 2;
+      position: absolute;
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+      // img{
+      //    width: 250px;
+      //    height: 250px;
+      // }
+      p {
+         color: black;
+         font-family: "Dosis", sans-serif;
+         font-size: 20px;
+         padding-bottom: 10px;
+         opacity: 0;
+         transition: opacity 1s ease-in-out;
+         -moz-transition: opacity 1s ease-in-out;
+         -webkit-transition: opacity 1s ease-in-out;
+      }
+   }
+
+   #about-flex-2 {
+      //background-color: white;
+      z-index: 2;
+      position: absolute;
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: space-around;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+      // img{
+      //    width: 250px;
+      //    height: 250px;
+      // }
+      p {
+         color: black;
+         font-family: "Dosis", sans-serif;
+         font-size: 20px;
+         padding-bottom: 10px;
+         opacity: 0;
+         transition: opacity 1s ease-in-out;
+         -moz-transition: opacity 1s ease-in-out;
+         -webkit-transition: opacity 1s ease-in-out;
+      }
+   }
+
+   #three-d:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #gd:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #mg:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #about:hover + #about-text {
+      p {
+         opacity: 1.0;
+         transition: opacity 0.55s ease-in-out;
+         -moz-transition: opacity 0.55s ease-in-out;
+         -webkit-transition: opacity 0.55s ease-in-out;
+      }
+   }
+
+   #empty-three-d:hover + .thumbnail-flex-2 {
+      display: flex;
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #empty-gd:hover + .thumbnail-flex-2 {
+      display: flex;
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #empty-mg:hover + .thumbnail-flex-2 {
+      display: flex;
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
+   #empty-about:hover + #about-text {
+      p {
+         opacity: 1.0;
+         transition: opacity 0.55s ease-in-out;
+         -moz-transition: opacity 0.55s ease-in-out;
+         -webkit-transition: opacity 0.55s ease-in-out;
+      }
+   }
+         /*.thumbnail-flex-2:hover{
+   display;
+flex:display;
+1:opacity;
+opacity 0.55s ease-in-out:transition;
+opacity 0.55s ease-in-out:-moz-transition;
+opacity 0.55s ease-in-out:-webkit-transition
+}
+*/
 
 
+}
+//end of main
+// =========================================================
+// Lightbox
+// =========================================================
 
+html.lb-disable-scrolling {
+   overflow: hidden;
+   /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
+   position: fixed;
+   height: 100vh;
+   width: 100vw;
+}
 
+.lightboxOverlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+   background-color: black;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+   opacity: 0.8;
+   display: none;
+}
+
+.lightbox {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   z-index: 10000;
+   text-align: center;
+   line-height: 0;
+   font-weight: normal;
+}
+
+.lightbox .lb-image {
+   display: block;
+   height: auto;
+   max-width: inherit;
+   max-height: none;
+   border-radius: 3px;
+   /* Image border */
+   // border: 4px solid white;
+}
+
+.lightbox a img {
+   border: none;
+}
+
+.lb-outerContainer {
+   position: relative;
+   *zoom: 1;
+   width: 250px;
+   height: 250px;
+   margin: 0 auto;
+   border-radius: 4px;
+   /* Background color behind image.
+     This is visible during transitions. */
+   background-color: pink;
+}
+
+.lb-outerContainer:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.lb-loader {
+   position: absolute;
+   top: 43%;
+   left: 0;
+   height: 25%;
+   width: 100%;
+   text-align: center;
+   line-height: 0;
+}
+
+.lb-cancel {
+   display: block;
+   width: 32px;
+   height: 32px;
+   margin: 0 auto;
+   background: url("../images/loading.gif") no-repeat;
+}
+
+.lb-nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 10;
+}
+
+.lb-container > .nav {
+   left: 0;
+}
+
+.lb-nav a {
+   outline: none;
+   background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+}
+
+.lb-next,
+.lb-prev {
+   height: 100%;
+   cursor: pointer;
+   display: block;
+}
+
+.lb-nav a.lb-prev {
+   width: 34%;
+   left: 0;
+   float: left;
+   background: url("../images/prev.png") left 48% no-repeat;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+   opacity: 0;
+   -webkit-transition: opacity 0.6s;
+   -moz-transition: opacity 0.6s;
+   -o-transition: opacity 0.6s;
+   transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+   opacity: 1;
+}
+
+.lb-nav a.lb-next {
+   width: 64%;
+   right: 0;
+   float: right;
+   background: url("../images/next.png") right 48% no-repeat;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+   opacity: 0;
+   -webkit-transition: opacity 0.6s;
+   -moz-transition: opacity 0.6s;
+   -o-transition: opacity 0.6s;
+   transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+   opacity: 1;
+}
+
+.lb-dataContainer {
+   margin: 0 auto;
+   padding-top: 5px;
+   *zoom: 1;
+   width: 100%;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.lb-data {
+   padding: 0 4px;
+   color: #ccc;
+}
+
+.lb-data .lb-details {
+   width: 85%;
+   float: left;
+   text-align: left;
+   line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+   font-family: "Dosis", sans-serif;
+   font-size: 20px;
+   font-weight: 700;
+   //line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+   color: black;
+}
+
+.lb-data .lb-number {
+   display: block;
+   clear: left;
+   padding-bottom: 1em;
+   font-size: 12px;
+   color: #999999;
+}
+
+.lb-data .lb-close {
+   display: block;
+   float: right;
+   width: 30px;
+   height: 30px;
+   background: url("../images/close.png") top right no-repeat;
+   text-align: right;
+   outline: none;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+   opacity: 0.7;
+   -webkit-transition: opacity 0.2s;
+   -moz-transition: opacity 0.2s;
+   -o-transition: opacity 0.2s;
+   transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+   cursor: pointer;
+   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+   opacity: 1;
 }
