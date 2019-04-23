@@ -230,8 +230,17 @@ main {
   /************************ Empty Hover Boxes ************************/
   /************************ Flex Boxes ************************/
   /************************ Hover React Boxes ************************/
+         /*.thumbnail-flex-2:hover{
+   display;
+flex:display;
+1:opacity;
+opacity 0.55s ease-in-out:transition;
+opacity 0.55s ease-in-out:-moz-transition;
+opacity 0.55s ease-in-out:-webkit-transition
 }
-main #three-d a {
+*/
+}
+main #three-d {
   position: absolute;
   top: 2vh;
   left: 3vw;
@@ -241,9 +250,8 @@ main #three-d a {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 34px;
-  z-index: 4;
 }
-main #three-d a:hover {
+main #three-d:hover {
   color: grey;
 }
 main #gd {
@@ -292,7 +300,7 @@ main #empty-three-d {
   width: 50vw;
   height: 50vh;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
 }
 main #empty-three-d:hover {
   background-color: lightpink;
@@ -303,7 +311,7 @@ main #empty-gd {
   height: 50vh;
   position: absolute;
   left: 50vw;
-  z-index: 3;
+  z-index: 2;
 }
 main #empty-gd:hover {
   background-color: lightpink;
@@ -314,7 +322,7 @@ main #empty-mg {
   height: 50vh;
   position: absolute;
   top: 50vh;
-  z-index: 3;
+  z-index: 2;
 }
 main #empty-mg:hover {
   background-color: lightpink;
@@ -326,7 +334,7 @@ main #empty-about {
   position: absolute;
   top: 50vh;
   left: 50vw;
-  z-index: 3;
+  z-index: 2;
 }
 main #empty-about:hover {
   background-color: lightpink;
@@ -334,7 +342,7 @@ main #empty-about:hover {
 }
 main .thumbnail-flex {
   background-color: white;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   display: flex;
   flex-flow: row wrap;
@@ -348,13 +356,13 @@ main .thumbnail-flex {
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex img {
+main .thumbnail-flex a img {
   width: 250px;
   height: 250px;
 }
 main .thumbnail-flex-2 {
   background-color: white;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   margin: auto;
   display: flex;
@@ -369,12 +377,12 @@ main .thumbnail-flex-2 {
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex-2 img {
+main .thumbnail-flex-2 a img {
   width: 250px;
   height: 250px;
 }
 main #about-flex {
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   left: 30vw;
   top: 15vh;
@@ -409,13 +417,6 @@ main #empty-mg:hover + .thumbnail-flex-2 {
 }
 main #empty-about:hover + #about-text {
   opacity: 1.0;
-  transition: opacity 0.55s ease-in-out;
-  -moz-transition: opacity 0.55s ease-in-out;
-  -webkit-transition: opacity 0.55s ease-in-out;
-}
-main .thumbnail-flex-2:hover {
-  display: flex;
-  opacity: 1;
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
