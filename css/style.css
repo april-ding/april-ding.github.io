@@ -1,189 +1,33 @@
-/***** ISSUES TO BE FIXED
-1. logo needs to link to the home page
-2. remove .html extensions
-3. make ABOUT red
-4. possibly make the bottom an animation and remove the jquery when its not laptop format
-5. responsive issues - the relationship between april ding and nav (and li widths)
-6. add $nav--margin-left-mobile-s: VALUEvw;
-*****/
-@import url("https://fonts.googleapis.com/css?family=Passion+One");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
+/*
+   1. Which positioning should i use for contents inside of main
+   2. Transferring responsiveness from Figma to code
+   3. Best way to do the moving squares
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
 body {
   width: 100vw;
   height: 100vh;
   margin: auto;
   overflow: hidden;
-}
-body .bg {
-  width: 100%;
-  height: 100%;
   position: fixed;
-  top: 40vh;
-  left: 0;
-  z-index: -2;
-  background: url("../img/asset-9.png") no-repeat center center;
-  background-size: cover;
-}
-@media (min-width: 1180px) {
-  body .bg {
-    transform: scale(1.1);
+  /*
+  #bg {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     opacity: 0.2;
+     background: url("../img/bg.png") no-repeat center center;
+     background-size: cover;
+     // @media (min-width: $breakpoint--laptop-r - 20) {
+     //   transform: scale(1.1);
+     // }
   }
-}
-body header {
-  width: 100%;
-  display: flex;
-  margin: auto;
-}
-@media (min-width: 1201px) {
-  body header {
-    margin-top: 1.5vw;
-    margin-left: 3vw;
-  }
-}
-@media (min-width: 801px) and (max-width: 1200px) {
-  body header {
-    margin-top: 3vw;
-    margin-left: 4vw;
-  }
-}
-@media (min-width: 425px) and (max-width: 800px) {
-  body header {
-    margin-top: 3vw;
-    margin-left: 4vw;
-  }
-}
-@media (max-width: 425px) {
-  body header {
-    margin-top: 8vw;
-    margin-left: 8vw;
-  }
-}
-body header img {
-  width: 35px;
-  height: 73px;
-}
-body header h1 {
-  margin-top: 1.5vw;
-}
-@media (min-width: 1201px) {
-  body header h1 {
-    margin-left: 2vw;
-    width: 50%;
-  }
-}
-@media (min-width: 801px) and (max-width: 1200px) {
-  body header h1 {
-    margin-left: 2.5vw;
-    width: 50%;
-  }
-}
-@media (min-width: 425px) and (max-width: 800px) {
-  body header h1 {
-    margin-left: 3.5vw;
-    width: 30%;
-  }
-}
-@media (max-width: 425px) {
-  body header h1 {
-    margin-left: 6.5vw;
-    width: 30%;
-  }
-}
-body header h1 a {
-  text-decoration: none;
-  color: black;
-  font-family: "Passion One", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-}
-body header nav {
-  width: 100%;
-  margin-top: 2.5vw;
-}
-@media (min-width: 1201px) {
-  body header nav {
-    margin-left: 41vw;
-  }
-}
-@media (min-width: 801px) and (max-width: 1200px) {
-  body header nav {
-    margin-left: 25vw;
-  }
-}
-@media (min-width: 425px) and (max-width: 800px) {
-  body header nav {
-    margin-left: 10vw;
-  }
-}
-@media (min-width: 365px) and (max-width: 425px) {
-  body header nav {
-    margin-left: 30vw;
-  }
-}
-@media (max-width: 365px) {
-  body header nav {
-    margin-left: 20vw;
-  }
-}
-body header nav ul {
-  display: flex;
-  list-style-type: none;
-  width: 100%;
-  margin: auto;
-}
-@media (max-width: 425px) {
-  body header nav ul {
-    display: block;
-  }
-}
-body header nav ul li {
-  text-align: center;
-}
-@media (max-width: 425px) {
-  body header nav ul li {
-    text-align: right;
-    line-height: 1.5;
-  }
-}
-@media (min-width: 1201px) {
-  body header nav ul li {
-    width: 8vw;
-  }
-}
-@media (min-width: 801px) and (max-width: 1200px) {
-  body header nav ul li {
-    width: 10.5vw;
-  }
-}
-@media (min-width: 425px) and (max-width: 800px) {
-  body header nav ul li {
-    width: 14vw;
-  }
-}
-@media (max-width: 425px) {
-  body header nav ul li {
-    width: 100px;
-  }
-}
-body header nav ul li a {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: solid;
-  font-size: 16px;
-}
-@media (max-width: 800px) {
-  body header nav ul li a {
-    font-size: 12px;
-  }
-}
-body header nav ul li a:hover {
-  color: grey;
-}
-body header nav ul li:last-child a {
-  color: red;
+  */
 }
 body #particle-container {
   z-index: -1;
