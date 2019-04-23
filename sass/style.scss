@@ -16,7 +16,7 @@
 // =========================================================
 $header--font-family: 'Dosis', sans-serif;
 $header--font-weight: 800; //bold
-$header--font-size: 200px;
+$header--font-size: 220px;
 $text-color: black;
 $nav--font-family: 'Dosis', sans-serif;
 $nav--font-weight: 600;
@@ -158,7 +158,7 @@ header {
 
       breakpoints******/
       position: absolute;
-      top: 20vh;
+      top: 15vh;
       left: 30vw;
       text-decoration: none;
       color: coral;
@@ -379,6 +379,7 @@ main {
          text-decoration: none;
          letter-spacing: 5px;
          font-size: $main--font-size;
+         line-height: 50px;
          // @media (max-width: $breakpoint--tablet){
          //   font-size: 12px;
          // }
@@ -494,7 +495,6 @@ main {
       width: 45vw;
       height: 45vw;
 
-
       img {
          width: 250px;
          height: 250px;
@@ -533,11 +533,12 @@ main {
       -webkit-transition: opacity 1s ease-in-out;
    }
 
+
    #about-flex {
       //background-color: white;
       z-index: 2;
       position: absolute;
-      // display: flex;
+      display: block;
       // flex-flow: row wrap;
       // justify-content: space-around;
       left: 30vw;
@@ -548,75 +549,20 @@ main {
       //    width: 250px;
       //    height: 250px;
       // }
-
+      .about-text {
          color: black;
          font-family: "Dosis", sans-serif;
          font-size: 20px;
+         line-height: 24px;
          padding-bottom: 10px;
-         opacity: 0;
-         transition: opacity 1s ease-in-out;
-         -moz-transition: opacity 1s ease-in-out;
-         -webkit-transition: opacity 1s ease-in-out;
-
+      }
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
    }
 
-   // #about-flex-2 {
-   //    //background-color: white;
-   //    z-index: 2;
-   //    position: absolute;
-   //    // display: flex;
-   //    // flex-flow: row wrap;
-   //    // justify-content: space-around;
-   //    left: 30vw;
-   //    top: 15vh;
-   //    width: 45vw;
-   //    height: 45vw;
-   //    // img{
-   //    //    width: 250px;
-   //    //    height: 250px;
-   //    // }
-   //    p {
-   //       color: black;
-   //       font-family: "Dosis", sans-serif;
-   //       font-size: 20px;
-   //       padding-bottom: 10px;
-   //       opacity: 0;
-   //       transition: opacity 1s ease-in-out;
-   //       -moz-transition: opacity 1s ease-in-out;
-   //       -webkit-transition: opacity 1s ease-in-out;
-   //    }
-   // }
-
    /************************ Hover React Boxes ************************/
-   // #three-d:hover + .thumbnail-flex {
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #gd:hover + .thumbnail-flex {
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #mg:hover + .thumbnail-flex {
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #about:hover + #about-text {
-   //    p {
-   //       opacity: 1.0;
-   //       transition: opacity 0.55s ease-in-out;
-   //       -moz-transition: opacity 0.55s ease-in-out;
-   //       -webkit-transition: opacity 0.55s ease-in-out;
-   //    }
-   // }
 
    #empty-three-d:hover + .thumbnail-flex-2 {
       opacity: 1.0;
@@ -641,7 +587,7 @@ main {
       -webkit-transition: opacity 0.55s ease-in-out;
    }
 
-   #empty-about:hover + #about-text {
+   #empty-about:hover + #about-flex {
 
          opacity: 1.0;
          transition: opacity 0.55s ease-in-out;
