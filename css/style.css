@@ -246,7 +246,10 @@ main #three-d a {
 main #three-d a:hover {
   color: grey;
 }
-main #gd {
+main #three-d a:after {
+  text-decoration: none;
+}
+main #gd a {
   position: absolute;
   top: 2vh;
   left: 80vw;
@@ -256,11 +259,15 @@ main #gd {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 34px;
+  z-index: 4;
 }
-main #gd:hover {
+main #gd a:hover {
   color: grey;
 }
-main #mg {
+main #gd a:after {
+  text-decoration: none;
+}
+main #mg a {
   position: absolute;
   top: 90vh;
   left: 3vw;
@@ -270,9 +277,13 @@ main #mg {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 34px;
+  z-index: 4;
 }
-main #mg:hover {
+main #mg a:hover {
   color: grey;
+}
+main #mg a:after {
+  text-decoration: none;
 }
 main #about {
   position: absolute;
