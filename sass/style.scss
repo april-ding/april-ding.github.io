@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 // =========================================================
 // Variables
 // =========================================================
@@ -171,7 +172,7 @@ header {
 
       text-decoration: none;
 
-      color: crimson;
+      color: Coral;
       font-family: $header--font-family;
       font-weight: $header--font-weight;
       font-size: $header--font-size;
@@ -187,7 +188,7 @@ header {
 
       text-decoration: none;
 
-      color: crimson;
+      color: Coral;
       font-family: $header--font-family;
       font-weight: $header--font-weight;
       font-size: $header--font-size;
@@ -413,127 +414,256 @@ main {
    }
 
 
-         #empty-three-d{
-            width: 50vw;
-            height: 50vh;
-            position: absolute;
-            z-index: 3;
-            &:hover{
-               background-color: lightpink;
-               opacity: 0.1;
-            }
-         }
+   #empty-three-d{
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      z-index: 3;
+      &:hover{
+         background-color: lightpink;
+         opacity: 0.1;
 
-         #empty-gd{
-            width: 50vw;
-            height: 50vh;
-            position: absolute;
-            left: 50vw;
-            z-index: 3;
-            &:hover{
-               background-color: lightpink;
-               opacity: 0.1;
-            }
-         }
+      }
 
 
+   }
+   #empty-gd{
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      left: 50vw;
+      z-index: 3;
+      &:hover{
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+   #empty-mg{
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      top: 50vh;
+      z-index: 3;
+      &:hover{
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
+   #empty-about{
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      z-index: 3;
+      &:hover{
+         background-color: lightpink;
+         opacity: 0.1;
+      }
+   }
 
-         .thumbnail-flex {
-            background-color: white;
+   .thumbnail-flex {
+      background-color: white;
 
-            z-index: 2;
-            position: absolute;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
 
-            left: 30vw;
-            top: 15vh;
-            width: 45vw;
-            height: 45vw;
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
 
-            img{
-               width: 250px;
-               height: 250px;
-            }
-
-
-            opacity: 0;
-
-            transition: opacity 1s ease-in-out;
-            -moz-transition: opacity 1s ease-in-out;
-            -webkit-transition: opacity 1s ease-in-out;
-         }
-
-
-         .thumbnail-flex-2 {
-            background-color: white;
-
-            z-index: 2;
-            position: absolute;
-            margin: auto;
-
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
-
-            left: 30vw;
-            top: 15vh;
-            width: 45vw;
-            height: 45vw;
-
-            img{
-               width: 250px;
-               height: 250px;
-            }
-
-
-            opacity: 0;
-
-            transition: opacity 1s ease-in-out;
-            -moz-transition: opacity 1s ease-in-out;
-            -webkit-transition: opacity 1s ease-in-out;
-         }
-
-         #three-d:hover + .thumbnail-flex {
-
-            opacity: 1.0;
-            transition: opacity 0.55s ease-in-out;
-            -moz-transition: opacity 0.55s ease-in-out;
-            -webkit-transition: opacity 0.55s ease-in-out;
-         }
-         #gd:hover + .thumbnail-flex {
-
-            opacity: 1.0;
-            transition: opacity 0.55s ease-in-out;
-            -moz-transition: opacity 0.55s ease-in-out;
-            -webkit-transition: opacity 0.55s ease-in-out;
-         }
-
-         #empty-three-d:hover + .thumbnail-flex-2 {
-
-            opacity: 1.0;
-            transition: opacity 0.55s ease-in-out;
-            -moz-transition: opacity 0.55s ease-in-out;
-            -webkit-transition: opacity 0.55s ease-in-out;
-         }
-         #empty-gd:hover + .thumbnail-flex-2 {
-
-            opacity: 1.0;
-            transition: opacity 0.55s ease-in-out;
-            -moz-transition: opacity 0.55s ease-in-out;
-            -webkit-transition: opacity 0.55s ease-in-out;
-         }
-
-         // .thumbnail-flex-2:hover{
-         //   opacity: 1;
-         //   transition: opacity 0.55s ease-in-out;
-         //   -moz-transition: opacity 0.55s ease-in-out;
-         //   -webkit-transition: opacity 0.55s ease-in-out;
-         // }
+      img{
+         width: 250px;
+         height: 250px;
+      }
 
 
 
+
+      opacity: 0;
+
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+   .thumbnail-flex-2 {
+      background-color: white;
+
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      img{
+         width: 250px;
+         height: 250px;
+      }
+
+
+      opacity: 0;
+
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+
+   #about-flex {
+      //background-color: white;
+
+      z-index: 2;
+      position: absolute;
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: space-around;
+
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      // img{
+      //    width: 250px;
+      //    height: 250px;
+      // }
+      p {
+         color: black;
+         font-family: "Dosis", sans-serif;
+         font-size: 20px;
+         padding-bottom: 10px;
+
+         opacity: 0;
+
+         transition: opacity 1s ease-in-out;
+         -moz-transition: opacity 1s ease-in-out;
+         -webkit-transition: opacity 1s ease-in-out;
+      }
+
+
+
+   }
+   #about-flex-2 {
+      //background-color: white;
+
+      z-index: 2;
+      position: absolute;
+      // display: flex;
+      // flex-flow: row wrap;
+      // justify-content: space-around;
+
+      left: 30vw;
+      top: 15vh;
+      width: 45vw;
+      height: 45vw;
+
+      // img{
+      //    width: 250px;
+      //    height: 250px;
+      // }
+      p {
+         color: black;
+         font-family: "Dosis", sans-serif;
+         font-size: 20px;
+         padding-bottom: 10px;
+
+         opacity: 0;
+
+         transition: opacity 1s ease-in-out;
+         -moz-transition: opacity 1s ease-in-out;
+         -webkit-transition: opacity 1s ease-in-out;
+      }
+
+
+
+   }
+
+
+   #three-d:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #gd:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #mg:hover + .thumbnail-flex {
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #about:hover + #about-text {
+
+      p{
+         opacity: 1.0;
+         transition: opacity 0.55s ease-in-out;
+         -moz-transition: opacity 0.55s ease-in-out;
+         -webkit-transition: opacity 0.55s ease-in-out;
+      }
+   }
+
+
+
+   #empty-three-d:hover + .thumbnail-flex-2 {
+      display:flex;
+
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #empty-gd:hover + .thumbnail-flex-2 {
+      display:flex;
+
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #empty-mg:hover + .thumbnail-flex-2 {
+      display:flex;
+
+      opacity: 1.0;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+   #empty-about:hover + #about-text {
+      p{
+         opacity: 1.0;
+         transition: opacity 0.55s ease-in-out;
+         -moz-transition: opacity 0.55s ease-in-out;
+         -webkit-transition: opacity 0.55s ease-in-out;
+      }
+
+
+   }
+
+
+
+   /*.thumbnail-flex-2:hover{
+      display: flex;
+     opacity: 1;
+     transition: opacity 0.55s ease-in-out;
+     -moz-transition: opacity 0.55s ease-in-out;
+     -webkit-transition: opacity 0.55s ease-in-out;
+   }
+*/
 
 
 
