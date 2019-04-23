@@ -11,6 +11,7 @@
 //   $(".thumbnail-flex-2").addClass('permahover');
 // });
 
+//merge test
 //p5
 var canvas;
 let rectX = 0;
