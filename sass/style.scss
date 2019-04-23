@@ -360,43 +360,58 @@ main {
          &:hover {
             color: grey;
          }
+         &:after{
+            text-decoration: none;
+         }
          z-index: 4;
       }
 
 
    }
    #gd {
-      position: absolute;
-      top: 2vh;
-      left: 80vw;
-      font-family: $nav--font-family;
-      font-weight: $main--font-weight;
-      color: $text-color;
-      text-decoration: none;
-      letter-spacing: 5px;
-      font-size: $main--font-size;
-      // @media (max-width: $breakpoint--tablet){
-      //   font-size: 12px;
-      // }
-      &:hover {
-         color: grey;
+      a{
+         position: absolute;
+         top: 2vh;
+         left: 3vw;
+         font-family: $nav--font-family;
+         font-weight: $main--font-weight;
+         color: $text-color;
+         text-decoration: none;
+         letter-spacing: 5px;
+         font-size: $main--font-size;
+         // @media (max-width: $breakpoint--tablet){
+         //   font-size: 12px;
+         // }
+         &:hover {
+            color: grey;
+         }
+         &:after{
+            text-decoration: none;
+         }
+         z-index: 4;
       }
    }
    #mg {
-      position: absolute;
-      top: 90vh;
-      left: 3vw;
-      font-family: $nav--font-family;
-      font-weight: $main--font-weight;
-      color: $text-color;
-      text-decoration: none;
-      letter-spacing: 5px;
-      font-size: $main--font-size;
-      // @media (max-width: $breakpoint--tablet){
-      //   font-size: 12px;
-      // }
-      &:hover {
-         color: grey;
+      a{
+         position: absolute;
+         top: 2vh;
+         left: 3vw;
+         font-family: $nav--font-family;
+         font-weight: $main--font-weight;
+         color: $text-color;
+         text-decoration: none;
+         letter-spacing: 5px;
+         font-size: $main--font-size;
+         // @media (max-width: $breakpoint--tablet){
+         //   font-size: 12px;
+         // }
+         &:hover {
+            color: grey;
+         }
+         &:after{
+            text-decoration: none;
+         }
+         z-index: 4;
       }
    }
    #about {
