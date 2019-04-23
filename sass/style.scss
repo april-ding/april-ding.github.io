@@ -324,22 +324,46 @@ main {
    position: absolute;
 
    /************************ Nav Boxes ************************/
+   // .links{
+   //    p{
+   //       z-index: 5;
+   //       font-family: $nav--font-family;
+   //       font-weight: $main--font-weight;
+   //       color: $text-color;
+   //       opacity: 0.2;
+   //       text-decoration: none;
+   //       letter-spacing: 5px;
+   //       font-size: 16px;
+   //       position: absolute;
+   //       margin-top: 10vh;
+   //       margin-left: 3vw;
+   //       width: 50px;
+   //       height:30px;
+   //
+   //    }
+   //
+   // }
    #three-d {
-      position: absolute;
-      top: 2vh;
-      left: 3vw;
-      font-family: $nav--font-family;
-      font-weight: $main--font-weight;
-      color: $text-color;
-      text-decoration: none;
-      letter-spacing: 5px;
-      font-size: $main--font-size;
-      // @media (max-width: $breakpoint--tablet){
-      //   font-size: 12px;
-      // }
-      &:hover {
-         color: grey;
+      a{
+         position: absolute;
+         top: 2vh;
+         left: 3vw;
+         font-family: $nav--font-family;
+         font-weight: $main--font-weight;
+         color: $text-color;
+         text-decoration: none;
+         letter-spacing: 5px;
+         font-size: $main--font-size;
+         // @media (max-width: $breakpoint--tablet){
+         //   font-size: 12px;
+         // }
+         &:hover {
+            color: grey;
+         }
+         z-index: 4;
       }
+
+
    }
    #gd {
       position: absolute;
@@ -455,10 +479,13 @@ main {
       width: 45vw;
       height: 45vw;
 
+
       img {
          width: 250px;
          height: 250px;
       }
+
+
       opacity: 0;
       transition: opacity 1s ease-in-out;
       -moz-transition: opacity 1s ease-in-out;
@@ -482,6 +509,9 @@ main {
          width: 250px;
          height: 250px;
       }
+
+
+
       opacity: 0;
       transition: opacity 1s ease-in-out;
       -moz-transition: opacity 1s ease-in-out;
@@ -604,15 +634,15 @@ main {
          -webkit-transition: opacity 0.55s ease-in-out;
 
    }
-         /*.thumbnail-flex-2:hover{
-   display;
-flex:display;
-1:opacity;
-opacity 0.55s ease-in-out:transition;
-opacity 0.55s ease-in-out:-moz-transition;
-opacity 0.55s ease-in-out:-webkit-transition
-}
-*/
+   .thumbnail-flex-2:hover{
+
+      display: flex;
+      opacity: 1;
+      transition: opacity 0.55s ease-in-out;
+      -moz-transition: opacity 0.55s ease-in-out;
+      -webkit-transition: opacity 0.55s ease-in-out;
+   }
+
 
 
 }
