@@ -19,41 +19,46 @@ let rectY = 0;
 let patternNum = 1;
 let sqSize = 10;
 
-function setup(){
+function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
 
 }
-function timeIt(){
-    rectX = int(sqSize*random(0, windowWidth/sqSize));
-    rectY = int(sqSize*random(0, windowHeight/sqSize));
+
+function timeIt() {
+    rectX = int(sqSize * random(0, windowWidth / sqSize));
+    rectY = int(sqSize * random(0, windowHeight / sqSize));
 }
 
-function pattern1(){
+function pattern1() {
     rect(rectX, rectY, sqSize, sqSize);
     rect(rectX + sqSize, rectY, sqSize, sqSize);
     rect(rectX + sqSize, rectY + sqSize, sqSize, sqSize);
 }
-function pattern2(){
-     rect(rectX, rectY, sqSize, sqSize);
+
+function pattern2() {
+    rect(rectX, rectY, sqSize, sqSize);
     rect(rectX + sqSize, rectY, sqSize, sqSize);
 
 }
-function pattern3(){
-   rect(rectX, rectY, sqSize, sqSize);
+
+function pattern3() {
+    rect(rectX, rectY, sqSize, sqSize);
     rect(rectX + sqSize, rectY + sqSize, sqSize, sqSize);
-    rect(rectX + sqSize*2, rectY + sqSize*2, sqSize, sqSize);
+    rect(rectX + sqSize * 2, rectY + sqSize * 2, sqSize, sqSize);
 }
-function pattern4(){
+
+function pattern4() {
     rect(rectX, rectY, sqSize, sqSize);
     rect(rectX, rectY + sqSize, sqSize, sqSize);
     rect(rectX, rectY + sqSize, sqSize, sqSize);
     rect(rectX, rectY + sqSize, sqSize, sqSize);
 }
-function pattern5(){
+
+function pattern5() {
     rect(rectX, rectY, sqSize, sqSize);
     rect(rectX + sqSize, rectY, sqSize, sqSize);
-    rect(rectX + sqSize, rectY + sqSize, sqSize*2, sqSize);
-    rect(rectX, rectY + sqSize, sqSize*3, sqSize);
+    rect(rectX + sqSize, rectY + sqSize, sqSize * 2, sqSize);
+    rect(rectX, rectY + sqSize, sqSize * 3, sqSize);
 }
 
 function draw() {
@@ -67,49 +72,24 @@ function draw() {
     //     line(0, y, windowWidth, y);
     // }
     noStroke();
-     // fill(255, 216, 230);
+    // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
     if (frameCount % 30 == 0) {
         timeIt();
 
-        patternNum = int(random(1,6));
+        patternNum = int(random(1, 6));
         console.log(patternNum);
-        if(patternNum == 1){
+        if (patternNum == 1) {
             pattern1();
-        }else if (patternNum == 2){
+        } else if (patternNum == 2) {
             pattern2();
-        }else if (patternNum == 3){
+        } else if (patternNum == 3) {
             pattern3();
-        }else if (patternNum == 4){
+        } else if (patternNum == 4) {
             pattern4();
-        }else if (patternNum == 5){
+        } else if (patternNum == 5) {
             pattern5();
         }
     }
-
-
-
-
-     translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-
-     $('.bg').css({
-       '-webit-transform': translate,
-       '-moz-transform': translate,
-       'transform': translate
-     });
-
-     window.requestAnimationFrame(moveBackground);
-    }
-
-    $(window).on('mousemove click', function(e) {
-
-     var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-     var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-     lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-     // lFollowY = (10 * lMouseY) / 100;
-
-    });
-    if ( $(window).width() > 1020) {
-    moveBackground();
-    }
+}
