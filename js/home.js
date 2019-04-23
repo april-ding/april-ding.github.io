@@ -1,9 +1,13 @@
 
-    var lFollowX = 0,
-       lFollowY = 0,
-       x = 0,
-       y = 0,
-       friction = 1 / 30;
+
+//merge test
+//p5
+var canvas;
+let rectX = 0;
+let rectY = 0;
+let patternNum = 1;
+let sqSize = 10;
+
 
     function moveBackground() {
      x += (lFollowX - x) * friction;
