@@ -66,54 +66,65 @@ function draw() {
 
     stroke(255, 216, 230);
     strokeWeight(2);
-    //draw grid
-    // for (var x = 30; x <= windowWidth; x += 30){
-    //     line(x, 0, x, windowHeight);
-    // }
-    // for (var y = 30; y <= windowHeight; y += 30){
-    //     line(0, y, windowWidth, y);
-    // }
+
     noStroke();
     // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
     if (frameCount % 30 == 0) {
-        // timeIt();
-        //
-        // patternNum = int(random(1, 6));
-        // console.log(patternNum);
-        // if (patternNum == 1) {
-        //     pattern1();
-        // } else if (patternNum == 2) {
-        //     pattern2();
-        // } else if (patternNum == 3) {
-        //     pattern3();
-        // } else if (patternNum == 4) {
-        //     pattern4();
-        // } else if (patternNum == 5) {
-        //     pattern5();
-        // }
+        timeIt();
+
+        patternNum = int(random(1, 6));
+        console.log(patternNum);
+        if (patternNum == 1) {
+            pattern1();
+        } else if (patternNum == 2) {
+            pattern2();
+        } else if (patternNum == 3) {
+            pattern3();
+        } else if (patternNum == 4) {
+            pattern4();
+        } else if (patternNum == 5) {
+            pattern5();
+        }
+    }
+
+    if(frameCount % 3600 == 0){
+        background('white');
     }
 }
 
 $('#empty-three-d').mouseenter(function () {
-    console.log('hovered in 3d');
+
     $('.thumbnail-flex').css('opacity', 0);
     $('.thumbnail-flex').css('z-index', 0);
+
     $('.thumbnail-flex-three-d').css('opacity', 1);
     $('.thumbnail-flex-three-d').css('z-index', 4);
+
+
 });
 $('#empty-gd').mouseenter(function () {
-    console.log('hovered in 3d');
+
     $('.thumbnail-flex').css('opacity', 0);
     $('.thumbnail-flex').css('z-index', 0);
     $('.thumbnail-flex-gd').css('opacity', 1);
     $('.thumbnail-flex-gd').css('z-index', 4);
+
 });
 $('#empty-mg').mouseenter(function () {
-    console.log('hovered in 3d');
+
     $('.thumbnail-flex').css('opacity', 0);
     $('.thumbnail-flex').css('z-index', 0);
     $('.thumbnail-flex-mg').css('opacity', 1);
     $('.thumbnail-flex-mg').css('z-index', 4);
+
+});
+$('#empty-about').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-about').css('opacity', 1);
+    $('.thumbnail-flex-about').css('z-index', 4);
+
 });

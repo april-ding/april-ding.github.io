@@ -9,6 +9,8 @@
 @import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 body {
   width: 100vw;
   height: 100vh;
@@ -77,7 +79,7 @@ header #april {
   left: 30vw;
   text-decoration: none;
   color: coral;
-  font-family: "Dosis", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 800;
   font-size: 220px;
   letter-spacing: 10px;
@@ -88,7 +90,7 @@ header #ding {
   left: 40vw;
   text-decoration: none;
   color: coral;
-  font-family: "Dosis", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 800;
   font-size: 220px;
   letter-spacing: 10px;
@@ -169,78 +171,106 @@ main {
   /************************ Flex Boxes ************************/
   /************************ Hover React Boxes ************************/
 }
-main #three-d a {
+main #three-d {
   position: absolute;
+  top: 80vh;
+  right: 3vw;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  text-align: right;
+  font-size: 64px;
+  z-index: 4;
+}
+@media (max-width: 800px) {
+  main #three-d {
+    font-size: 30px;
+  }
+}
+main #three-d:hover {
+  text-decoration: line-through;
+}
+main #three-d:after {
+  text-decoration: line-through;
+}
+main #gd {
+  position: absolute;
+  text-align: right;
+  text-transform: uppercase;
   top: 2vh;
-  left: 3vw;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
+  right: 3vw;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
   color: black;
   text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 34px;
+  font-size: 64px;
   z-index: 4;
 }
-main #three-d a:hover {
-  color: grey;
+@media (max-width: 800px) {
+  main #gd {
+    font-size: 30px;
+  }
 }
-main #three-d a:after {
-  text-decoration: none;
+main #gd:hover {
+  text-decoration: line-through;
 }
-main #gd a {
+main #gd:after {
+  text-decoration: line-through;
+}
+main #mg {
   position: absolute;
-  top: 2vh;
-  left: 80vw;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
-  color: black;
-  text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 34px;
-  line-height: 50px;
-  z-index: 4;
-}
-main #gd a:hover {
-  color: grey;
-}
-main #gd a:after {
-  text-decoration: none;
-}
-main #mg a {
-  position: absolute;
-  top: 90vh;
+  top: 80vh;
   left: 3vw;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
   color: black;
   text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 34px;
+  font-size: 64px;
   z-index: 4;
 }
-main #mg a:hover {
-  color: grey;
+@media (max-width: 800px) {
+  main #mg {
+    font-size: 30px;
+  }
 }
-main #mg a:after {
-  text-decoration: none;
+main #mg:hover {
+  text-decoration: line-through;
+}
+main #mg:after {
+  text-decoration: line-through;
 }
 main #about {
   position: absolute;
-  top: 90vh;
-  left: 90vw;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
-  color: black;
+  text-transform: uppercase;
+  text-align: left;
+  top: 2vh;
+  left: 3vw;
   text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 34px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  color: darkOrange;
+  font-size: 64px;
+  z-index: 4;
+}
+@media (max-width: 800px) {
+  main #about {
+    font-size: 30px;
+  }
 }
 main #about:hover {
-  color: grey;
+  text-decoration: line-through;
+}
+main #about:after {
+  text-decoration: line-through;
 }
 main #empty-three-d {
   width: 50vw;
   height: 50vh;
+  top: 50vh;
+  left: 50vw;
   position: absolute;
   z-index: 3;
 }
@@ -274,8 +304,6 @@ main #empty-about {
   width: 50vw;
   height: 50vh;
   position: absolute;
-  top: 50vh;
-  left: 50vw;
   z-index: 3;
 }
 main #empty-about:hover {
@@ -283,15 +311,15 @@ main #empty-about:hover {
   opacity: 0.1;
 }
 main .thumbnail-flex-three-d {
-  background-color: white;
   z-index: 2;
   position: absolute;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  left: 30vw;
-  top: 15vh;
+  left: 27.5vw;
+  top: calc(calc(100vh - 45vw)/2);
+  align-items: center;
   width: 45vw;
   height: 45vw;
   opacity: 0;
@@ -299,20 +327,20 @@ main .thumbnail-flex-three-d {
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex-three-d a img {
-  width: 250px;
-  height: 250px;
+main .thumbnail-flex-three-d img {
+  width: 20vw;
+  height: 20vw;
 }
 main .thumbnail-flex-gd {
-  background-color: white;
   z-index: 2;
   position: absolute;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  left: 30vw;
-  top: 15vh;
+  left: 27.5vw;
+  top: calc(calc(100vh - 45vw)/2);
+  align-items: center;
   width: 45vw;
   height: 45vw;
   opacity: 0;
@@ -321,19 +349,19 @@ main .thumbnail-flex-gd {
   -webkit-transition: opacity 1s ease-in-out;
 }
 main .thumbnail-flex-gd img {
-  width: 250px;
-  height: 250px;
+  width: 20vw;
+  height: 20vw;
 }
 main .thumbnail-flex-mg {
-  background-color: white;
   z-index: 2;
   position: absolute;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  left: 30vw;
-  top: 15vh;
+  left: 27.5vw;
+  top: calc(calc(100vh - 45vw)/2);
+  align-items: center;
   width: 45vw;
   height: 45vw;
   opacity: 0;
@@ -341,16 +369,20 @@ main .thumbnail-flex-mg {
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main .thumbnail-flex-mg a img {
-  width: 250px;
-  height: 250px;
+main .thumbnail-flex-mg img {
+  width: 20vw;
+  height: 20vw;
 }
-main #about-flex {
+main .thumbnail-flex-about {
   z-index: 2;
   position: absolute;
+  margin: auto;
   display: block;
-  left: 30vw;
-  top: 15vh;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  left: 27.5vw;
+  top: calc(calc(100vh - 45vw)/2);
+  align-items: center;
   width: 45vw;
   height: 45vw;
   opacity: 0;
@@ -358,12 +390,30 @@ main #about-flex {
   -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
 }
-main #about-flex .about-text {
+main .thumbnail-flex-about img {
+  width: 20vw;
+  height: 20vw;
+}
+main .thumbnail-flex-about #about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .thumbnail-flex-about #about-content img {
+  width: 40%;
+  height: 40%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main .thumbnail-flex-about #about-content .about-text {
+  width: 40%;
   color: black;
-  font-family: "Dosis", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 10px;
+  background-color: white;
 }
 main .thumbnail-flex-2:hover {
   display: flex;

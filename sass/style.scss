@@ -11,18 +11,20 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-@import url('https://fonts.googleapis.com/css?family=Dosis'); // =========================================================
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); // =========================================================
 // Variables
 // =========================================================
-$header--font-family: 'Dosis', sans-serif;
+$header--font-family: 'Roboto Condensed', sans-serif;
 $header--font-weight: 800; //bold
 $header--font-size: 220px;
 $text-color: black;
-$nav--font-family: 'Dosis', sans-serif;
-$nav--font-weight: 600;
-$nav--font-size: 20px;
-$main--font-weight: 800;
-$main--font-size: 34px;
+$nav--font-family: 'Roboto Condensed', sans-serif;
+$nav--font-weight: 400;
+$nav--font-size: 30px;
+$main--font-weight: 400;
+$main--font-size: 64px;
 $header--margin-top-laptop: 1.5vw;
 $header--margin-left-laptop: 3vw;
 $header--margin-top-tablet: 3vw;
@@ -61,7 +63,6 @@ body {
    margin: auto;
    overflow: hidden;
    position: fixed;
-
 }
 //end of body
 // =========================================================
@@ -207,8 +208,6 @@ header {
    -webkit-animation-name: fadeInRight;
    animation-name: fadeInRight;
 }
-
-
 // =========================================================
 // Main
 // =========================================================
@@ -254,120 +253,111 @@ main {
    width: 100%;
    height: 100%;
    position: absolute;
-
    /************************ Nav Boxes ************************/
-   // .links{
-   //    p{
-   //       z-index: 5;
-   //       font-family: $nav--font-family;
-   //       font-weight: $main--font-weight;
-   //       color: $text-color;
-   //       opacity: 0.2;
-   //       text-decoration: none;
-   //       letter-spacing: 5px;
-   //       font-size: 16px;
-   //       position: absolute;
-   //       margin-top: 10vh;
-   //       margin-left: 3vw;
-   //       width: 50px;
-   //       height:30px;
-   //
-   //    }
-   //
-   // }
    #three-d {
-      a{
-         position: absolute;
-         top: 2vh;
-         left: 3vw;
-         font-family: $nav--font-family;
-         font-weight: $main--font-weight;
-         color: $text-color;
-         text-decoration: none;
-         letter-spacing: 5px;
-         font-size: $main--font-size;
-         // @media (max-width: $breakpoint--tablet){
-         //   font-size: 12px;
-         // }
-         &:hover {
-            color: grey;
-         }
-         &:after{
-            text-decoration: none;
-         }
-         z-index: 4;
-      }
-
-
-   }
-   #gd {
-      a{
-         position: absolute;
-         top: 2vh;
-         left: 80vw;
-         font-family: $nav--font-family;
-         font-weight: $main--font-weight;
-         color: $text-color;
-         text-decoration: none;
-         letter-spacing: 5px;
-         font-size: $main--font-size;
-         line-height: 50px;
-         // @media (max-width: $breakpoint--tablet){
-         //   font-size: 12px;
-         // }
-         &:hover {
-            color: grey;
-         }
-         &:after{
-            text-decoration: none;
-         }
-         z-index: 4;
-      }
-   }
-   #mg {
-      a{
-         position: absolute;
-         top: 90vh;
-         left: 3vw;
-         font-family: $nav--font-family;
-         font-weight: $main--font-weight;
-         color: $text-color;
-         text-decoration: none;
-         letter-spacing: 5px;
-         font-size: $main--font-size;
-         // @media (max-width: $breakpoint--tablet){
-         //   font-size: 12px;
-         // }
-         &:hover {
-            color: grey;
-         }
-         &:after{
-            text-decoration: none;
-         }
-         z-index: 4;
-      }
-   }
-   #about {
       position: absolute;
-      top: 90vh;
-      left: 90vw;
+      top: 80vh;
+      right: 3vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      text-transform: uppercase;
+      color: $text-color;
+      text-decoration: none;
+      text-align: right;
+      font-size: $main--font-size;
+      @media (max-width: $breakpoint--tablet) {
+         font-size: 30px;
+      }
+
+      &:hover {
+         text-decoration: line-through;
+      }
+
+      &:after {
+         text-decoration: line-through;
+      }
+      z-index: 4;
+   }
+
+   #gd {
+      position: absolute;
+      text-align: right;
+      text-transform: uppercase;
+      top: 2vh;
+      right: 3vw;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: $text-color;
       text-decoration: none;
-      letter-spacing: 5px;
       font-size: $main--font-size;
-      // @media (max-width: $breakpoint--tablet){
-      //   font-size: 12px;
-      // }
-      &:hover {
-         color: grey;
+      @media (max-width: $breakpoint--tablet) {
+         font-size: 30px;
       }
+
+      &:hover {
+         text-decoration: line-through;
+      }
+
+      &:after {
+         text-decoration: line-through;
+      }
+      z-index: 4;
+   }
+
+   #mg {
+      position: absolute;
+      top: 80vh;
+      left: 3vw;
+      text-transform: uppercase;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      text-decoration: none;
+      font-size: $main--font-size;
+      @media (max-width: $breakpoint--tablet) {
+         font-size: 30px;
+      }
+
+      &:hover {
+         text-decoration: line-through;
+      }
+
+      &:after {
+         text-decoration: line-through;
+      }
+      z-index: 4;
+   }
+
+   #about {
+      position: absolute;
+      text-transform: uppercase;
+      text-align: left;
+      top: 2vh;
+      left: 3vw;
+      text-decoration: none;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: darkOrange;
+      font-size: $main--font-size;
+      @media (max-width: $breakpoint--tablet) {
+         font-size: 30px;
+      }
+
+      &:hover {
+         text-decoration: line-through;
+      }
+
+      &:after {
+         text-decoration: line-through;
+      }
+      z-index: 4;
    }
    /************************ Empty Hover Boxes ************************/
    #empty-three-d {
       width: 50vw;
       height: 50vh;
+      top: 50vh;
+      left: 50vw;
       position: absolute;
       z-index: 3;
 
@@ -376,6 +366,7 @@ main {
          opacity: 0.1;
       }
    }
+
    #empty-gd {
       width: 50vw;
       height: 50vh;
@@ -388,6 +379,7 @@ main {
          opacity: 0.1;
       }
    }
+
    #empty-mg {
       width: 50vw;
       height: 50vh;
@@ -400,12 +392,11 @@ main {
          opacity: 0.1;
       }
    }
+
    #empty-about {
       width: 50vw;
       height: 50vh;
       position: absolute;
-      top: 50vh;
-      left: 50vw;
       z-index: 3;
 
       &:hover {
@@ -413,79 +404,115 @@ main {
          opacity: 0.1;
       }
    }
-
    /************************ Flex Boxes ************************/
-
    .thumbnail-flex-three-d {
-      background-color: white;
       z-index: 2;
       position: absolute;
       margin: auto;
       display: flex;
-
       flex-flow: row wrap;
       justify-content: space-around;
-      left: 30vw;
-      top: 15vh;
-      width: 45vw;
-      height: 45vw;
-
-      a{
-         img {
-            width: 250px;
-            height: 250px;
-         }
-      }
-
-
-
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -webkit-transition: opacity 1s ease-in-out;
-   }
-   .thumbnail-flex-gd {
-      background-color: white;
-      z-index: 2;
-      position: absolute;
-      margin: auto;
-      display: flex;
-
-      flex-flow: row wrap;
-      justify-content: space-around;
-      left: 30vw;
-      top: 15vh;
+      left: 27.5vw;
+      top: calc(calc(100vh - 45vw)/2);
+      align-items: center;
       width: 45vw;
       height: 45vw;
 
       img {
-         width: 250px;
-         height: 250px;
+         width: 20vw;
+         height: 20vw;
       }
-
       opacity: 0;
       transition: opacity 1s ease-in-out;
       -moz-transition: opacity 1s ease-in-out;
       -webkit-transition: opacity 1s ease-in-out;
    }
-   .thumbnail-flex-mg {
-      background-color: white;
+
+   .thumbnail-flex-gd {
       z-index: 2;
       position: absolute;
       margin: auto;
       display: flex;
-
       flex-flow: row wrap;
       justify-content: space-around;
-      left: 30vw;
-      top: 15vh;
+      left: 27.5vw;
+      top: calc(calc(100vh - 45vw)/2);
+      align-items: center;
       width: 45vw;
       height: 45vw;
 
-      a{
-         img {
-            width: 250px;
-            height: 250px;
+      img {
+         width: 20vw;
+         height: 20vw;
+      }
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+
+   .thumbnail-flex-mg {
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 27.5vw;
+      top: calc(calc(100vh - 45vw)/2);
+      align-items: center;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 20vw;
+         height: 20vw;
+      }
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+   }
+
+   .thumbnail-flex-about {
+      z-index: 2;
+      position: absolute;
+      margin: auto;
+      display: block;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      left: 27.5vw;
+      top: calc(calc(100vh - 45vw)/2);
+      align-items: center;
+      width: 45vw;
+      height: 45vw;
+
+      img {
+         width: 20vw;
+         height: 20vw;
+      }
+
+      #about-content{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+
+         img{
+            width: 40%;
+            height: 40%;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+         }
+         .about-text {
+            width: 40%;
+            color: black;
+            font-family: "Roboto Condensed", sans-serif;
+            font-size: 20px;
+            line-height: 24px;
+            padding-bottom: 10px;
+            background-color: white;
+
          }
       }
 
@@ -494,36 +521,7 @@ main {
       -moz-transition: opacity 1s ease-in-out;
       -webkit-transition: opacity 1s ease-in-out;
    }
-   #about-flex {
-      //background-color: white;
-      z-index: 2;
-      position: absolute;
-      display: block;
-      // flex-flow: row wrap;
-      // justify-content: space-around;
-      left: 30vw;
-      top: 15vh;
-      width: 45vw;
-      height: 45vw;
-      // img{
-      //    width: 250px;
-      //    height: 250px;
-      // }
-      .about-text {
-         color: black;
-         font-family: "Dosis", sans-serif;
-         font-size: 20px;
-         line-height: 24px;
-         padding-bottom: 10px;
-      }
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -webkit-transition: opacity 1s ease-in-out;
-   }
-
    /************************ Hover React Boxes ************************/
-
    // #empty-three-d:hover + .thumbnail-flex {
    //    opacity: 1.0;
    //    transition: opacity 0.55s ease-in-out;
@@ -555,15 +553,12 @@ main {
    //       -webkit-transition: opacity 0.55s ease-in-out;
    //
    // }
-
-   .thumbnail-flex-2:hover{
-
+   .thumbnail-flex-2:hover {
       display: flex;
       opacity: 1;
       transition: opacity 0.55s ease-in-out;
       -moz-transition: opacity 0.55s ease-in-out;
       -webkit-transition: opacity 0.55s ease-in-out;
    }
-
 }
 //end of main
