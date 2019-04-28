@@ -47,12 +47,8 @@ $grid--gutter-width: 20px;
 $grid--unit: ($grid--column-width + $grid--gutter-width); // =========================================================
 // Breakpoints
 // =========================================================
-// $breakpoint--laptop-l: $grid--unit * 17 + 40;//1400
-// $breakpoint--laptop-r: $grid--unit * 12 + 64;//1024
-// $breakpoint--tablet: $grid--unit * 9 + 48; //768
-// $breakpoint--mobile: $grid--unit * 5 + 25; //425
-$breakpoint--laptop-r: $grid--unit * 15; //1200
-$breakpoint--tablet: $grid--unit * 10; //800
+$breakpoint--laptop: $grid--unit * 17 + 40; //1400
+$breakpoint--tablet: $grid--unit * 9 + 48; //768
 $breakpoint--mobile-r: $grid--unit * 5 + 25; //425
 $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 //actual scss
@@ -104,72 +100,7 @@ body {
    animation-name: fadeInTop;
 }
 
-header {
-   //margin: 3vw auto auto 10vw;
-   position: absolute;
-   //adjust top and left margin based on the viewport size
-   // @media (min-width: $breakpoint--laptop-r + 1) {
-   //    margin-top: $header--margin-top-laptop;
-   //    margin-left: $header--margin-left-laptop;
-   // }
-   // @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-   //    margin-top: $header--margin-top-tablet;
-   //    margin-left: $header--margin-left-tablet;
-   // }
-   // @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-   //    margin-top: $header--margin-top-tablet;
-   //    margin-left: $header--margin-left-tablet;
-   // }
-   // @media (max-width: $breakpoint--mobile-r){
-   //    margin-top: $header--margin-top-mobile;
-   //    margin-left: $header--margin-left-mobile;
-   // }
-   #april {
-      // width: 40%;
-      /******* breakpoints
-      @media (min-width: $breakpoint--laptop-r + 1) {
-         margin-left: $name--margin-left-laptop-l;
-         width: 50%;
-      }
-      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-         margin-left: $name--margin-left-laptop-r;
-         width: 50%;
-      }
-      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-         margin-left: $name--margin-left-tablet;
-         width: 30%;
-      }
-      @media (max-width: $breakpoint--mobile-r){
-         margin-left: $name--margin-left-mobile;
-         width: 30%;
-      }
 
-      breakpoints******/
-      position: absolute;
-      top: 15vh;
-      left: 30vw;
-      text-decoration: none;
-      color: coral;
-      font-family: $header--font-family;
-      font-weight: $header--font-weight;
-      font-size: $header--font-size;
-      letter-spacing: 10px;
-   }
-
-   #ding {
-      position: absolute;
-      top: 50vh;
-      left: 40vw;
-      text-decoration: none;
-      color: coral;
-      font-family: $header--font-family;
-      font-weight: $header--font-weight;
-      font-size: $header--font-size;
-      letter-spacing: 10px;
-   }
-   //end of h1
-}
-//end of header
 // =========================================================
 // Nav
 // =========================================================
@@ -256,7 +187,7 @@ main {
    /************************ Nav Boxes ************************/
    #three-d {
       position: absolute;
-      top: 80vh;
+      top: 75vh;
       right: 3vw;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
@@ -264,10 +195,6 @@ main {
       color: $text-color;
       text-decoration: none;
       text-align: right;
-      font-size: $main--font-size;
-      @media (max-width: $breakpoint--tablet) {
-         font-size: 30px;
-      }
 
       &:hover {
          text-decoration: line-through;
@@ -277,6 +204,21 @@ main {
          text-decoration: line-through;
       }
       z-index: 4;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 80px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 64px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 50px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 33px;
+      }//end of Breakpoints
+
    }
 
    #gd {
@@ -289,10 +231,6 @@ main {
       font-weight: $main--font-weight;
       color: $text-color;
       text-decoration: none;
-      font-size: $main--font-size;
-      @media (max-width: $breakpoint--tablet) {
-         font-size: 30px;
-      }
 
       &:hover {
          text-decoration: line-through;
@@ -302,21 +240,31 @@ main {
          text-decoration: line-through;
       }
       z-index: 4;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 80px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 64px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 50px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 33px;
+      }//end of Breakpoints
    }
 
    #mg {
       position: absolute;
-      top: 80vh;
+      top: 75vh;
       left: 3vw;
       text-transform: uppercase;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: $text-color;
       text-decoration: none;
-      font-size: $main--font-size;
-      @media (max-width: $breakpoint--tablet) {
-         font-size: 30px;
-      }
 
       &:hover {
          text-decoration: line-through;
@@ -326,6 +274,20 @@ main {
          text-decoration: line-through;
       }
       z-index: 4;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 80px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 64px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 50px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 33px;
+      }//end of Breakpoints
    }
 
    #about {
@@ -338,10 +300,7 @@ main {
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: darkOrange;
-      font-size: $main--font-size;
-      @media (max-width: $breakpoint--tablet) {
-         font-size: 30px;
-      }
+
 
       &:hover {
          text-decoration: line-through;
@@ -351,6 +310,20 @@ main {
          text-decoration: line-through;
       }
       z-index: 4;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 80px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 64px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 50px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 33px;
+      }//end of Breakpoints
    }
    /************************ Empty Hover Boxes ************************/
    #empty-three-d {
@@ -522,43 +495,21 @@ main {
       -webkit-transition: opacity 1s ease-in-out;
    }
    /************************ Hover React Boxes ************************/
-   // #empty-three-d:hover + .thumbnail-flex {
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #empty-gd:hover + .thumbnail-flex {
-   //
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #empty-mg:hover + .thumbnail-flex {
-   //
-   //    opacity: 1.0;
-   //    transition: opacity 0.55s ease-in-out;
-   //    -moz-transition: opacity 0.55s ease-in-out;
-   //    -webkit-transition: opacity 0.55s ease-in-out;
-   // }
-   //
-   // #empty-about:hover + #about-flex {
-   //
-   //       opacity: 1.0;
-   //       transition: opacity 0.55s ease-in-out;
-   //       -moz-transition: opacity 0.55s ease-in-out;
-   //       -webkit-transition: opacity 0.55s ease-in-out;
-   //
-   // }
-   .thumbnail-flex-2:hover {
-      display: flex;
-      opacity: 1;
-      transition: opacity 0.55s ease-in-out;
-      -moz-transition: opacity 0.55s ease-in-out;
-      -webkit-transition: opacity 0.55s ease-in-out;
-   }
+//    #empty-three-d:hover + #three-d {
+//       text-decoration: line-through;
+//    }
+//
+//    #empty-gd:hover + #gd {
+// text-decoration: line-through;
+//    }
+//
+//    #empty-mg:hover + #mg {
+// text-decoration: line-through;
+//    }
+//
+//    #empty-about:hover + #about {
+// text-decoration: line-through;
+//
+//    }
 }
 //end of main
