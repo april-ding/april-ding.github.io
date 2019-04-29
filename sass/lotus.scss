@@ -1,17 +1,7 @@
-//=========================================================
-// Questions
-// =========================================================
-/*
-   1. Which positioning should i use for contents inside of main
-   2. Transferring responsiveness from Figma to code
-   3. Best way to do the moving squares
-
-*/
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
-@import url('https://fonts.googleapis.com/css?family=Dosis'); // =========================================================
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Dosis');//// =========================================================
 // Variables
 // =========================================================
 $header--font-family: 'Dosis', sans-serif;
@@ -23,21 +13,7 @@ $nav--font-weight: 600;
 $nav--font-size: 20px;
 $main--font-weight: 800;
 $main--font-size: 34px;
-$header--margin-top-laptop: 1.5vw;
-$header--margin-left-laptop: 3vw;
-$header--margin-top-tablet: 3vw;
-$header--margin-left-tablet: 4vw;
-$header--margin-top-mobile: 8vw;
-$header--margin-left-mobile: 8vw;
-$name--margin-left-laptop-l: 2vw;
-$name--margin-left-laptop-r: 2.5vw;
-$name--margin-left-tablet: 3.5vw;
-$name--margin-left-mobile: 6.5vw;
-$nav--margin-left-laptop-l: 41vw;
-$nav--margin-left-laptop-r: 25vw;
-$nav--margin-left-tablet: 10vw;
-$nav--margin-left-mobile-r: 30vw;
-$nav--margin-left-mobile-s: 20vw; // =========================================================
+ // =========================================================
 // Grid Variables
 // =========================================================
 $grid--column-width: 60px;
@@ -45,12 +21,8 @@ $grid--gutter-width: 20px;
 $grid--unit: ($grid--column-width + $grid--gutter-width); // =========================================================
 // Breakpoints
 // =========================================================
-// $breakpoint--laptop-l: $grid--unit * 17 + 40;//1400
-// $breakpoint--laptop-r: $grid--unit * 12 + 64;//1024
-// $breakpoint--tablet: $grid--unit * 9 + 48; //768
-// $breakpoint--mobile: $grid--unit * 5 + 25; //425
-$breakpoint--laptop-r: $grid--unit * 15; //1200
-$breakpoint--tablet: $grid--unit * 10; //800
+$breakpoint--laptop: $grid--unit * 17 + 40; //1400
+$breakpoint--tablet: $grid--unit * 9 + 48; //768
 $breakpoint--mobile-r: $grid--unit * 5 + 25; //425
 $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 //actual scss
@@ -78,19 +50,6 @@ body {
       left: 22.5vw;
       background-color: white;
    }
-   /*
-   #bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      opacity: 0.2;
-      background: url("../img/bg.png") no-repeat center center;
-      background-size: cover;
-      // @media (min-width: $breakpoint--laptop-r - 20) {
-      //   transform: scale(1.1);
-      // }
-   }
-   */
 
 }
 //end of body
@@ -98,8 +57,8 @@ body {
 // Header
 // =========================================================
 header {
-   width: 50vw;
-   margin-left: 25vw;
+   width: 60vw;
+   margin-left: 20vw;
    margin-top: 5vh;
    display: flex;
    flex-flow: row wrap;
@@ -120,7 +79,7 @@ header {
 
       a{
          text-decoration: none;
-         color: coral;
+         color: darkOrange;
          font-family: $header--font-family;
          font-weight: $header--font-weight;
          font-size: 20px;
@@ -204,62 +163,6 @@ header {
    animation-name: fadeInRight;
 }
 
-nav {
-   z-index: 5;
-   margin-top: 3vh;
-   width: 100vh;
-   height: 45px;
-   position: fixed;
-   -webkit-transform-origin: left top;
-   -webkit-transform: rotate(90deg) translateX(50px) translateY(-1370px);
-   /****breakpoints
-   @media (min-width: $breakpoint--laptop-r + 1) {
-      margin-left: $nav--margin-left-laptop-l;
-   }
-   @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-      margin-left: $nav--margin-left-laptop-r;
-   }
-
-   @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-      margin-left: $nav--margin-left-tablet;
-   }
-   @media (min-width: $breakpoint--mobile-s) and (max-width: $breakpoint--mobile-r){
-     margin-left: $nav--margin-left-mobile-r;
-   }
-   @media (max-width: $breakpoint--mobile-s) {
-     margin-left: $nav--margin-left-mobile-s;
-   }
-   *****/
-   ul {
-      li {
-         margin-right: 20px;
-         float: left;
-         height: 100%;
-         line-height: 45px;
-
-         a {
-            font-family: $nav--font-family;
-            font-weight: $nav--font-weight;
-            color: $text-color;
-            text-decoration: none;
-            line-height: solid;
-            letter-spacing: 5px;
-            font-size: 16px;
-            // @media (max-width: $breakpoint--tablet){
-            //   font-size: 12px;
-            // }
-            &:hover {
-               color: grey;
-            }
-         }
-
-         p {
-            letter-spacing: -5px;
-         }
-      }
-   }
-}
-//end of nav
 // =========================================================
 // Main
 // =========================================================
@@ -301,9 +204,9 @@ nav {
 
 main {
 
-   width: 50vw;
-   margin-left: 25vw;
-   margin-right: 25vw;
+   width: 60vw;
+   margin-left: 20vw;
+   margin-right: 20vw;
 
    .info{
       margin-top: 5vh;
@@ -312,26 +215,46 @@ main {
       font-weight: 300;
       color: grey;
       line-height: solid;
-      font-size: 14px;
       letter-spacing: 2px;
+      //Breakpoints
+      @media (min-width: $breakpoint--tablet + 1) {
+         font-size: 14px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 10px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 10px;
+      }//end of Breakpoints
    }
    p{
       padding-bottom: 10px;
       font-family: $nav--font-family;
       font-weight: 400;
       color: black;
-      line-height: 20px;
-      font-size: 16px;
       letter-spacing: 2px;
+      //Breakpoints
+      @media (min-width: $breakpoint--tablet + 1) {
+         font-size: 16px;
+         line-height: 25px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 12px;
+         line-height: 16px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 10px;
+         line-height: 14px;
+      }//end of Breakpoints
+   }
+   img{
+      margin-top: 20px;
+      width: 100%;
    }
    video{
       margin-top: 20px;
       width: 100%;
    }
-   video::-webkit-media-controls-panel {
-    display: flex !important;
-    opacity: 1 !important;
-}
 
 }
 //end of main
