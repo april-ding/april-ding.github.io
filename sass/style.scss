@@ -7,23 +7,19 @@
    3. Best way to do the moving squares
 
 */
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
 @import url('https://fonts.googleapis.com/css?family=Dosis');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); // =========================================================
 // Variables
 // =========================================================
-$header--font-family: 'Roboto Condensed', sans-serif;
+$header--font-family: 'Dosis', sans-serif;
 $header--font-weight: 800; //bold
 $header--font-size: 220px;
 $text-color: black;
-$nav--font-family: 'Roboto Condensed', sans-serif;
-$nav--font-weight: 400;
+$nav--font-family: 'Dosis', sans-serif;
+$nav--font-weight: 800;
 $nav--font-size: 30px;
-$main--font-weight: 400;
+$main--font-weight: 300;
 $main--font-size: 64px;
 $header--margin-top-laptop: 1.5vw;
 $header--margin-left-laptop: 3vw;
@@ -191,10 +187,11 @@ main {
       right: 3vw;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       color: $text-color;
       text-decoration: none;
       text-align: right;
+      letter-spacing: 5px;
 
       &:hover {
          text-decoration: line-through;
@@ -224,13 +221,14 @@ main {
    #gd {
       position: absolute;
       text-align: right;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       top: 2vh;
       right: 3vw;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: $text-color;
       text-decoration: none;
+      letter-spacing: 5px;
 
       &:hover {
          text-decoration: line-through;
@@ -260,11 +258,12 @@ main {
       position: absolute;
       top: 75vh;
       left: 3vw;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: $text-color;
       text-decoration: none;
+      letter-spacing: 5px;
 
       &:hover {
          text-decoration: line-through;
@@ -292,7 +291,7 @@ main {
 
    #about {
       position: absolute;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       text-align: left;
       top: 2vh;
       left: 3vw;
@@ -300,6 +299,7 @@ main {
       font-family: $nav--font-family;
       font-weight: $main--font-weight;
       color: darkOrange;
+      letter-spacing: 5px;
 
 
       &:hover {
@@ -385,6 +385,10 @@ main {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      img {
+         border-radius: 5%;
+      }
+
 
       //Breakpoints
       @media (min-width: $breakpoint--tablet + 1) {//laptop plus
@@ -397,6 +401,7 @@ main {
          img {
             width: 20vw;
             height: 20vw;
+
          }
       }
       @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
@@ -437,6 +442,9 @@ main {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      img {
+         border-radius: 5%;
+      }
       //Breakpoints
       @media (min-width: $breakpoint--tablet + 1) {//laptop plus
          left: 27.5vw;
@@ -487,6 +495,9 @@ main {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+      img {
+         border-radius: 5%;
+      }
       //Breakpoints
       @media (min-width: $breakpoint--tablet + 1) {//laptop plus
          left: 27.5vw;
@@ -568,24 +579,29 @@ main {
          justify-content: space-around;
 
          img{
+
             //Breakpoints
             @media (min-width: $breakpoint--tablet + 1) {//laptop plus
                width: 40%;
                height: 40%;
                padding-top: 5vh;
                padding-bottom: 5vh;
+               border-radius: 5%;
+
             }
             @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
                width: 50%;
                height: 50%;
                padding-top: 5vh;
                padding-bottom: 5vh;
+               border-radius: 5%;
             }
             @media (max-width: $breakpoint--mobile-r) {//phone
                width: 80%;
                height: 80%;
                padding-top: 1vh;
                padding-bottom: 1vh;
+               border-radius: 5%;
             }//end of Breakpoints
          }
          .about-text {

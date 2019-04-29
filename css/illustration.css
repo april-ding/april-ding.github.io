@@ -1,31 +1,11 @@
-/*
-   1. Which positioning should i use for contents inside of main
-   2. Transferring responsiveness from Figma to code
-   3. Best way to do the moving squares
-
-*/
-@import url("https://fonts.googleapis.com/css?family=Merriweather");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
-@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 body {
   width: 100vw;
   height: 100vh;
   margin: auto;
-  /*
-  #bg {
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     opacity: 0.2;
-     background: url("../img/bg.png") no-repeat center center;
-     background-size: cover;
-     // @media (min-width: $breakpoint--laptop-r - 20) {
-     //   transform: scale(1.1);
-     // }
-  }
-  */
 }
 body canvas#defaultCanvas0.p5Canvas {
   z-index: -3 !important;
@@ -46,8 +26,8 @@ body #bg {
 }
 
 header {
-  width: 50vw;
-  margin-left: 25vw;
+  width: 60vw;
+  margin-left: 20vw;
   margin-top: 5vh;
   display: flex;
   flex-flow: row wrap;
@@ -67,7 +47,7 @@ header h2 {
 }
 header h2 a {
   text-decoration: none;
-  color: coral;
+  color: darkOrange;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -138,55 +118,6 @@ header h2 a {
   animation-name: fadeInRight;
 }
 
-nav {
-  z-index: 5;
-  margin-top: 3vh;
-  width: 100vh;
-  height: 45px;
-  position: fixed;
-  -webkit-transform-origin: left top;
-  -webkit-transform: rotate(90deg) translateX(50px) translateY(-1370px);
-   /****breakpoints
-   @media (min-width: $breakpoint--laptop-r + 1) {
-      margin-left: $nav--margin-left-laptop-l;
-   }
-   @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop-r) {
-      margin-left: $nav--margin-left-laptop-r;
-   }
-
-   @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
-      margin-left: $nav--margin-left-tablet;
-   }
-   @media (min-width: $breakpoint--mobile-s) and (max-width: $breakpoint--mobile-r){
-     margin-left: $nav--margin-left-mobile-r;
-   }
-   @media (max-width: $breakpoint--mobile-s) {
-     margin-left: $nav--margin-left-mobile-s;
-   }
-   *****/
-}
-nav ul li {
-  margin-right: 20px;
-  float: left;
-  height: 100%;
-  line-height: 45px;
-}
-nav ul li a {
-  font-family: "Dosis", sans-serif;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  line-height: solid;
-  letter-spacing: 5px;
-  font-size: 16px;
-}
-nav ul li a:hover {
-  color: grey;
-}
-nav ul li p {
-  letter-spacing: -5px;
-}
-
 .animated-main {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -220,9 +151,9 @@ nav ul li p {
 }
 
 main {
-  width: 50vw;
-  margin-left: 25vw;
-  margin-right: 25vw;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 main .info {
   margin-top: 5vh;
@@ -231,19 +162,53 @@ main .info {
   font-weight: 300;
   color: grey;
   line-height: solid;
-  font-size: 14px;
   letter-spacing: 2px;
+}
+@media (min-width: 769px) {
+  main .info {
+    font-size: 14px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  main .info {
+    font-size: 10px;
+  }
+}
+@media (max-width: 425px) {
+  main .info {
+    font-size: 10px;
+  }
 }
 main p {
   padding-bottom: 10px;
   font-family: "Dosis", sans-serif;
   font-weight: 400;
   color: black;
-  line-height: 20px;
-  font-size: 16px;
   letter-spacing: 2px;
 }
+@media (min-width: 769px) {
+  main p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  main p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 425px) {
+  main p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
 main img {
+  margin-top: 20px;
+  width: 100%;
+}
+main video {
   margin-top: 20px;
   width: 100%;
 }
