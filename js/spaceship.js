@@ -50,15 +50,7 @@ function draw() {
     console.log("hi");
     stroke(255, 216, 230);
     strokeWeight(2);
-    //draw grid
-    // for (var x = 30; x <= windowWidth; x += 30){
-    //     line(x, 0, x, windowHeight);
-    // }
-    // for (var y = 30; y <= windowHeight; y += 30){
-    //     line(0, y, windowWidth, y);
-    // }
     noStroke();
-    // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
     if (frameCount % 30 == 0) {

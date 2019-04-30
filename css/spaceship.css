@@ -39,8 +39,17 @@ header h1 {
   color: black;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 60px;
   letter-spacing: 10px;
+}
+@media (min-width: 426px) {
+  header h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 425px) {
+  header h1 {
+    font-size: 30px;
+  }
 }
 header h2 {
   margin-left: auto;
@@ -50,8 +59,17 @@ header h2 a {
   color: darkOrange;
   font-family: "Dosis", sans-serif;
   font-weight: 800;
-  font-size: 20px;
   letter-spacing: 10px;
+}
+@media (min-width: 426px) {
+  header h2 a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  header h2 a {
+    font-size: 14px;
+  }
 }
 
 .animated-header {

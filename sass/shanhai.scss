@@ -65,28 +65,39 @@ header {
   justify-content: space-around;
   align-items: baseline;
 
-   h1{
+  h1{
 
-      text-decoration: none;
-      color: black;
-      font-family: $header--font-family;
-      font-weight: $header--font-weight;
-      font-size: 60px;
-      letter-spacing: 10px;
-   }
-   h2{
-      margin-left: auto;
+     text-decoration: none;
+     color: black;
+     font-family: $header--font-family;
+     font-weight: $header--font-weight;
+     letter-spacing: 10px;
+     //Breakpoints
+     @media (min-width: $breakpoint--mobile-r + 1) {
+        font-size: 60px;
+     }
+     @media (max-width: $breakpoint--mobile-r){
+        font-size: 30px;
+     }//end of Breakpoints
+  }
+  h2{
+     margin-left: auto;
 
-      a{
-         text-decoration: none;
-         color: darkOrange;
-         font-family: $header--font-family;
-         font-weight: $header--font-weight;
-         font-size: 20px;
-         letter-spacing: 10px;
-      }
-
-   }
+     a{
+        text-decoration: none;
+        color: darkOrange;
+        font-family: $header--font-family;
+        font-weight: $header--font-weight;
+        letter-spacing: 10px;
+        //Breakpoints
+        @media (min-width: $breakpoint--mobile-r + 1) {
+           font-size: 20px;
+        }
+        @media (max-width: $breakpoint--mobile-r){
+           font-size: 14px;
+        }//end of Breakpoints
+     }
+  }
 }
 .animated-header {
    //animation fade in on load
@@ -207,6 +218,8 @@ main {
    width: 60vw;
    margin-left: 20vw;
    margin-right: 20vw;
+   margin-bottom: 40px;
+
 
    .info{
       margin-top: 5vh;

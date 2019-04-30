@@ -71,23 +71,23 @@ function draw() {
     // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
-    // if (frameCount % 30 == 0) {
-    //     timeIt();
-    //
-    //     patternNum = int(random(1, 6));
-    //     console.log(patternNum);
-    //     if (patternNum == 1) {
-    //         pattern1();
-    //     } else if (patternNum == 2) {
-    //         pattern2();
-    //     } else if (patternNum == 3) {
-    //         pattern3();
-    //     } else if (patternNum == 4) {
-    //         pattern4();
-    //     } else if (patternNum == 5) {
-    //         pattern5();
-    //     }
-    // }
+    if (frameCount % 30 == 0) {
+        timeIt();
+
+        patternNum = int(random(1, 6));
+        console.log(patternNum);
+        if (patternNum == 1) {
+            pattern1();
+        } else if (patternNum == 2) {
+            pattern2();
+        } else if (patternNum == 3) {
+            pattern3();
+        } else if (patternNum == 4) {
+            pattern4();
+        } else if (patternNum == 5) {
+            pattern5();
+        }
+    }
 
     if(frameCount % 3600 == 0){
         background('white');
@@ -126,4 +126,32 @@ $('#empty-about').mouseenter(function () {
     $('.thumbnail-flex-about').css('opacity', 1);
     $('.thumbnail-flex-about').css('z-index', 4);
 
+});
+$('#three-d').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-three-d').css('opacity', 1);
+    $('.thumbnail-flex-three-d').css('z-index', 4);
+});
+$('#gd').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-gd').css('opacity', 1);
+    $('.thumbnail-flex-gd').css('z-index', 4);
+});
+$('#mg').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-mg').css('opacity', 1);
+    $('.thumbnail-flex-mg').css('z-index', 4);
+});
+$('#about').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-about').css('opacity', 1);
+    $('.thumbnail-flex-about').css('z-index', 4);
 });
