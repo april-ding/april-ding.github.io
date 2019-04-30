@@ -4,12 +4,7 @@
    3. Best way to do the moving squares
 
 */
-@import url("https://fonts.googleapis.com/css?family=Merriweather");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
-@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 body {
   width: 100vw;
@@ -133,16 +128,9 @@ main #three-d {
   font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: black;
-  text-decoration: none;
   text-align: right;
   letter-spacing: 5px;
   z-index: 4;
-}
-main #three-d:hover {
-  text-decoration: line-through;
-}
-main #three-d:after {
-  text-decoration: line-through;
 }
 @media (min-width: 1401px) {
   main #three-d {
@@ -172,15 +160,8 @@ main #gd {
   font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: black;
-  text-decoration: none;
   letter-spacing: 5px;
   z-index: 4;
-}
-main #gd:hover {
-  text-decoration: line-through;
-}
-main #gd:after {
-  text-decoration: line-through;
 }
 @media (min-width: 1401px) {
   main #gd {
@@ -209,15 +190,8 @@ main #mg {
   font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: black;
-  text-decoration: none;
   letter-spacing: 5px;
   z-index: 4;
-}
-main #mg:hover {
-  text-decoration: line-through;
-}
-main #mg:after {
-  text-decoration: line-through;
 }
 @media (min-width: 1401px) {
   main #mg {
@@ -244,18 +218,11 @@ main #about {
   text-align: left;
   top: 2vh;
   left: 3vw;
-  text-decoration: none;
   font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: darkOrange;
   letter-spacing: 5px;
   z-index: 4;
-}
-main #about:hover {
-  text-decoration: line-through;
-}
-main #about:after {
-  text-decoration: line-through;
 }
 @media (min-width: 1401px) {
   main #about {
@@ -287,7 +254,7 @@ main #empty-three-d {
 }
 main #empty-three-d:hover {
   background-color: lightpink;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 main #empty-gd {
   width: 50vw;
@@ -298,7 +265,7 @@ main #empty-gd {
 }
 main #empty-gd:hover {
   background-color: lightpink;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 main #empty-mg {
   width: 50vw;
@@ -309,7 +276,7 @@ main #empty-mg {
 }
 main #empty-mg:hover {
   background-color: lightpink;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 main #empty-about {
   width: 50vw;
@@ -319,7 +286,7 @@ main #empty-about {
 }
 main #empty-about:hover {
   background-color: lightpink;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 main .thumbnail-flex-three-d {
   z-index: 2;
@@ -557,7 +524,7 @@ main .thumbnail-flex-about #about-content {
 }
 main .thumbnail-flex-about #about-content .about-text {
   color: black;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Dosis", sans-serif;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 10px;
