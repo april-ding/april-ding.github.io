@@ -292,6 +292,7 @@ main {
       left: 50vw;
       position: absolute;
       z-index: 3;
+      border-radius: 5%;
 
       &:hover {
          background-color: lightpink;
@@ -305,6 +306,7 @@ main {
       position: absolute;
       left: 50vw;
       z-index: 3;
+      border-radius: 5%;
 
       &:hover {
          background-color: lightpink;
@@ -318,6 +320,7 @@ main {
       position: absolute;
       top: 50vh;
       z-index: 3;
+      border-radius: 5%;
 
       &:hover {
          background-color: lightpink;
@@ -330,6 +333,7 @@ main {
       height: 50vh;
       position: absolute;
       z-index: 3;
+      border-radius: 5%;
 
       &:hover {
          background-color: lightpink;

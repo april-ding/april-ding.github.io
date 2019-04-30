@@ -251,6 +251,7 @@ main #empty-three-d {
   left: 50vw;
   position: absolute;
   z-index: 3;
+  border-radius: 5%;
 }
 main #empty-three-d:hover {
   background-color: lightpink;
@@ -262,6 +263,7 @@ main #empty-gd {
   position: absolute;
   left: 50vw;
   z-index: 3;
+  border-radius: 5%;
 }
 main #empty-gd:hover {
   background-color: lightpink;
@@ -273,6 +275,7 @@ main #empty-mg {
   position: absolute;
   top: 50vh;
   z-index: 3;
+  border-radius: 5%;
 }
 main #empty-mg:hover {
   background-color: lightpink;
@@ -283,6 +286,7 @@ main #empty-about {
   height: 50vh;
   position: absolute;
   z-index: 3;
+  border-radius: 5%;
 }
 main #empty-about:hover {
   background-color: lightpink;
