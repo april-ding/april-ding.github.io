@@ -29,6 +29,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  background-color: white;
 }
 header h1 {
   text-decoration: none;
@@ -172,6 +173,7 @@ main {
   margin-left: 20vw;
   margin-right: 20vw;
   margin-bottom: 30px;
+  background-color: white;
 }
 main .info {
   margin-top: 5vh;

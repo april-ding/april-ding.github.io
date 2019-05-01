@@ -68,7 +68,6 @@ function draw() {
     strokeWeight(2);
 
     noStroke();
-    // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
     // if (frameCount % 30 == 0) {

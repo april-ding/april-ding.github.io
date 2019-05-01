@@ -28,6 +28,7 @@ body {
    width: 100vw;
    height: 100vh;
    margin: auto;
+
    canvas#defaultCanvas0.p5Canvas{
       z-index: -3 !important;
       position: fixed;
@@ -60,6 +61,7 @@ header {
    display: flex;
    flex-flow: row wrap;
   align-items: center;
+  background-color: white;
 
   h1{
 
@@ -218,6 +220,7 @@ main {
    margin-left: 20vw;
    margin-right: 20vw;
    margin-bottom: 30px;
+   background-color: white;
 
    .info{
       margin-top: 5vh;
