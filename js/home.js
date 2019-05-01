@@ -1,18 +1,3 @@
-// $("#empty-three-d").one("mouseover", function() {
-//   $("#thumbnail-flex-3d").addClass('permahover');
-//   $("#thumbnail-flex-2-3d").addClass('permahover');
-// });
-// $("#empty-gd").one("mouseover", function() {
-//   $("#thumbnail-flex-gd").addClass('permahover');
-//   $("#thumbnail-flex-2-gd").addClass('permahover');
-// });
-// $("#empty-mg").one("mouseover", function() {
-//   $(".thumbnail-flex").addClass('permahover');
-//   $(".thumbnail-flex-2").addClass('permahover');
-// });
-
-
-
 //p5
 var canvas;
 let rectX = 0;
@@ -68,14 +53,12 @@ function draw() {
     strokeWeight(2);
 
     noStroke();
-    // fill(255, 216, 230);
     fill('cornFlowerBlue');
 
     // if (frameCount % 30 == 0) {
     //     timeIt();
     //
     //     patternNum = int(random(1, 6));
-    //     console.log(patternNum);
     //     if (patternNum == 1) {
     //         pattern1();
     //     } else if (patternNum == 2) {
@@ -100,6 +83,17 @@ $('#empty-three-d').mouseenter(function () {
     $('.thumbnail-flex').css('z-index', 0);
     $('.thumbnail-flex-three-d').css('opacity', 1);
     $('.thumbnail-flex-three-d').css('z-index', 4);
+
+    $('#three-d').css('color', 'black');
+    $('#gd').css('color', 'lightGrey');
+    $('#mg').css('color', 'lightGrey');
+    $('#about').css('color', '#FFCE94');
+
+    $('#three-d').css('text-decoration', 'line-through');
+    $('#gd').css('text-decoration', 'none');
+    $('#mg').css('text-decoration', 'none');
+    $('#about').css('text-decoration', 'none');
+
 });
 
 
@@ -110,6 +104,16 @@ $('#empty-gd').mouseenter(function () {
     $('.thumbnail-flex-gd').css('opacity', 1);
     $('.thumbnail-flex-gd').css('z-index', 4);
 
+    $('#gd').css('color', 'black');
+    $('#three-d').css('color', 'lightGrey');
+    $('#mg').css('color', 'lightGrey');
+    $('#about').css('color', '#FFCE94');
+
+    $('#gd').css('text-decoration', 'line-through');
+    $('#three-d').css('text-decoration', 'none');
+    $('#mg').css('text-decoration', 'none');
+    $('#about').css('text-decoration', 'none');
+
 });
 $('#empty-mg').mouseenter(function () {
 
@@ -118,6 +122,15 @@ $('#empty-mg').mouseenter(function () {
     $('.thumbnail-flex-mg').css('opacity', 1);
     $('.thumbnail-flex-mg').css('z-index', 4);
 
+    $('#mg').css('color', 'black');
+    $('#gd').css('color', 'lightGrey');
+    $('#three-d').css('color', 'lightGrey');
+    $('#about').css('color', '#FFCE94');
+
+    $('#mg').css('text-decoration', 'line-through');
+    $('#gd').css('text-decoration', 'none');
+    $('#three-d').css('text-decoration', 'none');
+    $('#about').css('text-decoration', 'none');
 });
 $('#empty-about').mouseenter(function () {
 
@@ -126,4 +139,42 @@ $('#empty-about').mouseenter(function () {
     $('.thumbnail-flex-about').css('opacity', 1);
     $('.thumbnail-flex-about').css('z-index', 4);
 
+    $('#about').css('color', 'darkOrange');
+    $('#gd').css('color', 'lightGrey');
+    $('#mg').css('color', 'lightGrey');
+    $('#three-d').css('color', 'lightGrey');
+
+    $('#about').css('text-decoration', 'line-through');
+    $('#gd').css('text-decoration', 'none');
+    $('#mg').css('text-decoration', 'none');
+    $('#three-d').css('text-decoration', 'none');
+
+});
+$('#three-d').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-three-d').css('opacity', 1);
+    $('.thumbnail-flex-three-d').css('z-index', 4);
+});
+$('#gd').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-gd').css('opacity', 1);
+    $('.thumbnail-flex-gd').css('z-index', 4);
+});
+$('#mg').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-mg').css('opacity', 1);
+    $('.thumbnail-flex-mg').css('z-index', 4);
+});
+$('#about').mouseenter(function () {
+
+    $('.thumbnail-flex').css('opacity', 0);
+    $('.thumbnail-flex').css('z-index', 0);
+    $('.thumbnail-flex-about').css('opacity', 1);
+    $('.thumbnail-flex-about').css('z-index', 4);
 });
