@@ -1,18 +1,3 @@
-// $("#empty-three-d").one("mouseover", function() {
-//   $("#thumbnail-flex-3d").addClass('permahover');
-//   $("#thumbnail-flex-2-3d").addClass('permahover');
-// });
-// $("#empty-gd").one("mouseover", function() {
-//   $("#thumbnail-flex-gd").addClass('permahover');
-//   $("#thumbnail-flex-2-gd").addClass('permahover');
-// });
-// $("#empty-mg").one("mouseover", function() {
-//   $(".thumbnail-flex").addClass('permahover');
-//   $(".thumbnail-flex-2").addClass('permahover');
-// });
-
-
-
 //p5
 var canvas;
 let rectX = 0;
