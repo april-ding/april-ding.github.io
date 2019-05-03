@@ -534,12 +534,16 @@ main {
          img{
 
             //Breakpoints
-            @media (min-width: $breakpoint--tablet + 1) {//laptop plus
+            @media (min-width: $breakpoint--mobile-r + 1) {//tablet plus
+               // img{
+
+
                width: 40%;
                height: 40%;
                padding-top: 5vh;
                padding-bottom: 5vh;
                border-radius: 5%;
+            // }
 
             }
             @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
@@ -549,12 +553,15 @@ main {
                padding-bottom: 5vh;
                border-radius: 5%;
             }
-            @media (max-width: $breakpoint--mobile-r) {//phone
+            @media (max-width: calc($breakpoint--mobile-r + 200)) {//phone
                width: 80%;
                height: 80%;
                padding-top: 1vh;
                padding-bottom: 1vh;
                border-radius: 5%;
+               img{
+                  display: none;
+               }
             }//end of Breakpoints
          }
          .about-text {
