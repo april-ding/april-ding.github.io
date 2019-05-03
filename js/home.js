@@ -55,22 +55,22 @@ function draw() {
     noStroke();
     fill('cornFlowerBlue');
 
-    // if (frameCount % 30 == 0) {
-    //     timeIt();
-    //
-    //     patternNum = int(random(1, 6));
-    //     if (patternNum == 1) {
-    //         pattern1();
-    //     } else if (patternNum == 2) {
-    //         pattern2();
-    //     } else if (patternNum == 3) {
-    //         pattern3();
-    //     } else if (patternNum == 4) {
-    //         pattern4();
-    //     } else if (patternNum == 5) {
-    //         pattern5();
-    //     }
-    // }
+    if (frameCount % 30 == 0) {
+        timeIt();
+
+        patternNum = int(random(1, 6));
+        if (patternNum == 1) {
+            pattern1();
+        } else if (patternNum == 2) {
+            pattern2();
+        } else if (patternNum == 3) {
+            pattern3();
+        } else if (patternNum == 4) {
+            pattern4();
+        } else if (patternNum == 5) {
+            pattern5();
+        }
+    }
 
     if(frameCount % 3600 == 0){
         background('white');
