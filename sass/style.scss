@@ -594,7 +594,7 @@ main {
             //Breakpoints
             @media (min-width: $breakpoint--tablet + 1) {//tablet plus
                width: 60%;
-               height: 60%;
+               height: auto;
                padding-top: 5vh;
                padding-bottom: 5vh;
                border-radius: 5%;
