@@ -54,9 +54,9 @@ function draw() {
     noStroke();
     fill('cornFlowerBlue');
 
-    if(windowWidth > 426){
+    //if(windowWidth > 426){
         drawBackground();
-    }
+    //}
 }
 
 function drawBackground(){

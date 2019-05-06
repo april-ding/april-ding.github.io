@@ -173,7 +173,7 @@ main {
    #intro{
       position: absolute;
       text-align: center;
-      top: 50vh;
+
       right: 25vw;
       width: 50vw;
       font-family: $nav--font-family;
@@ -186,15 +186,19 @@ main {
       //Breakpoints
       @media (min-width: $breakpoint--laptop + 1) {
          font-size: 36px;
+         top: 50vh;
       }
       @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
          font-size: 32px;
+         top: 45vh;
       }
       @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
          font-size: 20px;
+         top: 40vh;
       }
       @media (max-width: $breakpoint--mobile-r){
          font-size: 20px;
+         top: 40vh;
       }//end of Breakpoints
 
       // //Breakpoints

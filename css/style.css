@@ -118,7 +118,6 @@ main {
 main #intro {
   position: absolute;
   text-align: center;
-  top: 50vh;
   right: 25vw;
   width: 50vw;
   font-family: "Dosis", sans-serif;
@@ -131,21 +130,25 @@ main #intro {
 @media (min-width: 1401px) {
   main #intro {
     font-size: 36px;
+    top: 50vh;
   }
 }
 @media (min-width: 769px) and (max-width: 1400px) {
   main #intro {
     font-size: 32px;
+    top: 45vh;
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
   main #intro {
     font-size: 20px;
+    top: 40vh;
   }
 }
 @media (max-width: 425px) {
   main #intro {
     font-size: 20px;
+    top: 40vh;
   }
 }
 main #three-d {
