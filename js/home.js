@@ -48,7 +48,6 @@ function pattern5() {
 }
 
 function draw() {
-
     stroke(255, 216, 230);
     strokeWeight(2);
 
@@ -58,7 +57,6 @@ function draw() {
     if(windowWidth > 426){
         drawBackground();
     }
-
 }
 
 function drawBackground(){
