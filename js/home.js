@@ -55,6 +55,13 @@ function draw() {
     noStroke();
     fill('cornFlowerBlue');
 
+    if(windowWidth > 426){
+        drawBackground();
+    }
+
+}
+
+function drawBackground(){
     if (frameCount % 30 == 0) {
         timeIt();
 
