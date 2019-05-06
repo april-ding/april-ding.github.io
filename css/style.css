@@ -532,7 +532,7 @@ main .thumbnail-flex-about #about-content {
 @media (min-width: 769px) {
   main .thumbnail-flex-about #about-content img {
     width: 60%;
-    height: 60%;
+    height: auto;
     padding-top: 5vh;
     padding-bottom: 5vh;
     border-radius: 5%;
