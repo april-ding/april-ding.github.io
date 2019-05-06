@@ -170,6 +170,60 @@ main {
    width: 100%;
    height: 100%;
    position: absolute;
+   #intro{
+      position: absolute;
+      text-align: center;
+      top: 50vh;
+      right: 25vw;
+      width: 50vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      letter-spacing: 5px;
+      display: block;
+      z-index: 1;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 36px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 32px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 20px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 20px;
+      }//end of Breakpoints
+
+      // //Breakpoints
+      // @media (min-width: $breakpoint--tablet + 1) {//laptop plus
+      //    left: 27.5vw;
+      //    top: calc(calc(100vh - 45vw)/2);
+      //    align-items: center;
+      //    width: 45vw;
+      //    height: 45vw;
+      //
+      // }
+      // @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
+      //    left: 20vw;
+      //    top: calc(calc(100vh - 60vw)/2);
+      //    align-items: center;
+      //    width: 60vw;
+      //    height: 60vw;
+      //
+      // }
+      // @media (max-width: $breakpoint--mobile-r) {//phone
+      //    left: 10vw;
+      //    top: calc(calc(100vh - 80vw)/2);
+      //    align-items: center;
+      //    width: 80vw;
+      //    height: 80vw;
+      // }//end of Breakpoints
+
+
+   }
    /************************ Nav Boxes ************************/
    #three-d {
       position: absolute;
@@ -195,6 +249,7 @@ main {
       @media (max-width: $breakpoint--mobile-r){
          font-size: 33px;
       }//end of Breakpoints
+
 
    }
 
@@ -553,10 +608,8 @@ main {
             padding-bottom: 10px;
             background-color: white;
             //Breakpoints
-            @media (min-width: $breakpoint--laptop + 1) {//laptop
+            @media (min-width: $breakpoint--laptop + 1) {//laptop plus
                width: 60%;
-               font-size: 30px;
-               line-height: 34px;
             }
             @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {//laptop
                width: 60%;

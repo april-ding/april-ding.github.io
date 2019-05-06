@@ -115,6 +115,39 @@ main {
   /************************ Flex Boxes ************************/
   /************************ Hover React Boxes ************************/
 }
+main #intro {
+  position: absolute;
+  text-align: center;
+  top: 50vh;
+  right: 25vw;
+  width: 50vw;
+  font-family: "Dosis", sans-serif;
+  font-weight: 300;
+  color: black;
+  letter-spacing: 5px;
+  display: block;
+  z-index: 1;
+}
+@media (min-width: 1401px) {
+  main #intro {
+    font-size: 36px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1400px) {
+  main #intro {
+    font-size: 32px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  main #intro {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  main #intro {
+    font-size: 20px;
+  }
+}
 main #three-d {
   position: absolute;
   top: 75vh;
@@ -518,8 +551,6 @@ main .thumbnail-flex-about #about-content .about-text {
 @media (min-width: 1401px) {
   main .thumbnail-flex-about #about-content .about-text {
     width: 60%;
-    font-size: 30px;
-    line-height: 34px;
   }
 }
 @media (min-width: 769px) and (max-width: 1400px) {
