@@ -170,6 +170,60 @@ main {
    width: 100%;
    height: 100%;
    position: absolute;
+   #intro{
+      position: absolute;
+      text-align: center;
+      top: 50vh;
+      right: 25vw;
+      width: 50vw;
+      font-family: $nav--font-family;
+      font-weight: $main--font-weight;
+      color: $text-color;
+      letter-spacing: 5px;
+      display: block;
+      z-index: 1;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--laptop + 1) {
+         font-size: 36px;
+      }
+      @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {
+         font-size: 32px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 20px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 20px;
+      }//end of Breakpoints
+
+      // //Breakpoints
+      // @media (min-width: $breakpoint--tablet + 1) {//laptop plus
+      //    left: 27.5vw;
+      //    top: calc(calc(100vh - 45vw)/2);
+      //    align-items: center;
+      //    width: 45vw;
+      //    height: 45vw;
+      //
+      // }
+      // @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
+      //    left: 20vw;
+      //    top: calc(calc(100vh - 60vw)/2);
+      //    align-items: center;
+      //    width: 60vw;
+      //    height: 60vw;
+      //
+      // }
+      // @media (max-width: $breakpoint--mobile-r) {//phone
+      //    left: 10vw;
+      //    top: calc(calc(100vh - 80vw)/2);
+      //    align-items: center;
+      //    width: 80vw;
+      //    height: 80vw;
+      // }//end of Breakpoints
+
+
+   }
    /************************ Nav Boxes ************************/
    #three-d {
       position: absolute;
@@ -195,6 +249,7 @@ main {
       @media (max-width: $breakpoint--mobile-r){
          font-size: 33px;
       }//end of Breakpoints
+
 
    }
 
@@ -505,7 +560,7 @@ main {
       //Breakpoints
       @media (min-width: $breakpoint--tablet + 1) {//laptop plus
          left: 27.5vw;
-         top: calc(calc(100vh - 45vw)/2);
+         top: calc(calc(100vh - 45vw)/3);
          align-items: center;
          width: 45vw;
          height: 45vw;
@@ -519,7 +574,7 @@ main {
       }
       @media (max-width: $breakpoint--mobile-r) {//phone
          left: 10vw;
-         top: calc(calc(100vh - 80vw)/2);
+         top: calc(calc(100vh - 80vw)/3);
          align-items: center;
          width: 80vw;
          height: 80vw;
@@ -532,36 +587,17 @@ main {
          justify-content: space-around;
 
          img{
-
             //Breakpoints
-            @media (min-width: $breakpoint--mobile-r + 1) {//tablet plus
-               // img{
-
-
-               width: 40%;
-               height: 40%;
-               padding-top: 5vh;
-               padding-bottom: 5vh;
-               border-radius: 5%;
-            // }
-
-            }
-            @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
-               width: 50%;
-               height: 50%;
+            @media (min-width: $breakpoint--tablet + 1) {//tablet plus
+               width: 60%;
+               height: 60%;
                padding-top: 5vh;
                padding-bottom: 5vh;
                border-radius: 5%;
             }
-            @media (max-width: calc($breakpoint--mobile-r + 200)) {//phone
-               width: 80%;
-               height: 80%;
-               padding-top: 1vh;
-               padding-bottom: 1vh;
-               border-radius: 5%;
-               img{
-                  display: none;
-               }
+
+            @media (max-width: $breakpoint--tablet) {//phone
+               display: none;
             }//end of Breakpoints
          }
          .about-text {
@@ -572,15 +608,18 @@ main {
             padding-bottom: 10px;
             background-color: white;
             //Breakpoints
-            @media (min-width: $breakpoint--tablet + 1) {//laptop plus
-               width: 40%;
+            @media (min-width: $breakpoint--laptop + 1) {//laptop plus
+               width: 60%;
+            }
+            @media (min-width: $breakpoint--tablet + 1) and (max-width: $breakpoint--laptop) {//laptop
+               width: 60%;
             }
             @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
-               width: 50%;
+               width: 70%;
 
             }
             @media (max-width: $breakpoint--mobile-r) {//phone
-               width: 80%;
+               width: 95%;
 
             }//end of Breakpoints
 
