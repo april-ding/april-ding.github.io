@@ -528,13 +528,13 @@ main .thumbnail-flex-about #about-content {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-top: 5vh;
 }
 @media (min-width: 769px) {
   main .thumbnail-flex-about #about-content img {
     width: 60%;
     height: auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    margin-bottom: 1vh;
     border-radius: 5%;
   }
 }
@@ -542,6 +542,32 @@ main .thumbnail-flex-about #about-content {
   main .thumbnail-flex-about #about-content img {
     display: none;
   }
+}
+@media (min-width: 769px) {
+  main .thumbnail-flex-about #about-content #photo-credit {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  main .thumbnail-flex-about #about-content #photo-credit {
+    display: none;
+  }
+}
+main .thumbnail-flex-about #about-content #photo-credit p {
+  float: right;
+  color: grey;
+  font-family: "Dosis", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+main .thumbnail-flex-about #about-content #photo-credit a {
+  color: black;
+  text-decoration: none;
+}
+main .thumbnail-flex-about #about-content #photo-credit a:after {
+  text-decoration: none;
 }
 main .thumbnail-flex-about #about-content .about-text {
   color: black;
