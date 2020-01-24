@@ -247,6 +247,7 @@ main {
       font-weight: 400;
       color: black;
       letter-spacing: 2px;
+
       //Breakpoints
       @media (min-width: $breakpoint--tablet + 1) {
          font-size: 16px;
@@ -261,6 +262,30 @@ main {
          line-height: 14px;
       }//end of Breakpoints
    }
+
+   .subtitle{
+      padding-bottom: 10px;
+      font-family: $nav--font-family;
+      font-weight: 800;
+      color: red;
+      letter-spacing: 2px;
+
+      //Breakpoints
+      @media (min-width: $breakpoint--tablet + 1) {
+         font-size: 16px;
+         line-height: 25px;
+      }
+      @media (min-width: $breakpoint--mobile-r) and (max-width: $breakpoint--tablet) {
+         font-size: 12px;
+         line-height: 16px;
+      }
+      @media (max-width: $breakpoint--mobile-r){
+         font-size: 10px;
+         line-height: 14px;
+      }
+   }
+
+
    img{
       margin-top: 20px;
       width: 100%;
@@ -269,6 +294,8 @@ main {
       margin-top: 20px;
       width: 100%;
    }
+
+
 
 
 }

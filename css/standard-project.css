@@ -224,6 +224,31 @@ main p {
     line-height: 14px;
   }
 }
+main .subtitle {
+  padding-bottom: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  color: red;
+  letter-spacing: 2px;
+}
+@media (min-width: 769px) {
+  main .subtitle {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  main .subtitle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 425px) {
+  main .subtitle {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
 main img {
   margin-top: 20px;
   width: 100%;
