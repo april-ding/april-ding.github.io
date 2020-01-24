@@ -60,7 +60,7 @@ function draw() {
 }
 
 function drawBackground(){
-    if (frameCount % 30 == 0) {
+    if (frameCount % 45 == 0) {
         timeIt();
 
         patternNum = int(random(1, 6));
