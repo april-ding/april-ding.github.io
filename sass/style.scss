@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed'); // =========================================================
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+@font-face{
+   font-family: "HKGrotesk-Medium";
+   src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
+   src: url("../fonts/hkgrotesk/hkgrotesk-medium.woff") format("woff"),
+         url("../fonts/hkgrotesk/hkgrotesk-medium.otf") format("opentype"),
+         url("../fonts/hkgrotesk/hkgrotesk-medium.svg#hkgrotesk-medium") format("svg");
+}
+// =========================================================
 // Variables
 // =========================================================
-$header--font-family: 'Dosis', sans-serif;
+$header--font-family: 'HKGrotesk-Medium', sans-serif;
 $header--font-weight: 800; //bold
 $header--font-size: 220px;
 $text-color: black;
-$nav--font-family: 'Dosis', sans-serif;
+$nav--font-family: 'HKGrotesk-Medium', sans-serif;
 $nav--font-weight: 800;
 $nav--font-size: 30px;
 $main--font-weight: 300;
@@ -90,41 +99,104 @@ body {
 // =========================================================
 // Nav
 // =========================================================
+#nav-wrapper{
+   width: 100%;
+   height: 60px;
 
-.animated-nav {
-   //animation fade in on load
-   -webkit-animation-duration: 1s;
-   animation-duration: 1s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-}
-@-webkit-keyframes fadeInRight {
-   0% {
-      opacity: 0;
-      -webkit-transform: translateY(-50px);
+   background-color: #FF613F;
+   border-bottom: 1px solid #000000;
+
+   display: flex;
+   justify-content: center;
+
+   #nav-smallwrapper{
+      width: 75%;
+
+      font-family: 'HKGrotesk-Medium', sans-serif;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: center;
+      align-items: baseline;
+      justify-content: space-between;
+
+      #nav-headers{
+         width: 40%;
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-around;
+
+         font-size: 18px;
+         li:nth-child(6){
+            background-color:#FFA295;
+         }
+         li:nth-child(7){
+            color:#FFA295;
+         }
+         li:nth-child(8){
+            background-color:#FFA295;
+         }
+         li:nth-child(9){
+            color:#FFA295;
+         }
+
+         .dot{
+            height: 6px;
+              width: 6px;
+              background-color: #000000;
+              border-radius: 50%;
+              display: flex;
+              align-self: center;
+
+         }
+      }
+
+      h1{
+
+         font-size: 28px;
+         text-decoration: underline;
+         text-align: right;
+
+      }
    }
 
-   100% {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-   }
-}
-@keyframes fadeInRight {
-   0% {
-      opacity: 0;
-      transform: translateY(-50px);
-   }
-
-   100% {
-      opacity: 1;
-      transform: translateY(0);
-   }
 }
 
-.fadeInRight {
-   -webkit-animation-name: fadeInRight;
-   animation-name: fadeInRight;
-}
+
+/************ old Nav Code *************/
+// .animated-nav {
+//    //animation fade in on load
+//    -webkit-animation-duration: 1s;
+//    animation-duration: 1s;
+//    -webkit-animation-fill-mode: both;
+//    animation-fill-mode: both;
+// }
+// @-webkit-keyframes fadeInRight {
+//    0% {
+//       opacity: 0;
+//       -webkit-transform: translateY(-50px);
+//    }
+//
+//    100% {
+//       opacity: 1;
+//       -webkit-transform: translateY(0);
+//    }
+// }
+// @keyframes fadeInRight {
+//    0% {
+//       opacity: 0;
+//       transform: translateY(-50px);
+//    }
+//
+//    100% {
+//       opacity: 1;
+//       transform: translateY(0);
+//    }
+// }
+//
+// .fadeInRight {
+//    -webkit-animation-name: fadeInRight;
+//    animation-name: fadeInRight;
+// }
 // =========================================================
 // Main
 // =========================================================
@@ -201,30 +273,7 @@ main {
          top: 40vh;
       }//end of Breakpoints
 
-      // //Breakpoints
-      // @media (min-width: $breakpoint--tablet + 1) {//laptop plus
-      //    left: 27.5vw;
-      //    top: calc(calc(100vh - 45vw)/2);
-      //    align-items: center;
-      //    width: 45vw;
-      //    height: 45vw;
-      //
-      // }
-      // @media (min-width: $breakpoint--mobile-r + 1) and (max-width: $breakpoint--tablet) {//tablet
-      //    left: 20vw;
-      //    top: calc(calc(100vh - 60vw)/2);
-      //    align-items: center;
-      //    width: 60vw;
-      //    height: 60vw;
-      //
-      // }
-      // @media (max-width: $breakpoint--mobile-r) {//phone
-      //    left: 10vw;
-      //    top: calc(calc(100vh - 80vw)/2);
-      //    align-items: center;
-      //    width: 80vw;
-      //    height: 80vw;
-      // }//end of Breakpoints
+
 
 
    }
