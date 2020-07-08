@@ -19,7 +19,7 @@ function setup() {
     p5Canvas.parent("p5-canvas");
 
     if (!disableCanvas) {
-        boidsFill = color(250);
+        boidsFill = color(240);
         boidsStroke = color(180);
 
         flock = new Flock();
@@ -96,7 +96,7 @@ function Boid(x, y) {
     this.acceleration = createVector(0, 0);
     this.velocity = createVector(random(-1, 1), random(-1, 1));
     this.position = createVector(x, y);
-    this.r = 3.0;
+    this.r = 10.0;
     this.maxspeed = 3; // Maximum speed
     this.maxforce = 0.05; // Maximum steering force
 }
@@ -161,13 +161,47 @@ Boid.prototype.render = function() {
     push();
     translate(this.position.x, this.position.y);
     rotate(theta);
+    // beginShape();
+    // vertex(0, -this.r * 3);
+    // vertex(-this.r*1.5, this.r * 3);
+    // vertex(this.r*1.5, this.r * 3);
+    // endShape(CLOSE);
+
     beginShape();
-    vertex(0, -this.r * 3);
-    vertex(-this.r*1.5, this.r * 3);
-    vertex(this.r*1.5, this.r * 3);
+    curveVertex(0, -this.r);
+    curveVertex(0, -this.r);
+    curveVertex(-this.r/3, this.r  / 3);
+    curveVertex(-this.r/3, this.r / 2);
+    curveVertex(0, this.r);
+    curveVertex(0, this.r);
+    endShape();
 
-    endShape(CLOSE);
+    beginShape();
+    curveVertex(0, -this.r);
+    curveVertex(0, -this.r);
+    curveVertex(this.r/3, this.r  / 3);
+    curveVertex(this.r/3, this.r / 2);
+    curveVertex(0, this.r);
+    curveVertex(0, this.r);
+    endShape();
 
+    beginShape();
+    curveVertex(0, this.r);
+    curveVertex(0, this.r);
+    curveVertex(-this.r/3, this.r+this.r / 3);
+    curveVertex(-this.r/3, this.r+this.r * 2 / 3);
+    curveVertex(0, this.r*1.5);
+    curveVertex(0, this.r*1.5);
+    endShape();
+
+    beginShape();
+    curveVertex(0, this.r);
+    curveVertex(0, this.r);
+    curveVertex(this.r/3, this.r+this.r / 3);
+    curveVertex(this.r/3, this.r+this.r * 2 / 3);
+    curveVertex(0, this.r*1.5);
+    curveVertex(0, this.r*1.5);
+    endShape();
 
     pop();
 }
@@ -274,8 +308,9 @@ new WOW().init();
 const stickyElm = document.querySelector('nav')
 
 const observer = new IntersectionObserver(
-  ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
-  {threshold: [1]}
+    ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1), {
+        threshold: [1]
+    }
 );
 
 observer.observe(stickyElm)
