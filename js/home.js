@@ -18,6 +18,8 @@ function setup() {
     var p5Canvas = createCanvas(windowWidth, windowHeight);
     p5Canvas.parent("p5-canvas");
 
+
+
     if (!disableCanvas) {
         boidsFill = color(240);
         boidsStroke = color(180);
@@ -57,7 +59,6 @@ function draw() {
 
 
 }
-
 
 // The Nature of Code
 // Daniel Shiffman
@@ -161,17 +162,18 @@ Boid.prototype.render = function() {
     push();
     translate(this.position.x, this.position.y);
     rotate(theta);
+
     // beginShape();
     // vertex(0, -this.r * 3);
-    // vertex(-this.r*1.5, this.r * 3);
-    // vertex(this.r*1.5, this.r * 3);
+    // vertex(-this.r * 1.5, this.r * 3);
+    // vertex(this.r * 1.5, this.r * 3);
     // endShape(CLOSE);
 
     beginShape();
     curveVertex(0, -this.r);
     curveVertex(0, -this.r);
-    curveVertex(-this.r/3, this.r  / 3);
-    curveVertex(-this.r/3, this.r / 2);
+    curveVertex(-this.r / 3, this.r / 3);
+    curveVertex(-this.r / 3, this.r / 2);
     curveVertex(0, this.r);
     curveVertex(0, this.r);
     endShape();
@@ -179,8 +181,8 @@ Boid.prototype.render = function() {
     beginShape();
     curveVertex(0, -this.r);
     curveVertex(0, -this.r);
-    curveVertex(this.r/3, this.r  / 3);
-    curveVertex(this.r/3, this.r / 2);
+    curveVertex(this.r / 3, this.r / 3);
+    curveVertex(this.r / 3, this.r / 2);
     curveVertex(0, this.r);
     curveVertex(0, this.r);
     endShape();
@@ -188,19 +190,19 @@ Boid.prototype.render = function() {
     beginShape();
     curveVertex(0, this.r);
     curveVertex(0, this.r);
-    curveVertex(-this.r/3, this.r+this.r / 3);
-    curveVertex(-this.r/3, this.r+this.r * 2 / 3);
-    curveVertex(0, this.r*1.5);
-    curveVertex(0, this.r*1.5);
+    curveVertex(-this.r / 3, this.r + this.r / 3);
+    curveVertex(-this.r / 3, this.r + this.r * 2 / 3);
+    curveVertex(0, this.r * 1.5);
+    curveVertex(0, this.r * 1.5);
     endShape();
 
     beginShape();
     curveVertex(0, this.r);
     curveVertex(0, this.r);
-    curveVertex(this.r/3, this.r+this.r / 3);
-    curveVertex(this.r/3, this.r+this.r * 2 / 3);
-    curveVertex(0, this.r*1.5);
-    curveVertex(0, this.r*1.5);
+    curveVertex(this.r / 3, this.r + this.r / 3);
+    curveVertex(this.r / 3, this.r + this.r * 2 / 3);
+    curveVertex(0, this.r * 1.5);
+    curveVertex(0, this.r * 1.5);
     endShape();
 
     pop();
@@ -314,6 +316,24 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(stickyElm)
+
+/********* STATS ************/
+
+javascript: (function() {
+    var script = document.createElement('script');
+    script.onload = function() {
+        var stats = new Stats();
+        document.body.appendChild(stats.dom);
+        requestAnimationFrame(function loop() {
+            stats.update();
+            requestAnimationFrame(loop)
+        });
+    };
+    script.src = 'js/stats.min.js';
+    document.head.appendChild(script);
+})()
+
+
 
 // //p5
 // var canvas;
