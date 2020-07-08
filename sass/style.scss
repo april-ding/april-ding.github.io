@@ -83,6 +83,7 @@ $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
    animation-name: fadeInTop;
 }
 //p5canvas
+
 #p5-canvas {
    position: fixed;
    top: 0;
@@ -94,19 +95,29 @@ $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 // =========================================================
 // Nav
 // =========================================================
-
-#nav-wrapper {
+#nav-white-space{
+   width: 100%;
+   height: 70px;
+   //background-color: white;
+}
+nav.isSticky{
+   background-color: white;
+}
+nav {
    width: 100%;
    height: 60px;
-   top:0;
-   left:0;
+   top: -1px;
+   left: 0;
    // background-color: #FF613F;
-   background-color: white;
+   //background-color: white;
    //border-bottom: 2px solid #000000;
    display: flex;
    justify-content: center;
    position: sticky;
-   margin-top: 80px;
+   //margin-top: 80px;
+   padding-top: 1px;
+   z-index: 5;
+
 
 
    #nav-smallwrapper {
@@ -124,7 +135,6 @@ $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
          flex-flow: row wrap;
          justify-content: space-around;
          font-size: 22px;
-
 
          .dot {
             height: 6px;
@@ -186,13 +196,12 @@ main {
    width: 75%;
    margin-left: 12.5%;
    margin-top: 100px;
-
+   margin-bottom: 200px;
    font-family: 'HKGrotesk-Medium', sans-serif;
 
    #bio {
       font-size: 36px;
       line-height: 56px;
-
       margin-bottom: 120px;
       color: #636363;
    }
@@ -203,27 +212,141 @@ main {
       text-decoration: underline;
    }
 
-
    .selected-projects {
       display: flex;
       flex-flow: row wrap;
       align-items: flex-start;
 
-
-
       .project-thumb {
          width: 100%;
-
+         border: 1px solid black;
+         position: relative;
          img {
             width: 100%;
-            max-height: 400px;
-            // max-width: 100%;
-            // max-height: 100%;
-            border: 1px solid black;
+
+            opacity: 1;
+            transition: 0.5s;
          }
+         .selected-project-overlay-colorbox-blue{
+            //position
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            top:0;
+            left: 100%;
+
+            //styling
+            border: 1px solid black;
+            background-color: #1289F6;
+            opacity: 0;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+
+            //animation
+            transition: width 0.5s, left 0.5s;
+         }
+         .selected-project-overlay-colorbox-green{
+            //position
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            top:0;
+            left: 100%;
+
+            //styling
+            border: 1px solid black;
+            background-color: #219653;
+            opacity: 0;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+
+            //animation
+            transition: width 0.5s, left 0.5s;
+         }
+         .selected-project-overlay-colorbox-orange{
+            //position
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            top:0;
+            left: 100%;
+
+            //styling
+            border: 1px solid black;
+            background-color: #FF613F;
+            opacity: 0;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+
+            //animation
+            transition: width 0.5s, left 0.5s;
+         }
+
+
+         .selected-project-overlay-text{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            width: 20%;
+            height: 100%;
+            top:0;
+            left: 80%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s;
+            transition-delay: 0.5s;
+
+            font-size: 36px;
+            line-height: 56px;
+         }
+
+         .selected-project-overlay-title{
+
+            color: black;
+            z-index: 1;
+            padding: 10px;
+         }
+         .selected-project-overlay-media{
+
+            color: white;
+            z-index: 1;
+            padding: 10px;
+
+         }
+
+         &:hover img{
+            opacity: 0.3;
+         }
+         &:hover .selected-project-overlay-colorbox-blue{
+            opacity: 1;
+            width: 20%;
+            left: 80%;
+         }
+         &:hover .selected-project-overlay-colorbox-green{
+            opacity: 1;
+            width: 20%;
+            left: 80%;
+         }
+         &:hover .selected-project-overlay-colorbox-orange{
+            opacity: 1;
+            width: 20%;
+            left: 80%;
+         }
+
+         &:hover .selected-project-overlay-text{
+
+               opacity: 1;
+
+         }
+
       }
    }
-
 }
 //************* OLD MAIN **********//
 // .animated-main {

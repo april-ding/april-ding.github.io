@@ -46,18 +46,27 @@
   z-index: -1;
 }
 
-#nav-wrapper {
+#nav-white-space {
+  width: 100%;
+  height: 70px;
+}
+
+nav.isSticky {
+  background-color: white;
+}
+
+nav {
   width: 100%;
   height: 60px;
-  top: 0;
+  top: -1px;
   left: 0;
-  background-color: white;
   display: flex;
   justify-content: center;
   position: sticky;
-  margin-top: 80px;
+  padding-top: 1px;
+  z-index: 5;
 }
-#nav-wrapper #nav-smallwrapper {
+nav #nav-smallwrapper {
   width: 75%;
   font-family: 'HKGrotesk-Medium', sans-serif;
   display: flex;
@@ -66,14 +75,14 @@
   align-items: baseline;
   justify-content: space-between;
 }
-#nav-wrapper #nav-smallwrapper #nav-headers {
+nav #nav-smallwrapper #nav-headers {
   width: 15%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   font-size: 22px;
 }
-#nav-wrapper #nav-smallwrapper #nav-headers .dot {
+nav #nav-smallwrapper #nav-headers .dot {
   height: 6px;
   width: 6px;
   background-color: #000000;
@@ -81,7 +90,7 @@
   display: flex;
   align-self: center;
 }
-#nav-wrapper #nav-smallwrapper h1 {
+nav #nav-smallwrapper h1 {
   font-size: 30px;
   text-decoration: underline;
   text-align: right;
@@ -92,6 +101,7 @@ main {
   width: 75%;
   margin-left: 12.5%;
   margin-top: 100px;
+  margin-bottom: 200px;
   font-family: 'HKGrotesk-Medium', sans-serif;
 }
 main #bio {
@@ -112,11 +122,101 @@ main .selected-projects {
 }
 main .selected-projects .project-thumb {
   width: 100%;
+  border: 1px solid black;
+  position: relative;
 }
 main .selected-projects .project-thumb img {
   width: 100%;
-  max-height: 400px;
+  opacity: 1;
+  transition: 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-blue {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 100%;
   border: 1px solid black;
+  background-color: #1289F6;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-green {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  border: 1px solid black;
+  background-color: #219653;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-orange {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  border: 1px solid black;
+  background-color: #FF613F;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 80%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+  font-size: 36px;
+  line-height: 56px;
+}
+main .selected-projects .project-thumb .selected-project-overlay-title {
+  color: black;
+  z-index: 1;
+  padding: 10px;
+}
+main .selected-projects .project-thumb .selected-project-overlay-media {
+  color: white;
+  z-index: 1;
+  padding: 10px;
+}
+main .selected-projects .project-thumb:hover img {
+  opacity: 0.3;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-blue {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-green {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-orange {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-text {
+  opacity: 1;
 }
 
 /************************ Hover React Boxes ************************/

@@ -1,12 +1,12 @@
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = true;
+let disableCanvas = false;
 
 //public variables
 let flock;
 let num_of_boids = 0;
-let max_num_boids = 100;
+let max_num_boids = 50;
 let lastMouseX;
 let lastMouseY;
 
@@ -19,8 +19,8 @@ function setup() {
     p5Canvas.parent("p5-canvas");
 
     if (!disableCanvas) {
-        boidsFill = color(255, 233, 229);
-        boidsStroke = color(100);
+        boidsFill = color(250);
+        boidsStroke = color(180);
 
         flock = new Flock();
         // Add an initial set of boids into the system
@@ -162,10 +162,12 @@ Boid.prototype.render = function() {
     translate(this.position.x, this.position.y);
     rotate(theta);
     beginShape();
-    vertex(0, -this.r * 4);
-    vertex(-this.r * 2, this.r * 4);
-    vertex(this.r * 2, this.r * 4);
+    vertex(0, -this.r * 3);
+    vertex(-this.r*1.5, this.r * 3);
+    vertex(this.r*1.5, this.r * 3);
+
     endShape(CLOSE);
+
 
     pop();
 }
@@ -267,6 +269,16 @@ Boid.prototype.cohesion = function(boids) {
 /********* WOW *********/
 new WOW().init();
 
+/********* STICKY DETECTOR *********/
+// get the sticky element
+const stickyElm = document.querySelector('nav')
+
+const observer = new IntersectionObserver(
+  ([e]) => e.target.classList.toggle('isSticky', e.intersectionRatio < 1),
+  {threshold: [1]}
+);
+
+observer.observe(stickyElm)
 
 // //p5
 // var canvas;
