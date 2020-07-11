@@ -132,10 +132,10 @@ nav {
       justify-content: space-between;
 
       #nav-headers {
-         width: 15%;
+         width: 13%;
          display: flex;
          flex-flow: row wrap;
-         justify-content: space-around;
+         justify-content: space-between;
          font-size: 22px;
 
          .dot {
@@ -187,7 +187,7 @@ main {
 
       .project-thumb {
          width: 100%;
-         border: 1px solid black;
+         //border: 1px solid black;
          position: relative;
          img {
             width: 100%;
@@ -204,7 +204,7 @@ main {
             left: 100%;
 
             //styling
-            border: 1px solid black;
+            //border: 1px solid black;
             background-color: #1289F6;
             opacity: 0;
 
@@ -224,7 +224,7 @@ main {
             left: 100%;
 
             //styling
-            border: 1px solid black;
+            //border: 1px solid black;
             background-color: #219653;
             opacity: 0;
 
@@ -244,7 +244,7 @@ main {
             left: 100%;
 
             //styling
-            border: 1px solid black;
+            //border: 1px solid black;
             background-color: #FF613F;
             opacity: 0;
 
@@ -337,12 +337,12 @@ main {
 
    .gallery-thumb{
 
-      flex: 1 0 21%;
-      border: 0.5px solid black;
+      //flex: 1 0 21%;
+      //border: 0.5px solid black;
       padding-top: -1px;
 
-      //width: 23%;
-      //margin-bottom: 20px;
+      width: 21%;
+      margin-bottom: 50px;
 
       img{
          width: 100%;
