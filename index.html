@@ -5,15 +5,21 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <title>April Ding</title>
+   <!-- css stylesheets -->
    <link href="css/reset.css" rel="stylesheet"><!-- DO NOT EDIT THIS LINE. -->
    <link href="css/style.css" rel="stylesheet">
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+   <link rel="stylesheet" href="css/animate.css" />
+   <link href="css/lightbox.css" rel="stylesheet" />
+   <link href="css/aos.css" rel="stylesheet" />
+
+   <!-- js -->
    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
    <script scr="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
 
    <script type="text/javascript" src="js/wow.min.js"></script>
+   <script type="text/javascript" src="js/aos.js"></script>
 
 
 </head>
@@ -21,10 +27,6 @@
 <body>
    <div id="p5-canvas"></div>
 
-   <!-- <div class = "animated-header fadeInTop">
-      <header>
-      </header>
-   </div> -->
    <div id="nav-white-space"></div>
    <nav id="nav-wrapper">
       <div id="nav-smallwrapper">
@@ -42,19 +44,21 @@
    </nav>
 
    <main>
-      <p id="bio" class="animate__animated animate__jackInTheBox animate__slow">April is a motion designer worked at B-Reel LA. UCLA Aluma, book lover. Based in Los Angeles, California and Hangzhou, China.</p>
-      <p id="small-titles">Selected Projects</p>
+
+      <p id="bio" data-aos="skew-in" data-aos-duration="2000">April is a motion designer worked at B-Reel LA. UCLA Aluma, book lover. Based in Los Angeles, California and Hangzhou, China.</p>
+      <p class="small-titles">Selected Projects</p>
 
       <ul class="selected-projects">
 
-         <li class="project-thumb"><img src="img/selected-projects/memories.gif">
+         <li class="project-thumb" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/selected-projects/memories.gif">
             <div class="selected-project-overlay-colorbox-blue"></div>
             <div class="selected-project-overlay-text">
                <p class="selected-project-overlay-title">Memories</p>
                <p class="selected-project-overlay-media">Unity, Cinema 4D</p>
             </div>
          </li>
-         <li class="project-thumb animate__animated animate__rotateInUpLeft wow rotateInUpLeft" data-av-animation="rotateInUpLeft">
+         <li class="project-thumb" data-aos="fade-up" data-aos-duration="2000">
             <img src="img/selected-projects/plastic.jpg">
             <div class="selected-project-overlay-colorbox-green"></div>
             <div class="selected-project-overlay-text">
@@ -62,13 +66,33 @@
                <p class="selected-project-overlay-media">Riso Print Booklet</p>
             </div>
          </li>
-         <li class="project-thumb animate__animated animate__rotateInUpRight wow rotateInUpRight"><img src="img/selected-projects/shanhai.jpg">
+         <li class="project-thumb" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/selected-projects/shanhai.jpg">
             <div class="selected-project-overlay-colorbox-orange"></div>
             <div class="selected-project-overlay-text">
                <p class="selected-project-overlay-title">Shanhai</p>
                <p class="selected-project-overlay-media">After Effects, Cinema 4D</p>
             </div>
          </li>
+      </ul>
+
+      <p class="small-titles">Gallery</p>
+      <ul class = "gallery">
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up"  data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up"  data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+         <li class="gallery-thumb" data-aos="fade-up"  data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img src="img/thumbnails/nightmare-1.jpg" alt=""/></a></li>
+
 
 
       </ul>
@@ -137,8 +161,10 @@
 
    </footer>
 
-
+   <script src="js/lightbox-plus-jquery.min.js"></script>
    <script type="text/javascript" src="js/home.js"></script>
+
+
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 
