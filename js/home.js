@@ -1,6 +1,40 @@
 //************ AOS ****************//
 AOS.init();
 
+//************* lightbox video ******//
+$('main').append(`
+    <div class="lightboxV">
+      <a href="#lightboxV" class="lightboxV-close lightboxV-toggle">X</a>
+      <div class="lightboxV-container">
+        <div class="row">
+          <div class="col-sm-12 lightboxV-column">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  `);
+
+$('.lightboxV-toggle').on('click', (event) => {
+  event.preventDefault();
+  $('.lightboxV').fadeToggle('fast');
+
+  let context = $(event.currentTarget).attr('data-lightboxV-type');
+  let content = $(event.currentTarget).attr('data-lightboxV-content');
+  console.log(event);
+  if (context == 'video') {
+    $('.lightboxV-column').append(`
+        <div class="lightboxV-video">
+        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
+        </div>
+    `);
+}
+});
+
+$('.lightboxV-close').on('click', (event) => {
+  event.preventDefault();
+  $('.lightboxV-column > *').remove();
+});
 
 //************ p5 birds ************//
 
