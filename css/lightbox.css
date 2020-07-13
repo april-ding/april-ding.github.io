@@ -171,7 +171,8 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption a {
-  color: #4ae;
+  color: black;
+  font-family: "HK HKGrotesk-Medium", sans-serif;
 }
 
 .lb-data .lb-number {
