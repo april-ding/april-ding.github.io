@@ -39,7 +39,7 @@ AOS.init();
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = true;
+let disableCanvas = false;
 
 //public variables
 let flock;
@@ -65,7 +65,7 @@ function setup() {
         flock = new Flock();
         // Add an initial set of boids into the system
         for (let i = 0; i < 50; i++) {
-            let b = new Boid(width * 7 / 8, 200);
+            let b = new Boid(width / 8, 200);
             flock.addBoid(b);
             num_of_boids++;
         }
@@ -75,7 +75,7 @@ function setup() {
 
 function draw() {
     if (!disableCanvas) {
-        background(255);
+        background('#f4f4f4');
 
         if (lastMouseX != mouseX && lastMouseY != mouseY) {
             //check if max number of boids is reached, if not, add a new boid
