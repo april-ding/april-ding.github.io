@@ -1,465 +1,265 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis");
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: auto;
+@font-face {
+  font-family: "HKGrotesk-Medium";
+  src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
+  src: url("../fonts/hkgrotesk/hkgrotesk-medium.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-medium.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-medium.svg#hkgrotesk-medium") format("svg");
+  font-family: "HKGrotesk-Regular";
+  src: url("../fonts/hkgrotesk/hkgrotesk-regular.eot");
+  src: url("../fonts/hkgrotesk/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-regular.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-regular.svg#hkgrotesk-regular") format("svg");
 }
-body canvas#defaultCanvas0.p5Canvas {
-  z-index: -3 !important;
+body {
+  background-color: #f2f2f2;
+}
+
+#p5-canvas {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
-}
-body #bg {
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  position: fixed;
-  width: 55vw;
-  height: 100vh;
-  top: 0;
-  left: 22.5vw;
-  background-color: white;
 }
 
-header {
-  width: 60vw;
-  margin-left: 20vw;
-  margin-top: 5vh;
+#nav-white-space {
+  width: 100%;
+  height: 70px;
+}
+
+nav.isSticky {
+  background-color: #f2f2f2;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  top: -1px;
+  left: 0;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  padding-top: 1px;
+  z-index: 5;
+}
+nav #nav-smallwrapper {
+  width: 75%;
+  font-family: 'HKGrotesk-Medium', sans-serif;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  background-color: white;
+  align-content: center;
+  align-items: baseline;
+  justify-content: space-between;
 }
-header h1 {
-  text-decoration: none;
-  color: black;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
-  letter-spacing: 10px;
+nav #nav-smallwrapper #nav-headers {
+  width: 13%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-size: 22px;
 }
-@media (min-width: 426px) {
-  header h1 {
-    font-size: 60px;
-  }
+nav #nav-smallwrapper #nav-headers .dot {
+  height: 6px;
+  width: 6px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
 }
-@media (max-width: 425px) {
-  header h1 {
-    font-size: 30px;
-  }
-}
-header h2 {
-  margin-left: auto;
+nav h1 {
+  font-size: 30px;
+  text-decoration: underline;
   text-align: right;
+  color: black;
 }
-header h2 a {
-  text-decoration: none;
-  color: darkOrange;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-@media (min-width: 426px) {
-  header h2 a {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-@media (max-width: 425px) {
-  header h2 a {
-    font-size: 12px;
-    line-height: 14px;
-  }
-}
-
-.animated-header {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInTop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-@keyframes fadeInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fadeInTop {
-  -webkit-animation-name: fadeInTop;
-  animation-name: fadeInTop;
-}
-
-.animated-nav {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
-}
-
-.animated-main {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-@keyframes fadeInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fadeInBottom {
-  -webkit-animation-name: fadeInBottom;
-  animation-name: fadeInBottom;
+nav h1:after {
+  color: black;
 }
 
 main {
-  width: 60vw;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  font-family: 'HKGrotesk-Regular', sans-serif;
+}
+main .feature {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  margin-left: 10%;
+}
+main .feature-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .feature-info {
+  display: flex;
+  flex: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main h2 {
+  font-family: 'HKGrotesk-Medium', sans-serif;
+  width: 25%;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+main .feature-categories {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+main .category-title {
+  font-family: 'HKGrotesk-Medium', sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+  align-self: flex-start;
+  text-decoration: underline;
+}
+main .category-item {
+  font-size: 16px;
+  line-height: 20px;
+}
+main .feature-description {
+  width: 50%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+main .medium-titles {
   margin-bottom: 30px;
-  background-color: white;
-}
-main .info {
-  margin-top: 5vh;
-  margin-bottom: 3vh;
-  font-family: "Dosis", sans-serif;
-  font-weight: 300;
-  color: grey;
-  line-height: solid;
-  letter-spacing: 2px;
-}
-@media (min-width: 769px) {
-  main .info {
-    font-size: 14px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  main .info {
-    font-size: 10px;
-  }
-}
-@media (max-width: 425px) {
-  main .info {
-    font-size: 10px;
-  }
-}
-main p {
-  padding-bottom: 10px;
-  font-family: "Dosis", sans-serif;
-  font-weight: 400;
-  color: black;
-  letter-spacing: 2px;
-}
-@media (min-width: 769px) {
-  main p {
-    font-size: 16px;
-    line-height: 25px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  main p {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-@media (max-width: 425px) {
-  main p {
-    font-size: 10px;
-    line-height: 14px;
-  }
-}
-main .subtitle {
-  padding-bottom: 10px;
-  font-family: "Dosis", sans-serif;
-  font-weight: 800;
-  color: red;
-  letter-spacing: 2px;
-}
-@media (min-width: 769px) {
-  main .subtitle {
-    font-size: 16px;
-    line-height: 25px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  main .subtitle {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-@media (max-width: 425px) {
-  main .subtitle {
-    font-size: 10px;
-    line-height: 14px;
-  }
-}
-main img {
-  margin-top: 20px;
-  width: 100%;
-}
-main video {
-  margin-top: 20px;
-  width: 100%;
-}
-
-html.lb-disable-scrolling {
-  overflow: hidden;
-  /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-}
-
-.lightboxOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  display: none;
-}
-
-.lightbox {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  text-align: center;
-  line-height: 0;
-  font-weight: normal;
-}
-
-.lightbox .lb-image {
-  display: block;
-  height: auto;
-  max-width: inherit;
-  max-height: none;
-  border-radius: 3px;
-  /* Image border */
-}
-
-.lightbox a img {
-  border: none;
-}
-
-.lb-outerContainer {
-  position: relative;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  border-radius: 4px;
-  /* Background color behind image.
-    This is visible during transitions. */
-  background-color: pink;
-}
-
-.lb-outerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.lb-loader {
-  position: absolute;
-  top: 43%;
-  left: 0;
-  height: 25%;
-  width: 100%;
-  text-align: center;
-  line-height: 0;
-}
-
-.lb-cancel {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url("../images/loading.gif") no-repeat;
-}
-
-.lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
-
-.lb-container > .nav {
-  left: 0;
-}
-
-.lb-nav a {
-  outline: none;
-  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-}
-
-.lb-next,
-.lb-prev {
-  height: 100%;
-  cursor: pointer;
-  display: block;
-}
-
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url("../images/prev.png") left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-.lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url("../images/next.png") right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-.lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-.lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
-  *zoom: 1;
-  width: 100%;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.lb-dataContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
-
-.lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
-  line-height: 1.1em;
-}
-
-.lb-data .lb-caption {
-  font-family: "Dosis", sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  text-decoration: underline;
 }
-
-.lb-data .lb-caption a {
-  color: black;
+main .small-titles {
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-
-.lb-data .lb-number {
-  display: block;
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
+main .selected-projects {
+  margin-bottom: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
 }
-
-.lb-data .lb-close {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url("../images/close.png") top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+main .selected-projects .project-thumb {
+  width: 100%;
+  position: relative;
 }
-
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+main .selected-projects .project-thumb img {
+  width: 100%;
+  height: 100%;
   opacity: 1;
+  transition: 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-blue {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: #1289F6;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-green {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: #219653;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-colorbox-orange {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background-color: #FF613F;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: width 0.5s, left 0.5s;
+}
+main .selected-projects .project-thumb .selected-project-overlay-text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 80%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+  font-size: 36px;
+  line-height: 56px;
+}
+main .selected-projects .project-thumb .selected-project-overlay-title {
+  color: black;
+  z-index: 1;
+  padding: 10px;
+}
+main .selected-projects .project-thumb .selected-project-overlay-media {
+  color: white;
+  z-index: 1;
+  padding: 10px;
+}
+main .selected-projects .project-thumb:hover img {
+  opacity: 0.3;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-blue {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-green {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-colorbox-orange {
+  opacity: 1;
+  width: 20%;
+  left: 80%;
+}
+main .selected-projects .project-thumb:hover .selected-project-overlay-text {
+  opacity: 1;
+}
+
+/********* gallery *********/
+.gallery {
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.gallery .gallery-thumb {
+  padding-top: -1px;
+  width: 18%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.gallery .gallery-thumb img {
+  width: 100%;
+  cursor: url("../img/ui/cursor_expand.png"), auto;
+}
+
+/******* lightbox ********/
+data-title {
+  font-family: "HK HKGrotesk-Medium", sans-serif;
+  color: black;
 }
