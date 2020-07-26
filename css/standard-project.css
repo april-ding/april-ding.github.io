@@ -5,6 +5,9 @@
   font-family: "HKGrotesk-Regular";
   src: url("../fonts/hkgrotesk/hkgrotesk-regular.eot");
   src: url("../fonts/hkgrotesk/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-regular.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-regular.svg#hkgrotesk-regular") format("svg");
+  font-family: "HKGrotesk-Bold";
+  src: url("../fonts/hkgrotesk/hkgrotesk-bold.eot");
+  src: url("../fonts/hkgrotesk/hkgrotesk-bold.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-bold.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-bold.svg#hkgrotesk-bold") format("svg");
 }
 body {
   background-color: #f2f2f2;

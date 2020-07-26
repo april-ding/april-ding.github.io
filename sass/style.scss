@@ -1,13 +1,23 @@
 @font-face {
-   font-family: "HKGrotesk-Medium";
+   font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-medium.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-medium.svg#hkgrotesk-medium") format("svg");
-   font-family: "HKGrotesk-Regular";
+   font-weight: 500;
+   font-style: normal;
+}
+@font-face{
+   font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-regular.eot");
    src: url("../fonts/hkgrotesk/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-regular.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-regular.svg#hkgrotesk-regular") format("svg");
-   font-family: "HKGrotesk-Bold";
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face{
+   font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-bold.eot");
    src: url("../fonts/hkgrotesk/hkgrotesk-bold.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-bold.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-bold.svg#hkgrotesk-bold") format("svg");
+   font-weight: 600;
+   font-style: normal;
 }
 
 
@@ -38,45 +48,37 @@
    -o-animation: #{$str};
    animation: #{$str};
 }
-//
-// =========================================================
-// Variables
-// =========================================================
-$header--font-family: 'HKGrotesk-Medium', sans-serif;
-$header--font-weight: 800; //bold
-$header--font-size: 220px;
-$text-color: black;
-$nav--font-family: 'HKGrotesk-Medium', sans-serif;
-$nav--font-weight: 800;
-$nav--font-size: 30px;
-$main--font-weight: 300;
-$main--font-size: 64px;
-$header--margin-top-laptop: 1.5vw;
-$header--margin-left-laptop: 3vw;
-$header--margin-top-tablet: 3vw;
-$header--margin-left-tablet: 4vw;
-$header--margin-top-mobile: 8vw;
-$header--margin-left-mobile: 8vw;
-$name--margin-left-laptop-l: 2vw;
-$name--margin-left-laptop-r: 2.5vw;
-$name--margin-left-tablet: 3.5vw;
-$name--margin-left-mobile: 6.5vw;
-$nav--margin-left-laptop-l: 41vw;
-$nav--margin-left-laptop-r: 25vw;
-$nav--margin-left-tablet: 10vw;
-$nav--margin-left-mobile-r: 30vw;
-$nav--margin-left-mobile-s: 20vw; // =========================================================
-// Grid Variables
-// =========================================================
-$grid--column-width: 60px;
-$grid--gutter-width: 20px;
-$grid--unit: ($grid--column-width + $grid--gutter-width); // =========================================================
+ // =========================================================
 // Breakpoints
 // =========================================================
-$breakpoint--laptop: $grid--unit * 17 + 40; //1400
-$breakpoint--tablet: $grid--unit * 9 + 48; //768
-$breakpoint--mobile-r: $grid--unit * 5 + 25; //425
-$breakpoint--mobile-s: $grid--unit * 4 + 45; //350
+@mixin bp-Xlarge {
+  @media only screen and (min-width: 1691px) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only all and (min-width: 1041px)and(max-width: 1690px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only all and (min-width: 768px) and (max-width: 1048px) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only all and (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin bp-Xsmall {
+  @media only all and (max-width: 479px) {
+    @content;
+  }
+}
 // =========================================================
 // p5 CANVAS
 // =========================================================
@@ -116,17 +118,24 @@ $breakpoint--mobile-s: $grid--unit * 4 + 45; //350
 
 body {
    background-color: #f4f4f4;
+   width:100%;
+   height: 100%;
+   top:0;
+   left:0;
+   overflow-x: hidden;
+   font-family: 'HKGrotesk', sans-serif;
 }
 
 nav {
    //text styles
-   font-family: 'HKGrotesk-Bold', sans-serif;
    font-size: 15px;
+   font-weight: 600;
    text-transform: uppercase;
    color: black;
    background-color: white;
    //position
    position: sticky;
+   position: -webkit-sticky;
    top: 0;
    width: 100%;
    height: 40px;
@@ -136,15 +145,28 @@ nav {
    -webkit-align-items:center;
    z-index: 5;
    @include animation('nav-margin-intro 0.5s 1s ease-in-out 1 forwards');
+
+   @include bp-Xsmall{
+      @include animation('nav-margin-small-intro 0.5s 1s ease-in-out 1 forwards');
+   }
+
    @include keyframes(nav-margin-intro) {
       0% {
          margin-top: 0;
       }
-
       100% {
-         margin-top: 100px;
+         margin-top: 80px;
       }
    }
+   @include keyframes(nav-margin-small-intro) {
+      0% {
+         margin-top: 0;
+      }
+      100% {
+         margin-top: 50px;
+      }
+   }
+
 
    #nav-inner {
       width: 75%;
@@ -174,19 +196,30 @@ nav {
    top: 0;
    background-color: white;
    @include animation('bio-intro 0.5s 1s ease-in-out 1 forwards');
+   @include bp-Xsmall{
+      @include animation('bio-small-intro 0.5s 1s ease-in-out 1 forwards');
+   }
+
    @include keyframes(bio-intro) {
       0% {
          height: 0;
       }
-
       100% {
          height: 300px;
+      }
+   }
+   @include keyframes(bio-small-intro) {
+      0% {
+         height: 0;
+      }
+      100% {
+         height: 200px;
       }
    }
 }
 
 #bio {
-   font-family: 'HKGrotesk-Regular', sans-serif;
+   font-weight: 400;
    margin-left: 12.5%;
    width: 75%;
    position: absolute;
@@ -195,6 +228,26 @@ nav {
    line-height: 44px;
    color: #636363;
    z-index: 4;
+   @include bp-Xsmall{
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 20px;
+   }
+   @include bp-small{
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 30px;
+   }
+   @include bp-medium{
+      margin-top: 24px;
+      font-size: 30px;
+      line-height: 34px;
+   }
+   @include bp-Xlarge{
+      margin-top: 20px;
+      font-size: 40px;
+      line-height: 50px;
+   }
 }
 // ******************************
 // Main
@@ -202,11 +255,19 @@ nav {
 
 main {
    //position
+   top: 0;
+   left:0;
    width: 75%;
    margin-left: 12.5%;
    margin-top: 50px;
    margin-bottom: 200px;
+   @include bp-Xsmall{
+      margin-bottom: 100px;
+   }
    @include animation('margin-intro 0.5s 1s ease-in-out 1 forwards');
+   @include bp-Xsmall{
+      @include animation('margin-small-intro 0.5s 1s ease-in-out 1 forwards');
+   }
    @include keyframes(margin-intro) {
       0% {
          margin-top: 50px;
@@ -215,12 +276,21 @@ main {
          margin-top: 200px;
       }
    }
-   font-family: 'HKGrotesk-Medium', sans-serif;
+   @include keyframes(margin-small-intro) {
+      0% {
+         margin-top: 50px;
+      }
+      100% {
+         margin-top: 150px;
+      }
+   }
+
+   font-weight: 500;
 
    .small-titles {
       margin-bottom: 40px;
       font-size: 36px;
-      font-family: 'HKGrotesk-Bold', sans-serif;
+      font-weight: 600;
    }
 
    .selected-projects {
@@ -233,12 +303,19 @@ main {
          width: 100%;
          position: relative;
          margin-bottom: 30px;
+         @include bp-Xsmall{
+            margin-bottom: 5px;
+         }
+         @include bp-small{
+            margin-bottom: 5px;
+         }
 
          img {
             width: 100%;
             height: 100%;
             opacity: 1;
             transition: 0.5s;
+
          }
 
          .selected-project-overlay-colorbox-blue {
@@ -253,6 +330,15 @@ main {
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
+            @include bp-medium{
+               display: none;
+            }
+            @include bp-small{
+               display: none;
+            }
+            @include bp-Xsmall{
+               display: none;
+            }
          }
 
          .selected-project-overlay-colorbox-green {
@@ -267,6 +353,15 @@ main {
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
+            @include bp-medium{
+               display: none;
+            }
+            @include bp-small{
+               display: none;
+            }
+            @include bp-Xsmall{
+               display: none;
+            }
          }
 
          .selected-project-overlay-colorbox-orange {
@@ -281,22 +376,58 @@ main {
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
+
+            @include bp-medium{
+               display: none;
+            }
+            @include bp-small{
+               display: none;
+            }
+            @include bp-Xsmall{
+               display: none;
+            }
          }
 
          .selected-project-overlay-text {
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
-            width: 20%;
+            width: 30%;
             height: 100%;
             top: 0;
-            left: 80%;
+            left: 70%;
             position: absolute;
             opacity: 0;
             transition: opacity 0.5s;
             transition-delay: 0.5s;
             font-size: 36px;
             line-height: 40px;
+            @include bp-medium{
+               top: 0;
+               left: 0;
+               width:100%;
+               font-size: 24px;
+               line-height: 30px;
+               opacity: 1;
+            }
+            @include bp-small{
+               top: 0;
+               left: 0;
+               width:100%;
+               font-size: 22px;
+               line-height: 36px;
+               opacity: 1;
+            }
+            @include bp-Xsmall{
+               top: 0;
+               left: 0;
+               width:100%;
+               font-size: 16px;
+               line-height: 20px;
+               opacity: 1;
+            }
+
+
          }
 
          .selected-project-overlay-title {
@@ -314,6 +445,18 @@ main {
             color: white;
             z-index: 1;
             padding: 10px;
+            @include bp-medium{
+               color: black;
+               align-self: flex-end;
+            }
+            @include bp-small{
+               color: black;
+               align-self: flex-end;
+            }
+            @include bp-Xsmall{
+               color: black;
+               align-self: flex-end;
+            }
          }
 
          &:hover img {
@@ -322,21 +465,20 @@ main {
 
          &:hover .selected-project-overlay-colorbox-blue {
             opacity: 1;
-            width: 20%;
-            left: 80%;
+            width: 30%;
+            left: 70%;
          }
-
          &:hover .selected-project-overlay-colorbox-green {
             opacity: 1;
-            width: 20%;
-            left: 80%;
+            width: 30%;
+            left: 70%;
          }
-
          &:hover .selected-project-overlay-colorbox-orange {
             opacity: 1;
-            width: 20%;
-            left: 80%;
+            width: 30%;
+            left: 70%;
          }
+
 
          &:hover .selected-project-overlay-text {
             opacity: 1;
@@ -373,7 +515,7 @@ main {
 }
 /******* lightbox ********/
 data-title {
-   font-family: "HK HKGrotesk-Medium", sans-serif;
+   font-family: "HKGrotesk", sans-serif;
    color: black;
 }
 /***** lightbox video ******/

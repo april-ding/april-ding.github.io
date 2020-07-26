@@ -1,13 +1,44 @@
-
 @font-face {
    font-family: "HKGrotesk-Medium";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-medium.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-medium.svg#hkgrotesk-medium") format("svg");
-
    font-family: "HKGrotesk-Regular";
    src: url("../fonts/hkgrotesk/hkgrotesk-regular.eot");
    src: url("../fonts/hkgrotesk/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-regular.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-regular.svg#hkgrotesk-regular") format("svg");
-} //=========================================================
+   font-family: "HKGrotesk-Bold";
+   src: url("../fonts/hkgrotesk/hkgrotesk-bold.eot");
+   src: url("../fonts/hkgrotesk/hkgrotesk-bold.woff") format("woff"), url("../fonts/hkgrotesk/hkgrotesk-bold.otf") format("opentype"), url("../fonts/hkgrotesk/hkgrotesk-bold.svg#hkgrotesk-bold") format("svg");
+}
+
+
+//=========================================================
+// ANIMATION MIXIN
+//=========================================================
+@mixin keyframes($animation-name) {
+   @-webkit-keyframes #{$animation-name} {
+      @content;
+   }
+   @-moz-keyframes #{$animation-name} {
+      @content;
+   }
+   @-ms-keyframes #{$animation-name} {
+      @content;
+   }
+   @-o-keyframes #{$animation-name} {
+      @content;
+   }
+   @keyframes #{$animation-name} {
+      @content;
+   }
+}
+@mixin animation($str) {
+   -webkit-animation: #{$str};
+   -moz-animation: #{$str};
+   -ms-animation: #{$str};
+   -o-animation: #{$str};
+   animation: #{$str};
+}
+// //=========================================================
 // Variables
 // =========================================================
 $header--font-family: 'Dosis', sans-serif;
@@ -47,33 +78,7 @@ body {
    height: 100%;
    z-index: -1;
 }
-//=========================================================
-// ANIMATION MIXIN
-//=========================================================
-@mixin keyframes($animation-name) {
-   @-webkit-keyframes #{$animation-name} {
-      @content;
-   }
-   @-moz-keyframes #{$animation-name} {
-      @content;
-   }
-   @-ms-keyframes #{$animation-name} {
-      @content;
-   }
-   @-o-keyframes #{$animation-name} {
-      @content;
-   }
-   @keyframes #{$animation-name} {
-      @content;
-   }
-}
-@mixin animation($str) {
-   -webkit-animation: #{$str};
-   -moz-animation: #{$str};
-   -ms-animation: #{$str};
-   -o-animation: #{$str};
-   animation: #{$str};
-}
+
 // =========================================================
 // Nav
 // =========================================================

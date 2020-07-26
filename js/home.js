@@ -39,7 +39,7 @@ AOS.init();
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = false;
+let disableCanvas = true;
 
 //public variables
 let flock;
