@@ -139,28 +139,7 @@ nav {
    align-content: center;
    -webkit-align-items: center;
    z-index: 5;
-   // @include animation('nav-margin-intro 0.5s 1s ease-in-out 1 forwards');
-   //
-   // @include bp-Xsmall{
-   //    @include animation('nav-margin-small-intro 0.5s 1s ease-in-out 1 forwards');
-   // }
-   //
-   // @include keyframes(nav-margin-intro) {
-   //    0% {
-   //       margin-top: 0;
-   //    }
-   //    100% {
-   //       margin-top: 80px;
-   //    }
-   // }
-   // @include keyframes(nav-margin-small-intro) {
-   //    0% {
-   //       margin-top: 0;
-   //    }
-   //    100% {
-   //       margin-top: 50px;
-   //    }
-   // }
+
    #nav-inner {
       width: 75%;
       margin-left: 12.5%;
