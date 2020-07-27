@@ -123,8 +123,24 @@ nav a {
   text-decoration: none;
   letter-spacing: 1px;
 }
+nav a:hover {
+  color: grey;
+}
 nav a:after {
   color: black;
+}
+nav .a-navChange {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav .a-navChange:hover span {
+  display: none;
+}
+nav .a-navChange:hover:after {
+  content: "Work        ";
+  white-space: pre;
+  color: grey;
 }
 
 main {
@@ -230,6 +246,7 @@ main #info-wrapper a:after {
 }
 
 footer {
+  font-family: "HKGrotesk", sans-serif;
   font-weight: 400;
   width: 75%;
   margin-left: 12.5%;

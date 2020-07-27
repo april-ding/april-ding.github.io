@@ -1,3 +1,13 @@
+// ===================================
+// variables
+// ===================================
+$color-blue: #1289F6;
+$color-green: #219653;
+$color-orange: #FF613F;
+
+// ===================================
+// fonts
+// ===================================
 @font-face {
    font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -79,7 +89,7 @@
     @content;
   }
 }
-// =========================================================
+//=========================================================
 // p5 CANVAS
 // =========================================================
 
@@ -182,8 +192,26 @@ nav {
       text-decoration: none;
       letter-spacing: 1px;
 
+      &:hover {
+         color: grey;
+      }
       &:after {
          color: black;
+      }
+   }
+
+   .a-navChange {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 1px;
+
+      &:hover span {
+         display: none;
+      }
+      &:hover:after {
+         content: "Work        ";
+         white-space: pre;
+         color: grey;
       }
    }
 }
@@ -326,7 +354,7 @@ main {
             top: 0;
             left: 100%;
             //styling
-            background-color: #1289F6;
+            background-color: $color-blue;
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
@@ -349,7 +377,7 @@ main {
             top: 0;
             left: 100%;
             //styling
-            background-color: #219653;
+            background-color: $color-green;
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
@@ -372,7 +400,7 @@ main {
             top: 0;
             left: 100%;
             //styling
-            background-color: #FF613F;
+            background-color: $color-orange;
             opacity: 0;
             //animation
             transition: width 0.5s, left 0.5s;
@@ -512,6 +540,18 @@ main {
          width: 100%;
       }
    }
+}
+
+footer {
+   font-family: "HKGrotesk", sans-serif;
+   font-weight: 400;
+   width: 75%;
+   margin-left: 12.5%;
+   margin-bottom: 50px;
+   font-size: 12px;
+   line-height: 20px;
+   text-transform: uppercase;
+   color: #636363;
 }
 /******* lightbox ********/
 data-title {

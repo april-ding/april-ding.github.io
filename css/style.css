@@ -217,8 +217,24 @@ nav a {
   text-decoration: none;
   letter-spacing: 1px;
 }
+nav a:hover {
+  color: grey;
+}
 nav a:after {
   color: black;
+}
+nav .a-navChange {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav .a-navChange:hover span {
+  display: none;
+}
+nav .a-navChange:hover:after {
+  content: "Work        ";
+  white-space: pre;
+  color: grey;
 }
 
 #bio-white-space {
@@ -695,6 +711,18 @@ main .selected-projects .project-thumb:hover .selected-project-overlay-text {
 }
 .gallery .gallery-thumb img {
   width: 100%;
+}
+
+footer {
+  font-family: "HKGrotesk", sans-serif;
+  font-weight: 400;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 50px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #636363;
 }
 
 /******* lightbox ********/
