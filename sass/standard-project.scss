@@ -285,6 +285,40 @@ main {
       text-decoration: underline;
    }
 
+   .button{
+      width: 20%;
+      border-radius: 39px;
+      margin-left: 40%;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      background-color: #F3B34B;
+      text-align: center;
+      text-transform: uppercase;
+      @include bp-small{
+         width: 50%;
+         margin-left: 25%;
+      }
+      @include bp-Xsmall{
+         width: 50%;
+         margin-left: 25%;
+      }
+      a{
+
+         font-weight: 600;
+         color: black;
+         text-decoration: none;
+         &:hover{
+            color: white;
+         }
+         &:after{
+            color: black;
+            text-decoration: none;
+         }
+      }
+   }
+
    .small-titles {
       margin-bottom: 20px;
       font-size: 16px;
