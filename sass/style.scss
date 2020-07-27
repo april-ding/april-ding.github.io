@@ -4,6 +4,7 @@
 $color-blue: #1289F6;
 $color-green: #219653;
 $color-orange: #FF613F;
+$color-darkgrey: #636363;
 
 // ******************************
 // Fonts
@@ -203,7 +204,7 @@ nav {
       &:hover:after {
          content: "Work        ";
          white-space: pre;
-         color: grey;
+         color: black;
       }
    }
 }
@@ -246,7 +247,7 @@ nav {
    margin-top: 40px;
    font-size: 36px;
    line-height: 44px;
-   color: #636363;
+   color: $color-darkgrey;
    z-index: 4;
    @include bp-Xsmall{
       margin-top: 20px;
@@ -546,7 +547,7 @@ footer {
    font-size: 12px;
    line-height: 20px;
    text-transform: uppercase;
-   color: #636363;
+   color: $color-darkgrey;
 }
 // ******************************
 // Lightbox
