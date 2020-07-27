@@ -2,7 +2,6 @@
 new WOW().init();
 //************ AOS ****************//
 AOS.init();
-
 /********* STATS ************/
 
 javascript: (function() {
