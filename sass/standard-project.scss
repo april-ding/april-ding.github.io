@@ -147,6 +147,18 @@ nav {
       flex-flow: row wrap;
       align-items: baseline;
       justify-content: space-between;
+      @include bp-medium{
+         width: 90%;
+         margin-left: 5%;
+      }
+      @include bp-small{
+         width: 90%;
+         margin-left: 5%;
+      }
+      @include bp-Xsmall{
+         width: 90%;
+         margin-left: 5%;
+      }
    }
 
    a {
@@ -191,12 +203,18 @@ main {
    font-family: 'HKGrotesk', sans-serif;
    @include bp-medium {
       margin-bottom: 40px;
+      width: 90%;
+      margin-left: 5%;
    }
    @include bp-small {
       margin-bottom: 20px;
+      width: 90%;
+      margin-left: 5%;
    }
    @include bp-Xsmall {
       margin-bottom: 20px;
+      width: 90%;
+      margin-left: 5%;
    }
 
    .feature {
@@ -407,6 +425,18 @@ footer {
    margin-left: 12.5%;
    margin-bottom: 50px;
    color: #636363;
+   @include bp-medium{
+      width: 90%;
+      margin-left: 5%;
+   }
+   @include bp-small{
+      width: 90%;
+      margin-left: 5%;
+   }
+   @include bp-Xsmall{
+      width: 90%;
+      margin-left: 5%;
+   }
 
    p {
       font-size: 12px;

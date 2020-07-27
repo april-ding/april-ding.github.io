@@ -118,6 +118,24 @@ nav #nav-inner {
   align-items: baseline;
   justify-content: space-between;
 }
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  nav #nav-inner {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  nav #nav-inner {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media only all and (max-width: 479px) {
+  nav #nav-inner {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
 nav a {
   color: black;
   text-decoration: none;
@@ -153,16 +171,22 @@ main {
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
     margin-bottom: 40px;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main {
     margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 @media only all and (max-width: 479px) {
   main {
     margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 main .feature {
@@ -388,6 +412,24 @@ footer {
   margin-left: 12.5%;
   margin-bottom: 50px;
   color: #636363;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  footer {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  footer {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media only all and (max-width: 479px) {
+  footer {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 footer p {
   font-size: 12px;
