@@ -138,7 +138,7 @@ nav .a-navChange:hover span {
   display: none;
 }
 nav .a-navChange:hover:after {
-  content: "Work        ";
+  content: "Work ";
   white-space: pre;
   color: black;
 }
@@ -277,6 +277,19 @@ main .img-normal {
 main .divider {
   width: 100%;
   height: 40px;
+}
+main .iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+main .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /********* gallery *********/
