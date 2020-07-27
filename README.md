@@ -1,5 +1,6 @@
 # April Ding Portfolio
 
-April is a 3rd-year Design Media Arts student at UCLA. She specializes in graphic design, 2D/3D motion animation and photography, with basic knowledge of front-end web development and virtual reality. This website is completely designed and developed by her.
+Hey! April here.
+I’m a visual & motion designer living in San Francisco Bay Area. I graduated from UCLA with a BA in Design Media Arts. On the side, I like to take photos, make things move, and think about interactivity of organic forms.
 
 Contact: apr.ding@gmail.com
