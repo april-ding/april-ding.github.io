@@ -288,11 +288,11 @@ nav .a-navChange:hover:after {
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   #bio-white-space {
-    -webkit-animation: bio-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -moz-animation: bio-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -ms-animation: bio-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -o-animation: bio-small-intro 0.5s 1s ease-in-out 1 forwards;
-    animation: bio-small-intro 0.5s 1s ease-in-out 1 forwards;
+    -webkit-animation: bio-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -moz-animation: bio-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -ms-animation: bio-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -o-animation: bio-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    animation: bio-medium-intro 0.5s 1s ease-in-out 1 forwards;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
@@ -353,12 +353,52 @@ nav .a-navChange:hover:after {
     height: 300px;
   }
 }
-@-webkit-keyframes bio-small-intro {
+@-webkit-keyframes bio-medium-intro {
   0% {
     height: 0;
   }
   100% {
     height: 170px;
+  }
+}
+@-moz-keyframes bio-medium-intro {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 170px;
+  }
+}
+@-ms-keyframes bio-medium-intro {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 170px;
+  }
+}
+@-o-keyframes bio-medium-intro {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 170px;
+  }
+}
+@keyframes bio-medium-intro {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 170px;
+  }
+}
+@-webkit-keyframes bio-small-intro {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 550px;
   }
 }
 @-moz-keyframes bio-small-intro {
@@ -366,7 +406,7 @@ nav .a-navChange:hover:after {
     height: 0;
   }
   100% {
-    height: 170px;
+    height: 550px;
   }
 }
 @-ms-keyframes bio-small-intro {
@@ -374,7 +414,7 @@ nav .a-navChange:hover:after {
     height: 0;
   }
   100% {
-    height: 170px;
+    height: 550px;
   }
 }
 @-o-keyframes bio-small-intro {
@@ -382,7 +422,7 @@ nav .a-navChange:hover:after {
     height: 0;
   }
   100% {
-    height: 170px;
+    height: 550px;
   }
 }
 @keyframes bio-small-intro {
@@ -390,7 +430,7 @@ nav .a-navChange:hover:after {
     height: 0;
   }
   100% {
-    height: 170px;
+    height: 550px;
   }
 }
 #bio {
@@ -407,8 +447,8 @@ nav .a-navChange:hover:after {
 @media only all and (max-width: 479px) {
   #bio {
     margin-top: 20px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 48px;
+    line-height: 60px;
     width: 90%;
     margin-left: 5%;
   }
@@ -416,8 +456,8 @@ nav .a-navChange:hover:after {
 @media only all and (min-width: 480px) and (max-width: 767px) {
   #bio {
     margin-top: 20px;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 52px;
+    line-height: 64px;
     width: 90%;
     margin-left: 5%;
   }
@@ -474,11 +514,11 @@ main {
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
-    -webkit-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -moz-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -ms-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
-    -o-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
-    animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
+    -webkit-animation: margin-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -moz-animation: margin-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -ms-animation: margin-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    -o-animation: margin-medium-intro 0.5s 1s ease-in-out 1 forwards;
+    animation: margin-medium-intro 0.5s 1s ease-in-out 1 forwards;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
@@ -539,12 +579,52 @@ main {
     margin-top: 250px;
   }
 }
-@-webkit-keyframes margin-small-intro {
+@-webkit-keyframes margin-medium-intro {
   0% {
     margin-top: 50px;
   }
   100% {
     margin-top: 150px;
+  }
+}
+@-moz-keyframes margin-medium-intro {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 150px;
+  }
+}
+@-ms-keyframes margin-medium-intro {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 150px;
+  }
+}
+@-o-keyframes margin-medium-intro {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 150px;
+  }
+}
+@keyframes margin-medium-intro {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 150px;
+  }
+}
+@-webkit-keyframes margin-small-intro {
+  0% {
+    margin-top: 50px;
+  }
+  100% {
+    margin-top: 550px;
   }
 }
 @-moz-keyframes margin-small-intro {
@@ -552,7 +632,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 150px;
+    margin-top: 550px;
   }
 }
 @-ms-keyframes margin-small-intro {
@@ -560,7 +640,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 150px;
+    margin-top: 550px;
   }
 }
 @-o-keyframes margin-small-intro {
@@ -568,7 +648,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 150px;
+    margin-top: 550px;
   }
 }
 @keyframes margin-small-intro {
@@ -576,7 +656,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 150px;
+    margin-top: 550px;
   }
 }
 main .small-titles {
@@ -595,21 +675,39 @@ main .selected-projects .project-thumb {
   position: relative;
   margin-bottom: 30px;
 }
-@media only all and (max-width: 479px) {
-  main .selected-projects .project-thumb {
-    margin-bottom: 5px;
-  }
-}
-@media only all and (min-width: 480px) and (max-width: 767px) {
-  main .selected-projects .project-thumb {
-    margin-bottom: 5px;
-  }
-}
 main .selected-projects .project-thumb img {
   width: 100%;
   height: 100%;
   opacity: 1;
   transition: 0.5s;
+  display: block;
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .selected-projects .project-thumb img {
+    display: none;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .selected-projects .project-thumb img {
+    display: none;
+  }
+}
+main .selected-projects .project-thumb .mobile-thumb {
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s;
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .selected-projects .project-thumb .mobile-thumb {
+    display: block;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .selected-projects .project-thumb .mobile-thumb {
+    display: block;
+  }
 }
 main .selected-projects .project-thumb .selected-project-overlay-colorbox-blue {
   position: absolute;
