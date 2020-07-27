@@ -7,5 +7,7 @@
 !*.png
 !*.mp4
 
-!thumbnails
-!project
+!gallery-thumbs
+!project-thumbs
+!lightbox-icons
+!projects

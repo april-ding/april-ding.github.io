@@ -5,95 +5,162 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <title>April Ding</title>
+   <link rel="icon" href="img/ui/favicon.png">
+   <!-- css stylesheets -->
    <link href="css/reset.css" rel="stylesheet"><!-- DO NOT EDIT THIS LINE. -->
+   <link href="css/global.css" rel="stylesheet">
    <link href="css/style.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/animate.css" />
+   <link href="css/lightbox.css" rel="stylesheet" />
+   <link href="css/aos.css" rel="stylesheet" />
+
+   <!-- js -->
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
    <script scr="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
+
+   <script type="text/javascript" src="js/wow.min.js"></script>
+   <script type="text/javascript" src="js/aos.js"></script>
 
 
 </head>
 
 <body>
-   <div id="bg">
-   </div>
-   <div class = "animated-header fadeInTop">
-      <header>
-      </header>
-   </div>
+   <div id="white-fadeIn"></div>
+   <div id="p5-canvas"></div>
    <nav>
-      <!-- <div class = "animated-nav fadeInRight">
-         <ul>
-            <li><a href="https://vimeo.com/325817560">reel</a></li>
-            <li>
-               <p>————</p>
-            </li>
-            <li><a href="about.html">about</a></li>
-            <li>
-               <p>————</p>
-            </li>
-            <li><a href="photo.html">photography</a></li>
-
-         </ul>
-      </div> -->
+      <div id="nav-inner">
+         <a class ="a-navChange" href="index.html">
+            <span>April Ding</span>
+         </a>
+         <a href="projects/info.html">
+            <p>Info</p>
+         </a>
+      </div>
    </nav>
+
+   <div id="bio-white-space"></div>
+
+   <p id="bio" data-aos="skew-in" data-aos-duration="2000" data-aos-delay="1000">Visual & motion designer living in SF Bay Area, UCLA alum, and creator of touching human experiences.</p>
+
    <main>
 
-      <div class = "animated-main fadeInBottom">
-         <p id="intro">move your cursor to see my work!</p>
-         <h2 id = "three-d">3D<br>modeling</h2>
-         <div id = "empty-three-d"></div>
+      <p class="small-titles">Selected Work</p>
 
-         <ul class = "thumbnail-flex-three-d thumbnail-flex">
-            <li><a href="three-d/spaceship.html"><img src="img/thumbnails/spaceship.jpg"></a></li>
-            <li><a href="three-d/shanhai.html"><img src="img/thumbnails/shanhai.gif"></a></li>
-            <li><a href="three-d/searching.html"><img src="img/thumbnails/searching.gif"></a></li>
-            <li><a href="three-d/fly.html"><img src="img/thumbnails/fly.jpg"></a></li>
-         </ul>
-         <h2 id = "gd">graphic<br>design</h2>
-
-         <div id = "empty-gd"></div>
-         <ul class = "thumbnail-flex-gd thumbnail-flex">
-           <li><a href="gd/finland.html"><img src="img/thumbnails/finland.jpg"></a></li>
-            <li><a href="gd/illustration.html"><img src="img/thumbnails/nightmare.jpg"></a></li>
-            <li><a href="gd/plastic.html"><img src="img/thumbnails/plastic.jpg"></a></li>
-            <li><a href="gd/typebook.html"><img src="img/thumbnails/book.jpg"></a></li>
-         </ul>
-
-         <h2 id = "mg">motion<br>design</h2>
-
-
-         <div id = "empty-mg"></div>
-
-         <ul class = "thumbnail-flex-mg thumbnail-flex">
-            <li><a href="mg/milk.html"><img src="img/thumbnails/milk.gif"></a></li>
-            <li><a href="mg/reel.html"><img src="img/thumbnails/fire.gif"></a></li>
-            <li><a href="mg/lotus.html"><img src="img/thumbnails/lotus.gif"></a></li>
-            <li><a href="mg/hand.html"><img src="img/thumbnails/hand.gif"></a></li>
-
-         </ul>
-
-         <h2 id = "about">april<br>ding</h2>
-         <ul class = "thumbnail-flex-about thumbnail-flex">
-            <div id = "about-content">
-               <img src="img/profile.jpg">
-               <div id="photo-credit">
-                  <p>Photo by <a href="https://www.instagram.com/shampliu/">Chang Liu</a></p>
+      <ul class="selected-projects">
+         <li class="project-thumb">
+            <a href="projects/illustration.html">
+               <img src="img/project-thumbs/thumb-illo.jpg">
+               <div class="selected-project-overlay-colorbox-blue"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Illustrated Designs</p>
+                  <p class="selected-project-overlay-media"></p>
                </div>
-               <p class = "about-text">Hello world!</p>
-               <p class = "about-text">I'm April, a believer of illustrating narrative through interactive digital media. I specialize in graphic design, 2D/3D motion animation and photography, with working knowledge of front-end web development and virtual reality.</p>
-               <p class = "about-text">Contact: apr.ding@gmail.com</p>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/plastic.html">
+               <img src="img/project-thumbs/thumb-plastic.jpg">
+               <div class="selected-project-overlay-colorbox-green"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Its Food, Your Food</p>
+                  <p class="selected-project-overlay-media">Riso Print Booklet</p>
+               </div>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/memories.html">
+               <img src="img/project-thumbs/thumb-memories.gif">
+               <div class="selected-project-overlay-colorbox-orange"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Pointless Mindscape</p>
+                  <p class="selected-project-overlay-media">Unity, Cinema 4D</p>
+               </div>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/shanhai.html">
+               <img src="img/project-thumbs/thumb-shanhai.jpg">
+               <div class="selected-project-overlay-colorbox-orange"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Shanhai 山海</p>
+                  <p class="selected-project-overlay-media">After Effects, C4D</p>
+               </div>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/motion.html">
+               <img src="img/project-thumbs/thumb-motion.gif">
+               <div class="selected-project-overlay-colorbox-orange"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Motion Design</p>
+                  <p class="selected-project-overlay-media"></p>
+               </div>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/typebook.html">
+               <img src="img/project-thumbs/thumb-typebook.jpg">
+               <div class="selected-project-overlay-colorbox-orange"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">Dan Yuan Ren Chang Jiu</p>
+                  <p class="selected-project-overlay-media">Typography</p>
+               </div>
+            </a>
+         </li>
+         <li class="project-thumb"><a href="projects/finland.html">
+               <img src="img/project-thumbs/thumb-finland.jpg">
+               <div class="selected-project-overlay-colorbox-orange"></div>
+               <div class="selected-project-overlay-text">
+                  <p class="selected-project-overlay-title">An Infographic about Finland</p>
+                  <p class="selected-project-overlay-media">Graphic Design</p>
+               </div>
+            </a>
+         </li>
+      </ul>
 
-            </div>
-         </ul>
-         <div id = "empty-about"></div>
+      <!-- <p class="small-titles">Gallery</p>
+      <ul class="gallery">
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="img/projects/3d-fly-01.jpg" data-lightbox="gallery-set" data-title="Fly House | <a href='projects/fly.html'>View the whole project here</a>"><img
+                 src="img/gallery-thumbs/thumb-3d-fly-01.jpg" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="img/projects/flower-01.gif" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img
+                 src="img/gallery-thumbs/thumb-motion-flower-01.jpg" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-motion-milk-01.gif" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-design-finland-01.jpg" alt="" /></a></li>
+
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img
+                 src="img/gallery-thumbs/thumb-design-plastic-01.jpg" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-design-type-01.jpg" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-illo-future-01.jpg" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-illo-nightmare-01.jpg" alt="" /></a></li>
+
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set" data-title="Cinema 4D | Daily Practice"><img
+                 src="img/gallery-thumbs/thumb-motion-eye-01.gif" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-motion-fire-01.gif" alt="" /></a></li>
+         <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-motion-hand-01.gif" alt="" /></a></li> -->
+
+      <!-- FOR LIGHTBOX VIDEO, WORKS BUT NOT WITH EVERYTHING ELSE -->
+      <!-- <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"><a data-lightbox="gallery-set" href="#lightboxV" class="lightboxV-toggle" data-lightboxV-type="video" data-lightboxV-content="img/projects/flower-01.mp4">
+               <img src="img/gallery-thumbs/thumb-motion-lotus-01.gif" alt="" /></a></li> -->
 
 
-      </div>
+      <!-- <li class="gallery-thumb" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"><a class="og" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="gallery-set"
+              data-title="Cinema 4D | Daily Practice"><img src="img/gallery-thumbs/thumb-motion-lotus-01.gif" alt="" /></a></li>
+      </ul> -->
+
    </main>
+
+
    <footer>
 
    </footer>
 
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="js/lightbox.js"></script>
+   <script type="text/javascript" src="js/birds.js"></script>
+   <script type="text/javascript" src="js/typewriter.js"></script>
    <script type="text/javascript" src="js/home.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 
