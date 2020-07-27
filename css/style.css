@@ -412,7 +412,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 @-moz-keyframes margin-intro {
@@ -420,7 +420,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 @-ms-keyframes margin-intro {
@@ -428,7 +428,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 @-o-keyframes margin-intro {
@@ -436,7 +436,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 @keyframes margin-intro {
@@ -444,7 +444,7 @@ main {
     margin-top: 50px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 @-webkit-keyframes margin-small-intro {
