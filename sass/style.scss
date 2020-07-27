@@ -1,13 +1,13 @@
-// ===================================
-// variables
-// ===================================
+// ******************************
+// Variables
+// ******************************
 $color-blue: #1289F6;
 $color-green: #219653;
 $color-orange: #FF613F;
 
-// ===================================
-// fonts
-// ===================================
+// ******************************
+// Fonts
+// ******************************
 @font-face {
    font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -29,11 +29,9 @@ $color-orange: #FF613F;
    font-weight: 600;
    font-style: normal;
 }
-
-
-//=========================================================
-// ANIMATION MIXIN
-//=========================================================
+// ******************************
+// Animation Mixin
+// ******************************
 @mixin keyframes($animation-name) {
    @-webkit-keyframes #{$animation-name} {
       @content;
@@ -58,27 +56,24 @@ $color-orange: #FF613F;
    -o-animation: #{$str};
    animation: #{$str};
 }
- // =========================================================
+// ******************************
 // Breakpoints
-// =========================================================
+// ******************************
 @mixin bp-Xlarge {
   @media only screen and (min-width: 1691px) {
     @content;
   }
 }
-
 @mixin bp-large {
   @media only all and (min-width: 1041px)and(max-width: 1690px) {
     @content;
   }
 }
-
 @mixin bp-medium {
   @media only all and (min-width: 768px) and (max-width: 1048px) {
     @content;
   }
 }
-
 @mixin bp-small {
   @media only all and (min-width: 480px) and (max-width: 767px) {
     @content;
@@ -89,10 +84,9 @@ $color-orange: #FF613F;
     @content;
   }
 }
-//=========================================================
-// p5 CANVAS
-// =========================================================
-
+// ******************************
+// Master
+// ******************************
 #p5-canvas {
    position: fixed;
    top: 0;
@@ -122,10 +116,6 @@ $color-orange: #FF613F;
       }
    }
 }
-// =========================================================
-// Nav
-// =========================================================
-
 body {
    background-color: #f4f4f4;
    width:100%;
@@ -135,7 +125,9 @@ body {
    overflow-x: hidden;
    font-family: 'HKGrotesk', sans-serif;
 }
-
+// ******************************
+// Nav
+// ******************************
 nav {
    //text styles
    font-size: 15px;
@@ -280,7 +272,6 @@ nav {
 // ******************************
 // Main
 // ******************************
-
 main {
    //position
    top: 0;
@@ -514,7 +505,9 @@ main {
       }
    }
 }
-/********* gallery *********/
+// ******************************
+// Gallery
+// ******************************
 .gallery {
    //position
    width: 100%;
@@ -540,8 +533,10 @@ main {
          width: 100%;
       }
    }
-}
-
+}//end of main
+// ******************************
+// Footer
+// ******************************
 footer {
    font-family: "HKGrotesk", sans-serif;
    font-weight: 400;
@@ -553,81 +548,10 @@ footer {
    text-transform: uppercase;
    color: #636363;
 }
-/******* lightbox ********/
+// ******************************
+// Lightbox
+// ******************************
 data-title {
    font-family: "HKGrotesk", sans-serif;
    color: black;
 }
-/***** lightbox video ******/
-a:not(.lightboxV-close) {
-   // display:inline-block;
-   //background: darken(#e74c3c, 10%);
-   //line-height:200px;
-   // height:200px;
-   // width:200px;
-   //
-   // font-size:42px;
-   // text-align:center;
-   // color:#ffffff;
-}
-/*LIGHTBOX STYLE*/
-.lightboxV {
-   display: none;
-   position: fixed;
-   z-index: 999;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   // margin-top: 5%;
-   // margin-left: 15%;
-   background: rgba(255,255,255,0.5);
-
-   .lightboxV-video {
-      width: 80%;
-      //padding-bottom:56%;
-   }
-
-   iframe {
-      position: absolute;
-      height: 70%;
-      width: 70%;
-      left: 0;
-      right: 0;
-      margin-left: 15%;
-      margin-top: 5%;
-   }
-   // img {
-   //   display:block;
-   //   margin:0 auto;
-   // }
-   .lightboxV-close {
-      position: absolute;
-      display: block;
-      top: 5px;
-      right: 5px;
-      //color:#ffffff;
-      font-size: 20px;
-      height: 20px;
-      width: 20px;
-      background: rgba(0,0,0,0.3);
-      border: 3px solid #ffffff;
-      border-radius: 50%;
-      line-height: 50px;
-      text-align: center;
-
-      &:hover {
-         text-decoration: none;
-      }
-   }
-
-   .lightboxV-toggle {
-      color: black;
-   }
-
-   .lightboxV-container {
-      max-width: 1024px;
-      margin: 50px auto 25px;
-   }
-}
-//end of main
