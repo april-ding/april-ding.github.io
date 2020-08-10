@@ -6,7 +6,7 @@ let disableCanvas = false;
 //public variables
 let flock;
 let num_of_boids = 0;
-let max_num_boids = 50;
+let max_num_boids = 40;
 let lastMouseX;
 let lastMouseY;
 
@@ -21,12 +21,12 @@ function setup() {
 
 
     if (!disableCanvas) {
-        boidsFill = color(240);
-        boidsStroke = color(180);
+        boidsFill = color('#FBF2F2');
+        boidsStroke = color('#F8614C');
 
         flock = new Flock();
         // Add an initial set of boids into the system
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 40; i++) {
             let b = new Boid(width / 8, 200);
             flock.addBoid(b);
             num_of_boids++;
@@ -35,9 +35,13 @@ function setup() {
 
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
     if (!disableCanvas) {
-        background('#f4f4f4');
+        background('#FBF2F2');
 
         if (lastMouseX != mouseX && lastMouseY != mouseY) {
             //check if max number of boids is reached, if not, add a new boid
