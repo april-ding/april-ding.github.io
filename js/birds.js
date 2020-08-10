@@ -21,8 +21,8 @@ function setup() {
 
 
     if (!disableCanvas) {
-        boidsFill = color(240);
-        boidsStroke = color(180);
+        boidsFill = color('#FBF2F2');
+        boidsStroke = color('#F8614C');
 
         flock = new Flock();
         // Add an initial set of boids into the system
@@ -35,9 +35,13 @@ function setup() {
 
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
     if (!disableCanvas) {
-        background('#f4f4f4');
+        background('#FBF2F2');
 
         if (lastMouseX != mouseX && lastMouseY != mouseY) {
             //check if max number of boids is reached, if not, add a new boid
