@@ -1,7 +1,7 @@
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = true;
+let disableCanvas = false;
 
 //public variables
 let flock;
