@@ -1,12 +1,12 @@
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = false;
+let disableCanvas = true;
 
 //public variables
 let flock;
 let num_of_boids = 0;
-let max_num_boids = 50;
+let max_num_boids = 40;
 let lastMouseX;
 let lastMouseY;
 
@@ -26,7 +26,7 @@ function setup() {
 
         flock = new Flock();
         // Add an initial set of boids into the system
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 40; i++) {
             let b = new Boid(width / 8, 200);
             flock.addBoid(b);
             num_of_boids++;
