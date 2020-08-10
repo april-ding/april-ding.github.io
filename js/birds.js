@@ -40,6 +40,11 @@ function windowResized() {
 }
 
 function draw() {
+    if(windowWidth < 1048){
+        disableCanvas = true;
+    }else{
+        disableCanvas = false;
+    }
     if (!disableCanvas) {
         background('#FBF2F2');
 
