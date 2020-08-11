@@ -1,7 +1,7 @@
 //************ p5 birds ************//
 
 //disable p5 canvas
-let disableCanvas = false;
+let disableCanvas = true;
 
 //public variables
 let flock;
@@ -40,11 +40,7 @@ function windowResized() {
 }
 
 function draw() {
-    if(windowWidth < 1048){
-        disableCanvas = true;
-    }else{
-        disableCanvas = false;
-    }
+
     if (!disableCanvas) {
         background('#FBF2F2');
 
