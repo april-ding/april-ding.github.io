@@ -569,11 +569,11 @@ main {
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
-    -webkit-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
-    -moz-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
-    -ms-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
-    -o-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
-    animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
+    -webkit-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
+    -moz-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
+    -ms-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
+    -o-animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
+    animation: margin-small-intro 0.5s 1s ease-in-out 1 forwards;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {

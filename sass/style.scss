@@ -332,7 +332,7 @@ main {
    }
    @include animation('margin-intro 0.5s 1s ease-in-out 1 forwards');
    @include bp-medium {
-      @include animation('margin-intro 0.5s 1s ease-in-out 1 forwards');
+      @include animation('margin-small-intro 0.5s 1s ease-in-out 1 forwards');
    }
    @include bp-small {
       @include animation('margin-small-intro 0.5s 1s ease-in-out 1 forwards');
