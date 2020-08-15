@@ -108,7 +108,7 @@ body {
 
 nav {
   z-index: 5;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   color: black;
@@ -150,32 +150,6 @@ nav #nav-inner .svg-container {
 }
 nav #nav-inner .svg-container #logo {
   height: 30px;
-}
-nav #nav-inner .a-name {
-  color: black;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-@media only all and (min-width: 768px) and (max-width: 1048px) {
-  nav #nav-inner .a-name {
-    display: none;
-  }
-}
-@media only all and (min-width: 480px) and (max-width: 767px) {
-  nav #nav-inner .a-name {
-    display: none;
-  }
-}
-@media only all and (max-width: 479px) {
-  nav #nav-inner .a-name {
-    display: none;
-  }
-}
-nav #nav-inner .a-name:hover {
-  color: grey;
-}
-nav #nav-inner .a-name:after {
-  color: black;
 }
 nav #nav-inner #nav-links {
   width: 12%;
@@ -569,7 +543,6 @@ main {
   top: 0;
   width: 85%;
   margin-left: 10%;
-  margin-top: 0;
   -webkit-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -moz-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -ms-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
@@ -626,7 +599,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 @-moz-keyframes margin-intro {
@@ -634,7 +607,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 @-ms-keyframes margin-intro {
@@ -642,7 +615,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 @-o-keyframes margin-intro {
@@ -650,7 +623,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 @keyframes margin-intro {
@@ -658,7 +631,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 350px;
+    margin-top: 400px;
   }
 }
 @-webkit-keyframes margin-small-intro {
@@ -748,11 +721,11 @@ main .projects-wrapper .project {
 }
 @media only all and (min-width: 1041px) and (max-width: 1690px) {
   main .projects-wrapper .project {
-    width: 80%;
+    width: 70%;
     margin-bottom: 150px;
   }
   main .projects-wrapper .project:nth-child(n) {
-    left: 20%;
+    left: 30%;
   }
   main .projects-wrapper .project:nth-child(2n) {
     left: 0%;
@@ -760,11 +733,11 @@ main .projects-wrapper .project {
 }
 @media only screen and (min-width: 1691px) {
   main .projects-wrapper .project {
-    width: 80%;
+    width: 70%;
     margin-bottom: 150px;
   }
   main .projects-wrapper .project:nth-child(n) {
-    left: 20%;
+    left: 30%;
   }
   main .projects-wrapper .project:nth-child(2n) {
     left: 0%;
@@ -803,7 +776,7 @@ main .projects-wrapper .project .small-titles a {
   }
 }
 main .projects-wrapper .project .p-normal {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   margin-bottom: 20px;
 }
@@ -827,7 +800,7 @@ main .projects-wrapper .project .p-normal {
 }
 main .projects-wrapper .project .p-media {
   color: #F8614C;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   margin-bottom: 10px;
 }
