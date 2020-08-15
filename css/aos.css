@@ -799,7 +799,7 @@
 }
 
 [data-aos^=fade][data-aos^=fade] {
-   opacity: 0;
+   opacity: 0.3;
    transition-property: opacity, transform
 }
 
@@ -809,7 +809,7 @@
 }
 
 [data-aos=fade-up] {
-   transform: translate3d(0, 100px, 0)
+   transform: translate3d(0, 30px, 0)
 }
 
 [data-aos=fade-down] {
@@ -841,7 +841,7 @@
 }
 
 [data-aos^=zoom][data-aos^=zoom] {
-   opacity: 0;
+   opacity: 0.3;
    transition-property: opacity, transform
 }
 
@@ -871,11 +871,11 @@
 }
 
 [data-aos=zoom-out] {
-   transform: scale(1.2)
+   transform: scale(1.05)
 }
 
 [data-aos=zoom-out-up] {
-   transform: translate3d(0, 100px, 0) scale(1.2)
+   transform: translate3d(0, 30px, 0) scale(1.05)
 }
 
 [data-aos=zoom-out-down] {
@@ -949,13 +949,4 @@
 
 [data-aos=flip-down].aos-animate {
    transform: perspective(2500px) rotateX(0)
-}
-[data-aos=skew-in] {
-   transform: skewX(-45deg);
- opacity: 0;
- transition-property: transform, opacity;
-}
- [data-aos=skew-in].aos-animate {
-	 transform: skewX(0);
-	 opacity: 1;
 }

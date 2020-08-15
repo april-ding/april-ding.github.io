@@ -1,3 +1,6 @@
+
+AOS.init();
+
 /********* STATS ************/
 var disableStats = true;
 

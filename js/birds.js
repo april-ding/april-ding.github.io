@@ -15,8 +15,8 @@ let boidsStroke;
 
 function setup() {
 
-    var p5Canvas = createCanvas(windowWidth, windowHeight);
-    p5Canvas.parent("p5-canvas");
+    // var p5Canvas = createCanvas(windowWidth, windowHeight);
+    // p5Canvas.parent("p5-canvas");
 
 
 

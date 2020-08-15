@@ -108,7 +108,7 @@
    }
 }
 body {
-   background-color: #FBF2F2;
+   background-color: white;
    width: 100%;
    height: 100%;
    top: 0;
@@ -122,20 +122,32 @@ body {
 // ******************************
 
 nav {
+   z-index: 5;
    //text styles
-   font-size: 18px;
+   font-size: 14px;
    font-weight: 600;
    text-transform: uppercase;
    color: black;
    //position
-   position: sticky;
-   position: -webkit-sticky;
-   top: 20px;
-   width: 95%;
-   left: 2.5%;
+   position: absolute;
+   top: 50px;
+   width: 85%;
+   margin-left: 10%;
    height: 40px;
-
-   z-index: 5;
+   @include bp-medium {
+      width: 90%;
+      margin-left: 5%;
+   }
+   @include bp-small {
+      width: 90%;
+      margin-left: 5%;
+      top: 20px;
+   }
+   @include bp-Xsmall {
+      width: 90%;
+      margin-left: 5%;
+      top: 20px;
+   }
 
    #nav-inner {
       width: 100%;
@@ -144,32 +156,35 @@ nav {
       align-items: center;
       justify-content: space-between;
 
-      #nav-name {
+      .svg-container {
+         height: 30px;
+
+         #logo {
+            height: 30px;
+         }
+      }
+
+      //info text style
+      #nav-links{
          width: 12%;
          display: flex;
-         flex-flow: row wrap;
-         align-items: center;
+         float: right;
          justify-content: space-between;
-         .svg-container{
-            height: 30px;
-            #logo {
-               height: 30px;
-            }
+         @include bp-medium {
+            width: 15%;
          }
-         //name style
-         .a-name {
+         @include bp-small {
+            width: 20%;
+         }
+         @include bp-Xsmall {
+            width: 35%;
+         }
+
+         a {
             color: black;
             text-decoration: none;
             letter-spacing: 1px;
-            @include bp-medium{
-               display: none;
-            }
-            @include bp-small{
-               display: none;
-            }
-            @include bp-Xsmall{
-               display: none;
-            }
+
             &:hover {
                color: grey;
             }
@@ -179,20 +194,7 @@ nav {
             }
          }
       }
-      //info text style
-      a {
-         color: black;
-         text-decoration: none;
-         letter-spacing: 1px;
 
-         &:hover {
-            color: grey;
-         }
-
-         &:after {
-            color: black;
-         }
-      }
    }
 }
 // ******************************
@@ -203,34 +205,35 @@ main {
    //position
    top: 0;
    left: 0;
-   width: 75%;
-   margin-left: 12.5%;
-   margin-top: 100px;
+   width: 85%;
+   margin-left: 10%;
+   margin-top: 200px;
    font-weight: 500;
-   background-color: #FBF2F2;
+   background-color: white;
    @include bp-Xsmall {
-      margin-top: 50px;
+      margin-top: 100px;
       width: 90%;
       margin-left: 5%;
    }
    @include bp-small {
-      margin-top: 50px;
+      margin-top: 100px;
       width: 90%;
       margin-left: 5%;
    }
    @include bp-medium {
-      margin-top: 100px;
+      margin-top: 200px;
       width: 90%;
       margin-left: 5%;
    }
 
    #bio {
+      font-family: 'EB Garamond', serif;
       font-weight: 400;
       width: 100%;
       margin-bottom: 120px;
       font-size: 36px;
       line-height: 46px;
-      color: #636363;
+      color: black;
       z-index: 4;
 
       p {
@@ -313,8 +316,8 @@ main {
 footer {
    font-family: "HKGrotesk", sans-serif;
    font-weight: 400;
-   width: 75%;
-   margin-left: 12.5%;
+   width: 85%;
+   margin-left: 10%;
    margin-bottom: 50px;
    font-size: 12px;
    line-height: 20px;
