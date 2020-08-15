@@ -33,7 +33,7 @@
   width: 100%;
   height: 100%;
   z-index: 100;
-  background-color: #FBF2F2;
+  background-color: white;
   pointer-events: none;
   -webkit-animation: white-fadeIn 1s ease-in-out 1 forwards;
   -moz-animation: white-fadeIn 1s ease-in-out 1 forwards;
@@ -97,7 +97,7 @@
   }
 }
 body {
-  background-color: #FBF2F2;
+  background-color: white;
   width: 100%;
   height: 100%;
   top: 0;
@@ -106,25 +106,37 @@ body {
   font-family: 'HKGrotesk', sans-serif;
 }
 
-#p5-canvas {
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 nav {
   z-index: 5;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   color: black;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 20px;
-  width: 95%;
-  left: 2.5%;
+  position: absolute;
+  top: 50px;
+  width: 85%;
+  margin-left: 10%;
   height: 40px;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  nav {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  nav {
+    width: 90%;
+    margin-left: 5%;
+    top: 20px;
+  }
+}
+@media only all and (max-width: 479px) {
+  nav {
+    width: 90%;
+    margin-left: 5%;
+    top: 20px;
+  }
 }
 nav #nav-inner {
   width: 100%;
@@ -133,54 +145,68 @@ nav #nav-inner {
   align-items: center;
   justify-content: space-between;
 }
-nav #nav-inner #nav-name {
-  width: 12%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-nav #nav-inner #nav-name .svg-container {
+nav #nav-inner .svg-container {
   height: 30px;
 }
-nav #nav-inner #nav-name .svg-container #logo {
+nav #nav-inner .svg-container #logo {
   height: 30px;
 }
-nav #nav-inner #nav-name .a-name {
+nav #nav-inner .a-name {
   color: black;
   text-decoration: none;
   letter-spacing: 1px;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
-  nav #nav-inner #nav-name .a-name {
+  nav #nav-inner .a-name {
     display: none;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
-  nav #nav-inner #nav-name .a-name {
+  nav #nav-inner .a-name {
     display: none;
   }
 }
 @media only all and (max-width: 479px) {
-  nav #nav-inner #nav-name .a-name {
+  nav #nav-inner .a-name {
     display: none;
   }
 }
-nav #nav-inner #nav-name .a-name:hover {
+nav #nav-inner .a-name:hover {
   color: grey;
 }
-nav #nav-inner #nav-name .a-name:after {
+nav #nav-inner .a-name:after {
   color: black;
 }
-nav #nav-inner a {
+nav #nav-inner #nav-links {
+  width: 12%;
+  display: flex;
+  float: right;
+  justify-content: space-between;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  nav #nav-inner #nav-links {
+    width: 15%;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  nav #nav-inner #nav-links {
+    width: 20%;
+  }
+}
+@media only all and (max-width: 479px) {
+  nav #nav-inner #nav-links {
+    width: 35%;
+  }
+}
+nav #nav-inner #nav-links a {
   color: black;
   text-decoration: none;
   letter-spacing: 1px;
 }
-nav #nav-inner a:hover {
+nav #nav-inner #nav-links a:hover {
   color: grey;
 }
-nav #nav-inner a:after {
+nav #nav-inner #nav-links a:after {
   color: black;
 }
 
@@ -190,7 +216,7 @@ nav #nav-inner a:after {
   height: 100vh;
   left: 0;
   top: 0;
-  background-color: #FBF2F2;
+  background-color: white;
   -webkit-animation: bio-intro 1s 0.5s ease-in-out 1 forwards;
   -moz-animation: bio-intro 1s 0.5s ease-in-out 1 forwards;
   -ms-animation: bio-intro 1s 0.5s ease-in-out 1 forwards;
@@ -228,17 +254,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -249,17 +275,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -270,17 +296,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -291,17 +317,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -312,17 +338,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -333,17 +359,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -354,17 +380,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -375,17 +401,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -396,17 +422,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -417,17 +443,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -438,17 +464,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -459,17 +485,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -480,17 +506,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -501,17 +527,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -522,17 +548,17 @@ nav #nav-inner a:after {
   0% {
     width: 100vw;
     height: 100vh;
-    background-color: #FBF2F2;
+    background-color: white;
   }
   30% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   50% {
     width: 100vw;
     height: 100vh;
-    background-color: #F8614C;
+    background-color: black;
   }
   100% {
     width: 100vw;
@@ -541,16 +567,14 @@ nav #nav-inner a:after {
 }
 main {
   top: 0;
-  width: 75%;
-  margin-left: 12.5%;
+  width: 85%;
+  margin-left: 10%;
   margin-top: 0;
-  margin-bottom: 40px;
   -webkit-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -moz-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -ms-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -o-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
-  font-weight: 500;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
@@ -602,7 +626,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 100px;
+    margin-top: 350px;
   }
 }
 @-moz-keyframes margin-intro {
@@ -610,7 +634,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 100px;
+    margin-top: 350px;
   }
 }
 @-ms-keyframes margin-intro {
@@ -618,7 +642,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 100px;
+    margin-top: 350px;
   }
 }
 @-o-keyframes margin-intro {
@@ -626,7 +650,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 100px;
+    margin-top: 350px;
   }
 }
 @keyframes margin-intro {
@@ -634,7 +658,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 100px;
+    margin-top: 350px;
   }
 }
 @-webkit-keyframes margin-small-intro {
@@ -642,7 +666,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 @-moz-keyframes margin-small-intro {
@@ -650,7 +674,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 @-ms-keyframes margin-small-intro {
@@ -658,7 +682,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 @-o-keyframes margin-small-intro {
@@ -666,7 +690,7 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 @keyframes margin-small-intro {
@@ -674,35 +698,41 @@ main {
     margin-top: 0;
   }
   100% {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 main #bio {
+  font-family: 'EB Garamond', serif;
   font-weight: 400;
-  font-style: italic;
-  width: 100%;
-  font-size: 30px;
-  line-height: 36px;
+  width: 60%;
+  font-size: 32px;
+  line-height: 44px;
   color: black;
+  margin-bottom: 120px;
   padding-bottom: 40px;
-  border-bottom: 1px solid black;
 }
 @media only all and (max-width: 479px) {
   main #bio {
     font-size: 30px;
     line-height: 34px;
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main #bio {
     font-size: 30px;
     line-height: 34px;
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main #bio {
     font-size: 30px;
     line-height: 34px;
+    width: 100%;
+    margin-bottom: 40px;
   }
 }
 main .projects-wrapper {
@@ -712,14 +742,40 @@ main .projects-wrapper {
 }
 main .projects-wrapper .project {
   width: 100%;
+  left: 0;
   position: relative;
-  margin-top: 100px;
-  border-bottom: 1px solid black;
+  margin-bottom: 80px;
+}
+@media only all and (min-width: 1041px) and (max-width: 1690px) {
+  main .projects-wrapper .project {
+    width: 80%;
+    margin-bottom: 150px;
+  }
+  main .projects-wrapper .project:nth-child(n) {
+    left: 20%;
+  }
+  main .projects-wrapper .project:nth-child(2n) {
+    left: 0%;
+  }
+}
+@media only screen and (min-width: 1691px) {
+  main .projects-wrapper .project {
+    width: 80%;
+    margin-bottom: 150px;
+  }
+  main .projects-wrapper .project:nth-child(n) {
+    left: 20%;
+  }
+  main .projects-wrapper .project:nth-child(2n) {
+    left: 0%;
+  }
 }
 main .projects-wrapper .project .small-titles {
+  font-family: 'EB Garamond', serif;
   margin-bottom: 20px;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
   text-decoration: none;
   color: black;
 }
@@ -728,43 +784,107 @@ main .projects-wrapper .project .small-titles a {
   color: black;
   outline: none;
 }
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  main .projects-wrapper .project .small-titles {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .projects-wrapper .project .small-titles {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .projects-wrapper .project .small-titles {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+}
 main .projects-wrapper .project .p-normal {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 26px;
   margin-bottom: 20px;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  main .projects-wrapper .project .p-normal {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .projects-wrapper .project .p-normal {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .projects-wrapper .project .p-normal {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+main .projects-wrapper .project .p-media {
+  color: #F8614C;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  main .projects-wrapper .project .p-media {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .projects-wrapper .project .p-media {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .projects-wrapper .project .p-media {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 main .projects-wrapper .project img {
   width: 100%;
   height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   opacity: 1;
   transition: 0.5s;
   display: block;
 }
-main .projects-wrapper .project .read-more {
-  color: black;
-  text-decoration: underline;
-  float: right;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 40px;
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  main .projects-wrapper .project img {
+    margin-bottom: 20px;
+  }
 }
-main .projects-wrapper .project .read-more a {
-  color: black;
-  outline: none;
-  text-decoration: none;
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .projects-wrapper .project img {
+    margin-bottom: 20px;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .projects-wrapper .project img {
+    margin-bottom: 20px;
+  }
 }
 
 footer {
   font-family: "HKGrotesk", sans-serif;
   font-weight: 400;
-  width: 75%;
-  margin-left: 12.5%;
+  width: 30%;
+  margin-left: 10%;
+  padding-top: 20px;
   margin-bottom: 50px;
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #636363;
+  border-top: 1px solid black;
+  color: black;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   footer {
