@@ -398,21 +398,22 @@ main {
          left: 0;
          position: relative;
          margin-bottom: 80px;
+
          @include bp-large{
-            width: 70%;
+            width: 80%;
             margin-bottom: 150px;
             &:nth-child(n){
-               left: 30%;
+               left: 20%;
             }
             &:nth-child(2n){
                left: 0%;
             }
          }
          @include bp-Xlarge{
-            width: 70%;
+            width: 80%;
             margin-bottom: 150px;
             &:nth-child(n){
-               left: 30%;
+               left: 20%;
             }
             &:nth-child(2n){
                left: 0%;
@@ -485,6 +486,23 @@ main {
          }
 
          img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            opacity: 1;
+            transition: 0.5s;
+            display: block;
+            @include bp-medium{
+               margin-bottom: 20px;
+            }
+            @include bp-small{
+               margin-bottom: 20px;
+            }
+            @include bp-Xsmall{
+               margin-bottom: 20px;
+            }
+         }
+         .vid {
             width: 100%;
             height: 100%;
             margin-bottom: 30px;

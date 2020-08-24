@@ -448,6 +448,16 @@ main .img-normal {
   width: 100%;
   margin-bottom: 20px;
 }
+main .vid {
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .two-videos {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row;
+}
 main .divider {
   width: 100%;
   height: 40px;
