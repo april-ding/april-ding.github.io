@@ -379,6 +379,16 @@ main {
       width: 100%;
       margin-bottom: 20px;
    }
+   .vid {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+   .two-videos{
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-flow: row;
+   }
 
    .divider {
       width: 100%;

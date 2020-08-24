@@ -1,4 +1,7 @@
 
+// document.getElementsByClassName('vid').play();
+
+
 AOS.init();
 
 /********* STATS ************/
