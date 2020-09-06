@@ -10,6 +10,7 @@ $bg-color: white;
 $intro-animation-length: 2s; // ******************************
 // Fonts
 // ******************************
+
 @font-face {
    font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -401,7 +402,6 @@ main {
          margin-bottom: 40px;
          font-size: 56px;
          font-weight: 600;
-         letter-spacing: 1px;
          text-transform: uppercase;
          text-decoration: none;
          color: black;
@@ -435,8 +435,7 @@ main {
             margin-bottom: 40px;
             font-size: 40px;
             line-height: 48px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-weight: 500;
             text-decoration: none;
             color: black;
 
