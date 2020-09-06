@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 @font-face {
   font-family: "HKGrotesk";
   src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -209,10 +209,10 @@ main {
 main #bio {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
-  width: 100%;
+  width: 60%;
   margin-bottom: 120px;
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 28px;
+  line-height: 34px;
   color: black;
   z-index: 4;
 }
@@ -221,6 +221,7 @@ main #bio p {
 }
 @media only all and (max-width: 479px) {
   main #bio {
+    width: 100%;
     margin-top: 10px;
     font-size: 24px;
     line-height: 30px;
@@ -229,6 +230,7 @@ main #bio p {
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main #bio {
+    width: 100%;
     margin-top: 20px;
     font-size: 24px;
     line-height: 30px;
@@ -237,6 +239,7 @@ main #bio p {
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main #bio {
+    width: 100%;
     margin-top: 24px;
     font-size: 30px;
     line-height: 34px;
@@ -249,6 +252,27 @@ main #bio p {
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 120px;
+  }
+}
+main #profile {
+  width: 35%;
+}
+main #profile img {
+  width: 100%;
+}
+@media only all and (min-width: 768px) and (max-width: 1048px) {
+  main #profile {
+    width: 100%;
+  }
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main #profile {
+    width: 100%;
+  }
+}
+@media only all and (max-width: 479px) {
+  main #profile {
+    width: 100%;
   }
 }
 main #info-wrapper {

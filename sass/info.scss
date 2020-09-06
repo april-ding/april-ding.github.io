@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&display=swap');
 @font-face {
    font-family: "HKGrotesk";
    src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -234,10 +234,10 @@ main {
    #bio {
       font-family: 'EB Garamond', serif;
       font-weight: 400;
-      width: 100%;
+      width: 60%;
       margin-bottom: 120px;
-      font-size: 36px;
-      line-height: 46px;
+      font-size: 28px;
+      line-height: 34px;
       color: black;
       z-index: 4;
 
@@ -245,18 +245,21 @@ main {
          padding-bottom: 20px;
       }
       @include bp-Xsmall {
+         width: 100%;
          margin-top: 10px;
          font-size: 24px;
          line-height: 30px;
          margin-bottom: 60px;
       }
       @include bp-small {
+         width: 100%;
          margin-top: 20px;
          font-size: 24px;
          line-height: 30px;
          margin-bottom: 60px;
       }
       @include bp-medium {
+         width: 100%;
          margin-top: 24px;
          font-size: 30px;
          line-height: 34px;
@@ -270,7 +273,21 @@ main {
       }
    }
 
-
+   #profile{
+      width: 35%;
+      img{
+         width: 100%;
+      }
+      @include bp-medium{
+         width: 100%;
+      }
+      @include bp-small{
+         width: 100%;
+      }
+      @include bp-Xsmall{
+         width: 100%;
+      }
+   }
 
    #info-wrapper {
       border-top: 1px solid black;
