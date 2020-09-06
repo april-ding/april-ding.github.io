@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 @font-face {
   font-family: "HKGrotesk";
   src: url("../fonts/hkgrotesk/hkgrotesk-medium.eot");
@@ -139,27 +140,31 @@ nav #nav-inner .svg-container #logo {
   height: 30px;
 }
 nav #nav-inner #nav-links {
-  width: 12%;
+  width: 25%;
   display: flex;
+  flex-flow: row wrap;
   float: right;
+  text-align: right;
   justify-content: space-between;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   nav #nav-inner #nav-links {
-    width: 15%;
+    width: 40%;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   nav #nav-inner #nav-links {
-    width: 20%;
+    width: 85%;
   }
 }
 @media only all and (max-width: 479px) {
   nav #nav-inner #nav-links {
-    width: 35%;
+    width: 85%;
   }
 }
 nav #nav-inner #nav-links a {
+  float: right;
+  text-align: right;
   color: black;
   text-decoration: none;
   letter-spacing: 1px;
