@@ -131,7 +131,6 @@ body {
    overflow-x: hidden;
    font-family: 'HKGrotesk', sans-serif;
 }
-
 // #p5-canvas {
 //    width: 100%;
 //    top: 0;
@@ -184,24 +183,27 @@ nav {
             height: 30px;
          }
       }
-
       //info text style
-      #nav-links{
-         width: 12%;
+      #nav-links {
+         width: 25%;
          display: flex;
+         flex-flow: row wrap;
          float: right;
+         text-align: right;
          justify-content: space-between;
          @include bp-medium {
-            width: 15%;
+            width: 40%;
          }
          @include bp-small {
-            width: 20%;
+            width: 85%;
          }
          @include bp-Xsmall {
-            width: 35%;
+            width: 85%;
          }
 
          a {
+            float: right;
+            text-align: right;
             color: black;
             text-decoration: none;
             letter-spacing: 1px;
@@ -215,7 +217,6 @@ nav {
             }
          }
       }
-
    }
 }
 
@@ -346,7 +347,7 @@ main {
       }
 
       100% {
-         margin-top: 400px;
+         margin-top: 150px;
       }
    }
    @include keyframes(margin-small-intro) {
@@ -362,12 +363,12 @@ main {
    #bio {
       font-family: 'EB Garamond', serif;
       font-weight: 400;
-      width: 60%;
-      font-size: 32px;
-      line-height: 44px;
+      width: 40%;
+      font-size: 30px;
+      line-height: 34px;
       color: black;
-      margin-bottom: 120px;
-      padding-bottom: 40px;
+      margin-bottom: 40px;
+
       @include bp-Xsmall {
          font-size: 30px;
          line-height: 34px;
@@ -389,43 +390,52 @@ main {
    }
 
    .projects-wrapper {
+      // border-top: 1px solid black;
+      padding-top: 40px;
       display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start;
+      flex-flow: row wrap;
+
+      .large-titles {
+         font-family: 'EB Garamond', serif;
+         margin-top: 80px;
+         margin-bottom: 40px;
+         font-size: 56px;
+         font-weight: 600;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         text-decoration: none;
+         color: black;
+      }
 
       .project {
          width: 100%;
          left: 0;
          position: relative;
          margin-bottom: 80px;
-
-         @include bp-large{
-            width: 80%;
-            margin-bottom: 150px;
-            &:nth-child(n){
-               left: 20%;
-            }
-            &:nth-child(2n){
-               left: 0%;
-            }
+         display: flex;
+         flex-flow: row;
+         justify-content: space-between;
+         @include bp-medium{
+            flex-flow: column;
          }
-         @include bp-Xlarge{
-            width: 80%;
-            margin-bottom: 150px;
-            &:nth-child(n){
-               left: 20%;
-            }
-            &:nth-child(2n){
-               left: 0%;
-            }
+         @include bp-small{
+            flex-flow: column;
          }
-
+         @include bp-Xsmall{
+            flex-flow: column;
+         }
+         transition: 0.3s;
+         &:hover{
+            padding: 20px;
+            box-shadow: 0px 0px 5px lightgrey;
+         }
 
          .small-titles {
             font-family: 'EB Garamond', serif;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             font-size: 40px;
-            font-weight: 400;
+            line-height: 48px;
+            font-weight: 600;
             letter-spacing: 1px;
             text-decoration: none;
             color: black;
@@ -435,88 +445,157 @@ main {
                color: black;
                outline: none;
             }
-            @include bp-medium{
+            @include bp-medium {
                margin-bottom: 10px;
                font-size: 30px;
             }
-            @include bp-small{
+            @include bp-small {
                margin-bottom: 10px;
                font-size: 30px;
             }
-            @include bp-Xsmall{
+            @include bp-Xsmall {
                margin-bottom: 10px;
                font-size: 30px;
             }
          }
 
          .p-normal {
+            font-family: "HKGrotesk", sans-serif;
+            font-weight: 500;
             font-size: 16px;
             line-height: 26px;
-            margin-bottom: 20px;
-            @include bp-medium{
+            // margin-bottom: 20px;
+            @include bp-medium {
                font-size: 14px;
                line-height: 18px;
             }
-            @include bp-small{
+            @include bp-small {
                font-size: 14px;
                line-height: 18px;
             }
-            @include bp-Xsmall{
-               font-size: 14px;
-               line-height: 18px;
-            }
-         }
-         .p-media {
-            color: $color-red;
-            font-size: 16px;
-            line-height: 26px;
-            margin-bottom: 10px;
-            @include bp-medium{
-               font-size: 14px;
-               line-height: 18px;
-            }
-            @include bp-small{
-               font-size: 14px;
-               line-height: 18px;
-            }
-            @include bp-Xsmall{
+            @include bp-Xsmall {
                font-size: 14px;
                line-height: 18px;
             }
          }
 
-         img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 30px;
-            opacity: 1;
-            transition: 0.5s;
-            display: block;
+         .p-title {
+            color: $color-red;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            @include bp-medium {
+               font-size: 14px;
+               line-height: 18px;
+            }
+            @include bp-small {
+               font-size: 14px;
+               line-height: 18px;
+            }
+            @include bp-Xsmall {
+               font-size: 14px;
+               line-height: 18px;
+            }
+         }
+
+         .p-media {
+            font-family: "HKGrotesk", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 10px;
+            @include bp-medium {
+               font-size: 14px;
+               line-height: 18px;
+            }
+            @include bp-small {
+               font-size: 14px;
+               line-height: 18px;
+            }
+            @include bp-Xsmall {
+               font-size: 14px;
+               line-height: 18px;
+            }
+         }
+
+         .feature-img {
+            width: 60%;
             @include bp-medium{
-               margin-bottom: 20px;
+               width: 100%;
             }
             @include bp-small{
-               margin-bottom: 20px;
+               width: 100%;
             }
             @include bp-Xsmall{
+               width: 100%;
+            }
+         }
+
+         img {
+            width: 100%;
+            opacity: 1;
+            transition: 0.5s;
+            // display: block;
+            @include bp-medium {
+               margin-bottom: 20px;
+            }
+            @include bp-small {
+               margin-bottom: 20px;
+            }
+            @include bp-Xsmall {
                margin-bottom: 20px;
             }
          }
+
          .vid {
             width: 100%;
-            height: 100%;
             margin-bottom: 30px;
             opacity: 1;
             transition: 0.5s;
-            display: block;
-            @include bp-medium{
+            // display: block;
+            @include bp-medium {
                margin-bottom: 20px;
+            }
+            @include bp-small {
+               margin-bottom: 20px;
+            }
+            @include bp-Xsmall {
+               margin-bottom: 20px;
+            }
+         }
+
+         .info-wrapper {
+            width: 35%;
+            @include bp-medium{
+               width: 100%;
             }
             @include bp-small{
-               margin-bottom: 20px;
+               width: 100%;
             }
             @include bp-Xsmall{
-               margin-bottom: 20px;
+               width: 100%;
+            }
+         }
+
+         .read-more {
+            margin-top: 40px;
+            font-family: "HKGrotesk", sans-serif;
+            font-weight: 500;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            cursor: pointer;
+
+            &:hover {
+               background-color: black;
+               color: white;
             }
          }
       }
