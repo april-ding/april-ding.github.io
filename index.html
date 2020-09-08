@@ -16,6 +16,8 @@
    <link href="css/lightbox.css" rel="stylesheet" />
    <link href="css/aos.css" rel="stylesheet" />
 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    <!-- js -->
    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -23,6 +25,9 @@
 
    <script type="text/javascript" src="js/wow.min.js"></script>
    <script type="text/javascript" src="js/aos.js"></script>
+
+   <script type="text/javascript" src="js/paper-full.min.js"></script>
+   <script type="text/paperscript" src="js/paper-script.js" canvas="paperCanvas"></script>
 
 
 </head>
@@ -38,31 +43,47 @@
          <div class="svg-container"><a href="index.html">
                <img id="logo" src="img/ui/logo.svg"></a>
          </div>
-         <div id="nav-links">
-            <a href="index.html">
-               <p>Work</p><i class="fa fa-caret-down"></i>
-            </a>
-            <a href="../img/Resume.pdf" target=”_blank”>
-               <p>Resume</p>
-            </a>
-            <a href="projects/contact.html">
-               <p>Contact</p>
-            </a>
-            <a href="projects/info.html">
-               <p>About</p>
+         <div id="nav-web">
+            <div class="web-dropdown">
+               <p><button class="web-dropbtn web-link">Work<i class="fa fa-caret-down" style="display:inline;"></i></button></p>
+               <div id="web-dropdown-content">
+                  <p><a href="#visual" class="web-link">Visual Design</a></p>
+                  <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link">Interactive</a></p>
+                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link">Motion Design</a></p>
+               </div>
+            </div>
+            <p><a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
+            <p><a class="web-link" href="projects/contact.html">Contact</a></p>
+            <p><a class="web-link" href="projects/info.html">About</a></p>
+         </div>
+         <div id="nav-mobile">
+            <div id="nav-mobile-links" class="nav-open">
+               <div class="dropdown">
+                  <p class="fade-down"><button class="dropbtn" onclick="showWork()">Work</button></p>
+                  <div id="dropdown-content">
+                     <p class="fade-down"><a href="#visual" onclick="openNav()">Visual Design</a></p>
+                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive" onclick="openNav()">Interactive</a></p>
+                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion" onclick="openNav()">Motion Design</a></p>
+                  </div>
+               </div>
+               <p class="fade-down" style="animation-delay: 0.1s;"><a href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
+               <p class="fade-down" style="animation-delay: 0.2s;"><a href="projects/contact.html">Contact</a></p>
+               <p class="fade-down" style="animation-delay: 0.3s;"><a href="projects/info.html">About</a></p>
+            </div>
+            <a href="javascript:void(0);" class="icon">
+               <i class="fa fa-bars" style="color: black; font-size: 24px; font-weight: 400; z-index: 2;"></i>
             </a>
          </div>
       </div>
    </nav>
 
    <main>
-      <!-- <p id="bio" style="font-weight: 800; font-size: 36px; line-height: 48px;margin-bottom: 20px; border: none; padding-bottom: 0px;">Visual Designer &<br>Front-End Developer</p> -->
       <p id="bio" style="margin-bottom: 40px;">April Ding is a <b>visual designer</b> dedicated to make ideas beautiful, and a <b>front-end web developer</b> loving building interactive emotional experiences.</p>
 
-      <img style="width: 100%" src="img/projects/motion-shanhai-07.gif">
+      <canvas id="paperCanvas" resize></canvas>
 
       <ul class="projects-wrapper">
-         <p class="large-titles">Visual Design</p>
+         <p id="visual" class="large-titles">Visual Design</p>
          <li class="project">
             <div class="feature-img">
                <a href="projects/illustration.html"><img src="img/projects/illo-its-01.jpg"></a></div>
@@ -92,7 +113,7 @@
             </div>
          </li>
 
-         <p class="large-titles">Interactive</p>
+         <p id="interactive" class="large-titles">Interactive</p>
 
          <li class="project">
             <div class="feature-img">
@@ -125,7 +146,9 @@
                <a href="projects/memories.html"><button class="read-more">Read More</button></a>
             </div>
          </li>
-         <p class="large-titles">Motion</p>
+
+         <p id="motion" class="large-titles">Motion</p>
+
          <li class="project">
             <div class="feature-img">
                <a href="projects/motion.html"><img src="img/projects/motion-flower-01.gif"></a></div>

@@ -1,5 +1,13 @@
-$bg-color: white;
+// ******************************
+// Variables
+// ******************************
+$color-blue: #1289F6;
+$color-green: #219653;
+$color-orange: #FF613F;
+$color-darkgrey: #636363;
 $color-red: #F8614C;
+$bg-color: white;
+$intro-animation-length: 2s;
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 @font-face {
@@ -127,11 +135,6 @@ body {
 
 nav {
    z-index: 5;
-   //text styles
-   font-size: 14px;
-   font-weight: 600;
-   text-transform: uppercase;
-   color: black;
    //position
    position: absolute;
    top: 50px;
@@ -152,57 +155,208 @@ nav {
       margin-left: 5%;
       top: 20px;
    }
-
    #nav-inner {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
-
       .svg-container {
          height: 30px;
-
          #logo {
             height: 30px;
          }
       }
-
-      //info text style
-      #nav-links {
-         width: 25%;
+      //web nav
+      #nav-web {
+         color: black;
          display: flex;
          flex-flow: row wrap;
-         float: right;
-         text-align: right;
+         width: 30%;
          justify-content: space-between;
+         @include bp-Xlarge{
+            width: 20%;
+         }
          @include bp-medium {
-            width: 40%;
+            display: none;
          }
          @include bp-small {
-            width: 85%;
+            display: none;
          }
          @include bp-Xsmall {
-            width: 85%;
+            display: none;
          }
-
-         a {
-            float: right;
-            text-align: right;
+         .web-dropbtn{
+            outline: none;
+            border: none;
+            background: none;
+            padding: 0;
+         }
+         .web-link {
+            //text styles
+            font-family: 'HKGrotesk', sans-serif;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 600;
             color: black;
             text-decoration: none;
-            letter-spacing: 1px;
-
             &:hover {
-               color: grey;
+               color: $color-red;
             }
-
-            &:after {
-               color: black;
+         }
+         .web-dropdown {
+            &:hover{
+               #web-dropdown-content {
+                  display: block;
+               }
+            }
+            #web-dropdown-content {
+               display: none;
+               position: absolute;
+               z-index: 1;
+               padding-top: 5px;
             }
          }
       }
+      //mobile nav
+      #nav-mobile {
+         color: black;
+         display: none;
+         @include bp-medium {
+            display: block;
+         }
+         @include bp-small {
+            display: block;
+         }
+         @include bp-Xsmall {
+            display: block;
+         }
 
+         .nav-open {
+            @include animation('nav-open 0.3s ease-in-out 1 forwards');
+            @include keyframes(nav-open) {
+               0% {
+                  opacity: 0;
+               }
+
+               100% {
+                  opacity: 1;
+               }
+            }
+         }
+         .nav-close {
+            @include animation('nav-close 0.3s ease-in-out 1 forwards');
+            @include keyframes(nav-close) {
+               0% {
+                  opacity: 1;
+               }
+
+               100% {
+                  opacity: 0;
+               }
+            }
+         }
+         .fade-down {
+            @include animation('fade-down 0.5s ease-in-out 1 forwards');
+            @include keyframes(fade-down) {
+               0% {
+                  opacity: 0;
+                  transform: translate3d(0, -25px, 0);
+               }
+
+               100% {
+                  opacity: 1;
+                  transform: translate3d(0, 0px, 0);
+               }
+            }
+         }
+         #nav-mobile-links {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            padding-top: 150px;
+            padding-left: 5%;
+            background-color: #f4f4f4;
+
+            p {
+               display: block;
+               opacity: 0;
+               transform: translate3d(0, -25px, 0);
+            }
+
+            a {
+               //text styles
+               font-family: 'EB Garamond', serif;
+               font-size: 48px;
+               line-height: 60px;
+               font-weight: 600;
+               text-transform: none;
+               color: black;
+               text-decoration: none;
+
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+
+            .dropdown {
+               position: relative;
+
+               p {
+                  opacity: 0;
+                  transform: translate3d(0, -50px, 0);
+               }
+
+               .dropbtn {
+                  border: none;
+                  outline: none;
+                  background: none;
+                  cursor: pointer;
+                  //text styles
+                  font-family: 'EB Garamond', serif;
+                  font-size: 48px;
+                  line-height: 60px;
+                  font-weight: 600;
+                  text-transform: none;
+                  color: black;
+                  padding: 0;
+                  //animation
+                  &:hover {
+                     text-decoration: underline;
+                  }
+               }
+
+               #dropdown-content {
+                  display: none;
+                  min-width: 160px;
+                  z-index: 1;
+
+                  p {
+                     display: block;
+                  }
+                  a {
+                     padding-left: 30px;
+                     //text styles
+                     font-family: 'EB Garamond', serif;
+                     font-size: 36px;
+                     line-height: 48px;
+                     font-weight: 600;
+                     color: black;
+                     text-transform: none;
+                     text-decoration: none;
+
+                     &:hover {
+                        text-decoration: underline;
+                     }
+                  }
+               }
+            }
+         }
+      }
    }
 }
 // ******************************
