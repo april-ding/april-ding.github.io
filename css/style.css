@@ -108,11 +108,6 @@ body {
 
 nav {
   z-index: 5;
-  font-family: 'HKGrotesk', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: black;
   position: absolute;
   top: 50px;
   width: 85%;
@@ -152,44 +147,58 @@ nav #nav-inner .svg-container {
 nav #nav-inner .svg-container #logo {
   height: 30px;
 }
-nav #nav-inner #nav-links {
-  width: 25%;
+nav #nav-inner #nav-web {
+  color: black;
   display: flex;
   flex-flow: row wrap;
-  float: right;
-  text-align: right;
+  width: 30%;
   justify-content: space-between;
 }
+@media only screen and (min-width: 1691px) {
+  nav #nav-inner #nav-web {
+    width: 20%;
+  }
+}
 @media only all and (min-width: 768px) and (max-width: 1048px) {
-  nav #nav-inner #nav-links {
-    width: 40%;
+  nav #nav-inner #nav-web {
     display: none;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
-  nav #nav-inner #nav-links {
-    width: 85%;
+  nav #nav-inner #nav-web {
     display: none;
   }
 }
 @media only all and (max-width: 479px) {
-  nav #nav-inner #nav-links {
-    width: 85%;
+  nav #nav-inner #nav-web {
     display: none;
   }
 }
-nav #nav-inner #nav-links a {
-  float: right;
-  text-align: right;
+nav #nav-inner #nav-web .web-dropbtn {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+}
+nav #nav-inner #nav-web .web-link {
+  font-family: 'HKGrotesk', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
   color: black;
   text-decoration: none;
-  letter-spacing: 1px;
 }
-nav #nav-inner #nav-links a:hover {
-  color: grey;
+nav #nav-inner #nav-web .web-link:hover {
+  color: #F8614C;
 }
-nav #nav-inner #nav-links a:after {
-  color: black;
+nav #nav-inner #nav-web .web-dropdown:hover #web-dropdown-content {
+  display: block;
+}
+nav #nav-inner #nav-web .web-dropdown #web-dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 5px;
 }
 nav #nav-inner #nav-mobile {
   color: black;
@@ -367,7 +376,7 @@ nav #nav-inner #nav-mobile-links {
   width: 100vw;
   height: 100vh;
   top: 0;
-  left: 0vw;
+  left: 0;
   z-index: -1;
   padding-top: 150px;
   padding-left: 5%;

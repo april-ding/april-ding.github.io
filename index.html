@@ -43,29 +43,27 @@
          <div class="svg-container"><a href="index.html">
                <img id="logo" src="img/ui/logo.svg"></a>
          </div>
-         <div id="nav-links">
-            <a href="index.html">
-               <p>Work</p><i class="fa fa-caret-down"></i>
-            </a>
-            <a href="../img/Resume.pdf" target=”_blank”>
-               <p>Resume</p>
-            </a>
-            <a href="projects/contact.html">
-               <p>Contact</p>
-            </a>
-            <a href="projects/info.html">
-               <p>About</p>
-            </a>
+         <div id="nav-web">
+            <div class="web-dropdown">
+               <p><button class="web-dropbtn web-link">Work<i class="fa fa-caret-down" style="display:inline;"></i></button></p>
+               <div id="web-dropdown-content">
+                  <p><a href="#visual" class="web-link">Visual Design</a></p>
+                  <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link">Interactive</a></p>
+                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link">Motion Design</a></p>
+               </div>
+            </div>
+            <p><a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
+            <p><a class="web-link" href="projects/contact.html">Contact</a></p>
+            <p><a class="web-link" href="projects/info.html">About</a></p>
          </div>
          <div id="nav-mobile">
-
             <div id="nav-mobile-links" class="nav-open">
                <div class="dropdown">
                   <p class="fade-down"><button class="dropbtn" onclick="showWork()">Work</button></p>
                   <div id="dropdown-content">
                      <p class="fade-down"><a href="#visual" onclick="openNav()">Visual Design</a></p>
-                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive"onclick="openNav()">Interactive</a></p>
-                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion"onclick="openNav()">Motion Design</a></p>
+                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive" onclick="openNav()">Interactive</a></p>
+                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion" onclick="openNav()">Motion Design</a></p>
                   </div>
                </div>
                <p class="fade-down" style="animation-delay: 0.1s;"><a href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
