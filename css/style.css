@@ -219,7 +219,7 @@ nav #nav-inner #nav-mobile {
     display: block;
   }
 }
-nav #nav-inner .nav-open {
+nav #nav-inner #nav-mobile .nav-open {
   -webkit-animation: nav-open 0.3s ease-in-out 1 forwards;
   -moz-animation: nav-open 0.3s ease-in-out 1 forwards;
   -ms-animation: nav-open 0.3s ease-in-out 1 forwards;
@@ -266,7 +266,7 @@ nav #nav-inner .nav-open {
     opacity: 1;
   }
 }
-nav #nav-inner .nav-close {
+nav #nav-inner #nav-mobile .nav-close {
   -webkit-animation: nav-close 0.3s ease-in-out 1 forwards;
   -moz-animation: nav-close 0.3s ease-in-out 1 forwards;
   -ms-animation: nav-close 0.3s ease-in-out 1 forwards;
@@ -313,7 +313,7 @@ nav #nav-inner .nav-close {
     opacity: 0;
   }
 }
-nav #nav-inner .fade-down {
+nav #nav-inner #nav-mobile .fade-down {
   -webkit-animation: fade-down 0.5s ease-in-out 1 forwards;
   -moz-animation: fade-down 0.5s ease-in-out 1 forwards;
   -ms-animation: fade-down 0.5s ease-in-out 1 forwards;
@@ -370,7 +370,7 @@ nav #nav-inner .fade-down {
     transform: translate3d(0, 0px, 0);
   }
 }
-nav #nav-inner #nav-mobile-links {
+nav #nav-inner #nav-mobile #nav-mobile-links {
   display: none;
   position: fixed;
   width: 100vw;
@@ -382,12 +382,12 @@ nav #nav-inner #nav-mobile-links {
   padding-left: 5%;
   background-color: #f4f4f4;
 }
-nav #nav-inner #nav-mobile-links p {
+nav #nav-inner #nav-mobile #nav-mobile-links p {
   display: block;
   opacity: 0;
   transform: translate3d(0, -25px, 0);
 }
-nav #nav-inner #nav-mobile-links a {
+nav #nav-inner #nav-mobile #nav-mobile-links a {
   font-family: 'EB Garamond', serif;
   font-size: 48px;
   line-height: 60px;
@@ -396,17 +396,17 @@ nav #nav-inner #nav-mobile-links a {
   color: black;
   text-decoration: none;
 }
-nav #nav-inner #nav-mobile-links a:hover {
+nav #nav-inner #nav-mobile #nav-mobile-links a:hover {
   text-decoration: underline;
 }
-nav #nav-inner #nav-mobile-links .dropdown {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown {
   position: relative;
 }
-nav #nav-inner #nav-mobile-links .dropdown p {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown p {
   opacity: 0;
   transform: translate3d(0, -50px, 0);
 }
-nav #nav-inner #nav-mobile-links .dropdown .dropbtn {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown .dropbtn {
   border: none;
   outline: none;
   background: none;
@@ -419,18 +419,18 @@ nav #nav-inner #nav-mobile-links .dropdown .dropbtn {
   color: black;
   padding: 0;
 }
-nav #nav-inner #nav-mobile-links .dropdown .dropbtn:hover {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown .dropbtn:hover {
   text-decoration: underline;
 }
-nav #nav-inner #nav-mobile-links .dropdown #dropdown-content {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content {
   display: none;
   min-width: 160px;
   z-index: 1;
 }
-nav #nav-inner #nav-mobile-links .dropdown #dropdown-content p {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content p {
   display: block;
 }
-nav #nav-inner #nav-mobile-links .dropdown #dropdown-content a {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a {
   padding-left: 30px;
   font-family: 'EB Garamond', serif;
   font-size: 36px;
@@ -440,7 +440,7 @@ nav #nav-inner #nav-mobile-links .dropdown #dropdown-content a {
   text-transform: none;
   text-decoration: none;
 }
-nav #nav-inner #nav-mobile-links .dropdown #dropdown-content a:hover {
+nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover {
   text-decoration: underline;
 }
 
@@ -988,7 +988,7 @@ main .projects-wrapper {
   flex-flow: row wrap;
 }
 main .projects-wrapper .large-titles {
-  font-family: 'EB Garamond', serif;
+  font-family: 'HKGrotesk', sans-serif;
   margin-top: 80px;
   margin-bottom: 40px;
   font-size: 56px;
