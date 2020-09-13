@@ -428,12 +428,12 @@ main {
   font-family: 'HKGrotesk', sans-serif;
   width: 85%;
   margin-left: 10%;
-  margin-top: 0px;
-  -webkit-animation: margin-intro 0.5s ease-in-out 1 forwards;
-  -moz-animation: margin-intro 0.5s ease-in-out 1 forwards;
-  -ms-animation: margin-intro 0.5s ease-in-out 1 forwards;
-  -o-animation: margin-intro 0.5s ease-in-out 1 forwards;
-  animation: margin-intro 0.5s ease-in-out 1 forwards;
+  margin-top: 100px;
+  -webkit-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+  -moz-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+  -ms-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+  -o-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+  animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
@@ -458,29 +458,29 @@ main {
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main {
-    -webkit-animation: margin-intro 0.5s ease-in-out 1 forwards;
-    -moz-animation: margin-intro 0.5s ease-in-out 1 forwards;
-    -ms-animation: margin-intro 0.5s ease-in-out 1 forwards;
-    -o-animation: margin-intro 0.5s ease-in-out 1 forwards;
-    animation: margin-intro 0.5s ease-in-out 1 forwards;
+    -webkit-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -moz-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -ms-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -o-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
+    animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main {
-    -webkit-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -moz-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -ms-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -o-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    animation: margin-small-intro 0.5s ease-in-out 1 forwards;
+    -webkit-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -moz-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -ms-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -o-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
   }
 }
 @media only all and (max-width: 479px) {
   main {
-    -webkit-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -moz-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -ms-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    -o-animation: margin-small-intro 0.5s ease-in-out 1 forwards;
-    animation: margin-small-intro 0.5s ease-in-out 1 forwards;
+    -webkit-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -moz-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -ms-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    -o-animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
+    animation: margin-small-intro 0.5s 0.5s ease-in-out 1 forwards;
   }
 }
 @-webkit-keyframes margin-intro {
@@ -488,7 +488,7 @@ main {
     margin-top: 100px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 @-moz-keyframes margin-intro {
@@ -496,7 +496,7 @@ main {
     margin-top: 100px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 @-ms-keyframes margin-intro {
@@ -504,7 +504,7 @@ main {
     margin-top: 100px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 @-o-keyframes margin-intro {
@@ -512,7 +512,7 @@ main {
     margin-top: 100px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 @keyframes margin-intro {
@@ -520,7 +520,7 @@ main {
     margin-top: 100px;
   }
   100% {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 @-webkit-keyframes margin-small-intro {
@@ -564,28 +564,11 @@ main {
   }
 }
 main .feature {
-  width: 60%;
+  width: 100%;
   top: 0;
   left: 0;
-  margin-bottom: 50px;
-}
-@media only all and (min-width: 768px) and (max-width: 1048px) {
-  main .feature {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-}
-@media only all and (min-width: 480px) and (max-width: 767px) {
-  main .feature {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-@media only all and (max-width: 479px) {
-  main .feature {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+  text-align: center;
+  margin-bottom: 30px;
 }
 main .feature h2 {
   font-family: 'EB Garamond', serif;
@@ -593,15 +576,35 @@ main .feature h2 {
   width: 100%;
   font-size: 40px;
   line-height: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+main .overview {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+main .overview .task-wrapper {
+  width: 65%;
+}
+main .overview .task-wrapper .task-line {
+  font-family: 'HKGrotesk', sans-serif;
+  font-weight: 600;
+  width: 100%;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+main .overview .role-wrapper {
+  width: 25%;
 }
 main .medium-titles {
-  font-family: 'EB Garamond', serif;
-  margin-bottom: 30px;
-  font-size: 30px;
-  line-height: 36px;
+  font-family: 'HKGrotesk', sans-serif;
   font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .medium-titles {
@@ -659,6 +662,7 @@ main .small-titles {
   font-size: 16px;
 }
 main .p-normal {
+  width: 45%;
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 20px;
@@ -684,27 +688,23 @@ main .p-normal {
 }
 main .p-media {
   color: #F8614C;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+main .text-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+main .p-skills {
+  font-family: "HKGrotesk", sans-serif;
+  font-weight: 600;
   font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 10px;
-}
-@media only all and (min-width: 768px) and (max-width: 1048px) {
-  main .p-media {
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-@media only all and (min-width: 480px) and (max-width: 767px) {
-  main .p-media {
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
-@media only all and (max-width: 479px) {
-  main .p-media {
-    font-size: 14px;
-    line-height: 18px;
-  }
+  line-height: 24px;
 }
 main .img-normal {
   width: 100%;
@@ -722,7 +722,7 @@ main .two-videos {
 }
 main .divider {
   width: 100%;
-  height: 40px;
+  height: 80px;
 }
 main .iframe-container {
   position: relative;

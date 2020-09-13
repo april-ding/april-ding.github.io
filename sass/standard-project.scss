@@ -8,7 +8,6 @@ $color-darkgrey: #636363;
 $color-red: #F8614C;
 $bg-color: white;
 $intro-animation-length: 2s;
-
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 @font-face {
    font-family: "HKGrotesk";
@@ -89,7 +88,6 @@ $intro-animation-length: 2s;
 // =========================================================
 // p5 CANVAS
 // =========================================================
-
 // #p5-canvas {
 //    position: fixed;
 //    top: 0;
@@ -119,6 +117,7 @@ $intro-animation-length: 2s;
       }
    }
 }
+
 body {
    background-color: $bg-color;
    width: 100%;
@@ -128,7 +127,6 @@ body {
    overflow-x: hidden;
    font-family: 'HKGrotesk', sans-serif;
 }
-
 // ******************************
 // Nav
 // ******************************
@@ -155,14 +153,17 @@ nav {
       margin-left: 5%;
       top: 20px;
    }
+
    #nav-inner {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
+
       .svg-container {
          height: 30px;
+
          #logo {
             height: 30px;
          }
@@ -174,7 +175,7 @@ nav {
          flex-flow: row wrap;
          width: 30%;
          justify-content: space-between;
-         @include bp-Xlarge{
+         @include bp-Xlarge {
             width: 20%;
          }
          @include bp-medium {
@@ -186,12 +187,14 @@ nav {
          @include bp-Xsmall {
             display: none;
          }
-         .web-dropbtn{
+
+         .web-dropbtn {
             outline: none;
             border: none;
             background: none;
             padding: 0;
          }
+
          .web-link {
             //text styles
             font-family: 'HKGrotesk', sans-serif;
@@ -200,16 +203,19 @@ nav {
             font-weight: 600;
             color: black;
             text-decoration: none;
+
             &:hover {
                color: $color-red;
             }
          }
+
          .web-dropdown {
-            &:hover{
+            &:hover {
                #web-dropdown-content {
                   display: block;
                }
             }
+
             #web-dropdown-content {
                display: none;
                position: absolute;
@@ -244,6 +250,7 @@ nav {
                }
             }
          }
+
          .nav-close {
             @include animation('nav-close 0.3s ease-in-out 1 forwards');
             @include keyframes(nav-close) {
@@ -256,6 +263,7 @@ nav {
                }
             }
          }
+
          .fade-down {
             @include animation('fade-down 0.5s ease-in-out 1 forwards');
             @include keyframes(fade-down) {
@@ -270,6 +278,7 @@ nav {
                }
             }
          }
+
          #nav-mobile-links {
             display: none;
             position: fixed;
@@ -338,6 +347,7 @@ nav {
                   p {
                      display: block;
                   }
+
                   a {
                      padding-left: 30px;
                      //text styles
@@ -364,12 +374,11 @@ nav {
 // ******************************
 
 main {
-
    margin-bottom: 100px;
    font-family: 'HKGrotesk', sans-serif;
    width: 85%;
    margin-left: 10%;
-   margin-top: 0px;
+   margin-top: 100px;
    @include bp-medium {
       width: 90%;
       margin-left: 5%;
@@ -385,16 +394,15 @@ main {
       margin-left: 5%;
       margin-top: 100px;
    }
-
-   @include animation('margin-intro 0.5s ease-in-out 1 forwards');
+   @include animation('margin-intro 0.5s 0.5s ease-in-out 1 forwards');
    @include bp-medium {
-      @include animation('margin-intro 0.5s ease-in-out 1 forwards');
+      @include animation('margin-intro 0.5s 0.5s ease-in-out 1 forwards');
    }
    @include bp-small {
-      @include animation('margin-small-intro 0.5s ease-in-out 1 forwards');
+      @include animation('margin-small-intro 0.5s 0.5s ease-in-out 1 forwards');
    }
    @include bp-Xsmall {
-      @include animation('margin-small-intro 0.5s ease-in-out 1 forwards');
+      @include animation('margin-small-intro 0.5s 0.5s ease-in-out 1 forwards');
    }
    @include keyframes(margin-intro) {
       0% {
@@ -402,7 +410,7 @@ main {
       }
 
       100% {
-         margin-top: 200px;
+         margin-top: 150px;
       }
    }
    @include keyframes(margin-small-intro) {
@@ -416,50 +424,65 @@ main {
    }
 
    .feature {
-      width: 60%;
+      width: 100%;
       top: 0;
       left: 0;
-      margin-bottom: 50px;
-      @include bp-medium {
-         width: 100%;
-         margin-bottom: 40px;
-      }
-      @include bp-small {
-         width: 100%;
-         margin-bottom: 20px;
-      }
-      @include bp-Xsmall {
-         width: 100%;
-         margin-bottom: 20px;
-      }
+      text-align: center;
+      margin-bottom: 30px;
+
       h2 {
          font-family: 'EB Garamond', serif;
          font-weight: 600;
          width: 100%;
          font-size: 40px;
          line-height: 48px;
-         margin-bottom: 30px;
+         margin-bottom: 10px;
       }
    }
+
+   .overview {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      .task-wrapper {
+         width: 65%;
+
+         .task-line {
+            font-family: 'HKGrotesk', sans-serif;
+            font-weight: 600;
+            width: 100%;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 10px;
+         }
+      }
+
+      .role-wrapper {
+         width: 25%;
+      }
+   }
+
    .medium-titles {
-      font-family: 'EB Garamond', serif;
-      margin-bottom: 30px;
-      font-size: 30px;
-      line-height: 36px;
+      font-family: 'HKGrotesk', sans-serif;
       font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
       text-decoration: none;
-      @include bp-medium{
+      margin-bottom: 20px;
+      @include bp-medium {
          font-size: 20px;
       }
-      @include bp-small{
+      @include bp-small {
          font-size: 20px;
       }
-      @include bp-Xsmall{
+      @include bp-Xsmall {
          font-size: 20px;
       }
    }
 
-   .button{
+   .button {
       width: 20%;
       border-radius: 39px;
       margin-left: 40%;
@@ -470,23 +493,25 @@ main {
       background-color: #F3B34B;
       text-align: center;
       text-transform: uppercase;
-      @include bp-small{
+      @include bp-small {
          width: 50%;
          margin-left: 25%;
       }
-      @include bp-Xsmall{
+      @include bp-Xsmall {
          width: 50%;
          margin-left: 25%;
       }
-      a{
 
+      a {
          font-weight: 600;
          color: black;
          text-decoration: none;
-         &:hover{
+
+         &:hover {
             color: white;
          }
-         &:after{
+
+         &:after {
             color: black;
             text-decoration: none;
          }
@@ -499,51 +524,59 @@ main {
    }
 
    .p-normal {
+      width: 45%;
       font-size: 16px;
       line-height: 26px;
       margin-bottom: 20px;
       font-weight: 500;
-      @include bp-medium{
+      @include bp-medium {
          font-size: 14px;
          line-height: 18px;
       }
-      @include bp-small{
+      @include bp-small {
          font-size: 14px;
          line-height: 18px;
       }
-      @include bp-Xsmall{
+      @include bp-Xsmall {
          font-size: 14px;
          line-height: 18px;
       }
    }
+
    .p-media {
       color: $color-red;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      margin-bottom: 5px;
+   }
+   .text-wrapper{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+   }
+
+   .p-skills {
+      font-family: "HKGrotesk", sans-serif;
+      font-weight: 600;
       font-size: 16px;
-      line-height: 26px;
-      margin-bottom: 10px;
-      @include bp-medium{
-         font-size: 14px;
-         line-height: 18px;
-      }
-      @include bp-small{
-         font-size: 14px;
-         line-height: 18px;
-      }
-      @include bp-Xsmall{
-         font-size: 14px;
-         line-height: 18px;
-      }
+      line-height: 24px;
    }
 
    .img-normal {
       width: 100%;
       margin-bottom: 20px;
    }
+
    .vid {
       width: 100%;
       margin-bottom: 20px;
    }
-   .two-videos{
+
+   .two-videos {
       width: 100%;
       margin-bottom: 20px;
       display: flex;
@@ -552,7 +585,7 @@ main {
 
    .divider {
       width: 100%;
-      height: 40px;
+      height: 80px;
    }
 
    .iframe-container {
@@ -622,15 +655,15 @@ footer {
    margin-left: 10%;
    margin-bottom: 50px;
    color: #636363;
-   @include bp-medium{
+   @include bp-medium {
       width: 90%;
       margin-left: 5%;
    }
-   @include bp-small{
+   @include bp-small {
       width: 90%;
       margin-left: 5%;
    }
-   @include bp-Xsmall{
+   @include bp-Xsmall {
       width: 90%;
       margin-left: 5%;
    }
