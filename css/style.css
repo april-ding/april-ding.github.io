@@ -141,6 +141,18 @@ nav #nav-inner {
   align-items: center;
   justify-content: space-between;
 }
+nav #nav-inner #name {
+  font-family: 'HKGrotesk', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav #nav-inner #name:hover {
+  color: #F8614C;
+}
 nav #nav-inner .svg-container {
   height: 30px;
 }
@@ -948,10 +960,10 @@ main {
 }
 main #bio {
   font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  width: 50%;
-  font-size: 30px;
-  line-height: 34px;
+  font-weight: 500;
+  width: 30%;
+  font-size: 24px;
+  line-height: 28px;
   color: black;
   margin-bottom: 40px;
 }
@@ -1023,7 +1035,8 @@ main .projects-wrapper .large-titles {
   }
 }
 main .projects-wrapper .project {
-  width: 50%;
+  width: 30%;
+  margin-bottom: 40px;
   left: 0;
   position: relative;
   transition: 0.3s;
