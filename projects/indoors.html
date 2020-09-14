@@ -27,28 +27,14 @@
                <img id="logo" src="../img/ui/logo.svg"></a>
          </div>
          <div id="nav-web">
-            <div class="web-dropdown">
-               <p><button class="web-dropbtn web-link">Work<i class="fa fa-caret-down" style="display:inline;"></i></button></p>
-               <div id="web-dropdown-content">
-                  <p><a href="../index.html#visual" class="web-link">Visual Design</a></p>
-                  <p style="animation-delay: 0.05s;"><a href="../index.html#interactive" class="web-link">Interactive</a></p>
-                  <p style="animation-delay: 0.1s;"><a href="../index.html#motion" class="web-link">Motion Design</a></p>
-               </div>
-            </div>
+            <p><a class="web-link" href="../index.html">Work</a></p>
             <p><a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
             <p><a class="web-link" href="contact.html">Contact</a></p>
             <p><a class="web-link" href="info.html">About</a></p>
          </div>
          <div id="nav-mobile">
             <div id="nav-mobile-links" class="nav-open">
-               <div class="dropdown">
-                  <p class="fade-down"><button class="dropbtn" onclick="showWork()">Work</button></p>
-                  <div id="dropdown-content">
-                     <p class="fade-down"><a href="../index.html#visual" onclick="openNav()">Visual Design</a></p>
-                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="../index.html#interactive" onclick="openNav()">Interactive</a></p>
-                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="../index.html#motion" onclick="openNav()">Motion Design</a></p>
-                  </div>
-               </div>
+               <p class="fade-down"><a href="../index.html">Work</a></p>
                <p class="fade-down" style="animation-delay: 0.1s;"><a href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
                <p class="fade-down" style="animation-delay: 0.2s;"><a href="contact.html">Contact</a></p>
                <p class="fade-down" style="animation-delay: 0.3s;"><a href="info.html">About</a></p>
@@ -63,21 +49,28 @@
    <main>
       <div class="feature">
          <h2>Happy Indoors</h2>
-         <p class="p-media">Experience Design / Web Design & Development
+         <p class="p-media">Voice-Triggered Web Experience
          </p>
-         <p class="p-normal">HAPPY INDOORS is a voice-driven web experience that shares positive moments of the Covid-19 quarantine.</p>
       </div>
-
-      <video class="vid" autoplay muted loop  playsinline>
-         <source src="../img/projects/int-indoors-cover.mp4" type="video/mp4" />
-         Happy Indoors Feature Image
-      </video>
+      <div class="iframe-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"><iframe src="https://player.vimeo.com/video/450876857" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
       <div class="divider"></div>
 
-      <p class="medium-titles">Background</p>
-      <p class="p-normal">In Spring 2020, many states in the US imposed lockdowns due to the impact of the Covid-19 pandemic. With businesses, restaurants and schools shutdown, people were forced to adapt to a remote work life. Over the course of 5
-         months, I have seen people I know go through stages of curiosity, boredem, isolation, and acceptance. While some people find comfort at home, most others struggle with limited human interactions. More people around me were having more
-         downtimes than before, and that was when I decided to make something that spread positivity. </p>
+      <div class="overview">
+         <div class="task-wrapper">
+            <p class="p-media">The Task</p>
+            <p class="task-line">Make a voice-driven web experience to cheer people up during quarantine</p>
+            <p class="p-normal" style="width: 100%;">In Spring 2020, many states in the US imposed lockdowns due to the impact of the Covid-19 pandemic. With businesses, restaurants and schools shutdown, people were forced to adapt to a remote work life. Over the course of 5
+               months, I have seen people I know go through stages of curiosity, boredem, isolation, and acceptance. While some people find comfort at home, most others struggle with limited human interactions. More people around me were having more
+               downtimes than before, and that was when I decided to make something that spread positivity.</p>
+         </div>
+         <div class="role-wrapper">
+            <p class="p-media">Skills</p>
+            <p class="p-skills">UX Design</p>
+            <p class="p-skills">Prototyping</p>
+            <p class="p-skills">Front-End Web Development</p>
+            <p class="p-skills">paper.js / p5.js</p>
+         </div>
+      </div>
       <div class="divider"></div>
 
       <p class="medium-titles">Concept Development</p>
@@ -95,6 +88,8 @@
             Happy Indoors Feature Image
          </video>
       </div>
+
+      <div class="divider"></div>
       <p class="p-normal">
          Even though the prototypes felt nice and interactive, I felt the experience lacked tangibility and relevance. Screaming is an act of letting out negative emotions, but it doesn't actually have any compelling narrative behind it. That was
          when I thought of the little things that brought me joy during quarantine, such as making more insider jokes with my family and chasing off birds that tried to eat homegrown grapes in our backyard. I believed that despite of how the

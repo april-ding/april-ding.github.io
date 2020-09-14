@@ -25,6 +25,7 @@ javascript: (function() {
 })()
 
 /********* NAV ************/
+var transitionTime = 300;
 $(document).ready(function() {
     $('.icon').on("click", function() {
         openNav();
