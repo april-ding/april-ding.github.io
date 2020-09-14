@@ -22,10 +22,33 @@ javascript: (function() {
 
 })()
 /********* NAV ************/
+var transitionTime = 300;
 $(document).ready(function() {
     $('.icon').on("click", function() {
         openNav();
     })
+
+    $('.showAll').on('click', function(){
+        $('.visual').show(transitionTime);
+        $('.interactive').show(transitionTime);
+        $('.motion').show(transitionTime);
+    });
+
+    $('.visualOnly').on('click', function(){
+        $('.visual').show(transitionTime);
+        $('.interactive').hide(transitionTime);
+        $('.motion').hide(transitionTime);
+    });
+    $('.interactiveOnly').on('click', function(){
+        $('.visual').hide(transitionTime);
+        $('.interactive').show(transitionTime);
+        $('.motion').hide(transitionTime);
+    });
+    $('.motionOnly').on('click', function(){
+        $('.interactive').hide(transitionTime);
+        $('.visual').hide(transitionTime);
+        $('.motion').show(transitionTime);
+    });
 });
 
 function showWork() {

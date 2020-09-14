@@ -110,9 +110,9 @@ nav {
   z-index: 5;
   position: absolute;
   top: 50px;
-  width: 85%;
-  margin-left: 10%;
-  height: 40px;
+  width: 90%;
+  margin-left: 5%;
+  height: 20px;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   nav {
@@ -151,7 +151,7 @@ nav #nav-inner #nav-web {
   color: black;
   display: flex;
   flex-flow: row wrap;
-  width: 30%;
+  width: 25%;
   justify-content: space-between;
 }
 @media only screen and (min-width: 1691px) {
@@ -182,17 +182,30 @@ nav #nav-inner #nav-web .web-dropbtn {
 }
 nav #nav-inner #nav-web .web-link {
   font-family: 'HKGrotesk', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 nav #nav-inner #nav-web .web-link:hover {
   color: #F8614C;
 }
+nav #nav-inner #nav-web .web-dropdown #nohover {
+  display: inline;
+}
+nav #nav-inner #nav-web .web-dropdown #onhover {
+  display: none;
+}
 nav #nav-inner #nav-web .web-dropdown:hover #web-dropdown-content {
   display: block;
+}
+nav #nav-inner #nav-web .web-dropdown:hover #nohover {
+  display: none;
+}
+nav #nav-inner #nav-web .web-dropdown:hover #onhover {
+  display: inline;
 }
 nav #nav-inner #nav-web .web-dropdown #web-dropdown-content {
   display: none;
@@ -423,7 +436,6 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown .dropbtn:hover {
   text-decoration: underline;
 }
 nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content {
-  display: none;
   min-width: 160px;
   z-index: 1;
 }
@@ -801,8 +813,8 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover
 }
 main {
   top: 0;
-  width: 85%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   -webkit-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -moz-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
   -ms-animation: margin-intro 0.5s 1s ease-in-out 1 forwards;
@@ -937,7 +949,7 @@ main {
 main #bio {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
-  width: 40%;
+  width: 50%;
   font-size: 30px;
   line-height: 34px;
   color: black;
@@ -986,6 +998,7 @@ main .projects-wrapper {
   padding-top: 40px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 main .projects-wrapper .large-titles {
   font-family: 'HKGrotesk', sans-serif;
@@ -1010,42 +1023,43 @@ main .projects-wrapper .large-titles {
   }
 }
 main .projects-wrapper .project {
-  width: 100%;
+  width: 50%;
   left: 0;
   position: relative;
-  margin-bottom: 80px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
   transition: 0.3s;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .projects-wrapper .project {
     flex-flow: column;
+    width: 100%;
   }
 }
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main .projects-wrapper .project {
     flex-flow: column;
+    width: 100%;
   }
 }
 @media only all and (max-width: 479px) {
   main .projects-wrapper .project {
     flex-flow: column;
+    width: 100%;
   }
 }
-main .projects-wrapper .project:hover {
-  padding: 20px;
-  box-shadow: 0 0 5px lightgrey;
+main .projects-wrapper .project:hover .info-wrapper {
+  opacity: 0.8;
+}
+main .projects-wrapper .project:hover .info-wrapper .info-text-wrapper {
+  opacity: 1;
 }
 main .projects-wrapper .project .small-titles {
   font-family: 'EB Garamond', serif;
-  margin-bottom: 40px;
   font-size: 40px;
   line-height: 48px;
   font-weight: 500;
   text-decoration: none;
   color: black;
+  margin-bottom: 10px;
 }
 main .projects-wrapper .project .small-titles a {
   text-decoration: none;
@@ -1120,7 +1134,7 @@ main .projects-wrapper .project .p-title {
 }
 main .projects-wrapper .project .p-media {
   font-family: "HKGrotesk", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 10px;
@@ -1144,7 +1158,7 @@ main .projects-wrapper .project .p-media {
   }
 }
 main .projects-wrapper .project .feature-img {
-  width: 60%;
+  width: 100%;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .projects-wrapper .project .feature-img {
@@ -1165,6 +1179,7 @@ main .projects-wrapper .project img {
   width: 100%;
   opacity: 1;
   transition: 0.5s;
+  display: block;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .projects-wrapper .project img {
@@ -1183,9 +1198,9 @@ main .projects-wrapper .project img {
 }
 main .projects-wrapper .project .vid {
   width: 100%;
-  margin-bottom: 30px;
   opacity: 1;
   transition: 0.5s;
+  display: block;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .projects-wrapper .project .vid {
@@ -1203,7 +1218,17 @@ main .projects-wrapper .project .vid {
   }
 }
 main .projects-wrapper .project .info-wrapper {
-  width: 35%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: white;
+  text-align: center;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .projects-wrapper .project .info-wrapper {
@@ -1219,6 +1244,17 @@ main .projects-wrapper .project .info-wrapper {
   main .projects-wrapper .project .info-wrapper {
     width: 100%;
   }
+}
+main .projects-wrapper .project .info-wrapper .info-text-wrapper {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 main .projects-wrapper .project .read-more {
   margin-top: 40px;
@@ -1245,7 +1281,8 @@ footer {
   font-family: "HKGrotesk", sans-serif;
   font-weight: 400;
   width: 30%;
-  margin-left: 10%;
+  margin-left: 5%;
+  margin-top: 40px;
   padding-top: 20px;
   margin-bottom: 50px;
   font-size: 12px;

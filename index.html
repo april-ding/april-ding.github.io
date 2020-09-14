@@ -26,16 +26,10 @@
    <script type="text/javascript" src="js/wow.min.js"></script>
    <script type="text/javascript" src="js/aos.js"></script>
 
-   <script type="text/javascript" src="js/paper-full.min.js"></script>
-   <script type="text/paperscript" src="js/paper-script.js" canvas="paperCanvas"></script>
-
 
 </head>
 
 <body>
-   <!-- <div id="white-fadeIn"></div> -->
-
-   <!-- <div id="p5-canvas"></div> -->
 
    <nav>
       <div id="nav-bg"></div>
@@ -45,11 +39,11 @@
          </div>
          <div id="nav-web">
             <div class="web-dropdown">
-               <p><button class="web-dropbtn web-link">Work<i class="fa fa-caret-down" style="display:inline;"></i></button></p>
+               <p><a class="web-dropbtn web-link showAll" href="javascript:void(0);"><span id="nohover">Work</span><span id="onhover">All</span><i class="fa fa-caret-down" style="display:inline;"></i></a></p>
                <div id="web-dropdown-content">
-                  <p><a href="#visual" class="web-link">Visual Design</a></p>
-                  <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link">Interactive</a></p>
-                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link">Motion Design</a></p>
+                  <p><a href="#visual" class="web-link visualOnly">Visual Design</a></p>
+                  <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link interactiveOnly">Interactive</a></p>
+                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link motionOnly">Motion Design</a></p>
                </div>
             </div>
             <p><a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
@@ -59,11 +53,11 @@
          <div id="nav-mobile">
             <div id="nav-mobile-links" class="nav-open">
                <div class="dropdown">
-                  <p class="fade-down"><button class="dropbtn" onclick="showWork()">Work</button></p>
+                  <p class="fade-down"><button class="dropbtn showAll" onclick="openNav()">All Work</button></p>
                   <div id="dropdown-content">
-                     <p class="fade-down"><a href="#visual" onclick="openNav()">Visual Design</a></p>
-                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive" onclick="openNav()">Interactive</a></p>
-                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion" onclick="openNav()">Motion Design</a></p>
+                     <p class="fade-down"><a href="#visual" class="visualOnly" onclick="openNav()">Visual Design</a></p>
+                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive" class="interactiveOnly" onclick="openNav()">Interactive</a></p>
+                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion" class="motionOnly" onclick="openNav()">Motion Design</a></p>
                   </div>
                </div>
                <p class="fade-down" style="animation-delay: 0.1s;"><a href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
@@ -80,124 +74,98 @@
    <main>
       <p id="bio" style="margin-bottom: 40px;">April Ding is a <b>visual designer</b> dedicated to make ideas beautiful, and a <b>front-end web developer</b> loving building interactive emotional experiences.</p>
 
-      <canvas id="paperCanvas" resize></canvas>
-
       <ul class="projects-wrapper">
-         <p id="visual" class="large-titles">Visual Design</p>
-         <li class="project">
-            <div class="feature-img">
-               <a href="projects/illustration.html"><img src="img/projects/illo-its-01.jpg"></a></div>
-            <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/illustration.html">Illustrated Design</a></p>
-               <p class="p-title">Role</p>
-               <p class="p-media">Illustrator / Graphic Designer</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">A selection of the illustrations I did over the past 3 years.</p>
-               <a href="projects/illustration.html"><button class="read-more">Read More</button></a>
-            </div>
-         </li>
-
-         <li class="project">
-            <div class="feature-img">
-               <a href="projects/plastic.html"><img src="img/projects/design-plastic-15.jpg"></a></div>
-            <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/plastic.html">Its Food, Your Food</a></p>
-               <p class="p-title">Role</p>
-               <p class="p-media">Print Designer / Researcher</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">This 12-page RISO print publication discusses the consequences of anthropocene waste, particularly bioaccumulation, from a pile of plastic bags I collected from my everyday life. I
-                  created a ‘fish’ sculpture from
-                  these
-                  plastic bags, photoraphed and used it as a metaphor of human’s impact on marine organisms.</p>
-               <a href="projects/plastic.html"><button class="read-more">Read More</button></a>
-            </div>
-         </li>
-
-         <p id="interactive" class="large-titles">Interactive</p>
-
-         <li class="project">
+         <li class="project interactive">
             <div class="feature-img">
                <a href="projects/indoors.html">
                   <video class="vid" autoplay muted loop playsinline>
                      <source src="img/projects/int-indoors-cover.mp4" type="video/mp4" />
                      Happy Indoors Feature Image
-                  </video></a></div>
-            <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/indoors.html">Happy Indoors</a></p>
-               <p class="p-title">Role</p>
-               <p class="p-media">Experience Designer / Web Developer</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">HAPPY INDOORS is a passion project created to share positive moments of the Covid-19 quarantine. It's an interactive web experience.</p>
-               <a href="projects/indoors.html"><button class="read-more">Read More</button></a>
+                  </video></a>
             </div>
-         </li>
-         <li class="project">
-            <div class="feature-img">
-               <a href="projects/memories.html"><img src="img/projects/int-memories-06.gif"></a></div>
             <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/memories.html">Pointless Mindscape</a></p>
-               <p class="p-title">Role</p>
-               <p class="p-media">Unity Game Developer</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">POINTLESS MINDSCAPE is a 2D platform-adventure game where the player plays as the main character, Orby. Orby is stuck in the space between people’s past life and next life, a limbo where
-                  they
-                  are unable to escape
-                  unless they complete the “bridge” that leads to the gate of the next life.</p>
-               <a href="projects/memories.html"><button class="read-more">Read More</button></a>
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/indoors.html">Happy Indoors</a></p>
+                  <p class="p-media">Voice-Triggered Web Experience</p>
+               </div>
             </div>
          </li>
 
-         <p id="motion" class="large-titles">Motion</p>
-
-         <li class="project">
+         <li class="project motion">
             <div class="feature-img">
-               <a href="projects/motion.html"><img src="img/projects/motion-flower-01.gif"></a></div>
-            <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/motion.html">Motion Design Collection</a></p>
-               <p class="p-title">Skills</p>
-               <p class="p-media">After Effects / Cinema 4D</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">A selection of short motion graphics I created over the past 3 years.</p>
-               <a href="projects/motion.html"><button class="read-more">Read More</button></a>
+               <a href="projects/motion.html"><img src="img/projects/flower-cover-01.gif"></a>
             </div>
-         </li>
-         <li class="project">
-            <div class="feature-img">
-               <a href="projects/shanhai.html"><img src="img/projects/motion-shanhai-06.gif"></a></div>
             <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/shanhai.html">Shanhai 山海</a></p>
-               <p class="p-title">Role</p>
-               <p class="p-media">3D Animator</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">SHANHAI is a series of still and animation frames based on an imaginary terrain inspired by the mythic geography and beasts from the Chinese book "Classic of Mountains and Seas". The
-                  name SHANHAI in Chinese means
-                  "Mountain Sea"(山海). Built to be a meditative experience, the piece puts the audience in an eerie world with a lot of organic creatures.</p>
-               <a href="projects/shanhai.html"><button class="read-more">Read More</button></a>
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/motion.html">Motion Design Collection</a></p>
+                  <p class="p-media">Motion Graphics</p>
+               </div>
             </div>
          </li>
 
-         <!-- Typebook -->
-         <!-- <li class="project">
+         <li class="project motion">
             <div class="feature-img">
-               <a href="projects/typebook.html"><img src="img/projects/design-typebook/design-typebook-book-02.jpg"></a></div>
-            <div class="info-wrapper">
-               <p class="small-titles"><a href="projects/typebook.html">Dan Yuan Ren Chang Jiu 但願人長久</a></p>
-               <p class="p-title">Skills</p>
-               <p class="p-media">Typography / Book Design / Research</p>
-               <p class="p-title">Overview</p>
-               <p class="p-normal" style="margin-bottom: 30px;">A typography book that consists of 40 cover designs based on Chinese singer Teresa Teng (鄧麗君)'s song “May We be Blessed with Longevity” (但願人長久). Each design uses the year, the name of
-                  the song, artist and album as
-                  the
-                  only text source. After all designs have been completed, they are put together using a Chinese-style stitch binding method.</p>
-               <a href="projects/typebook.html"><button class="read-more">Read More</button></a>
+               <a href="projects/shanhai.html"><img src="img/projects/motion-shanhai-06.gif"></a>
             </div>
-         </li> -->
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/shanhai.html">Shanhai 山海</a></p>
+                  <p class="p-media">3D Animation Video</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/plastic.html"><img src="img/projects/design-plastic-cover-01.jpg"></a></div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/plastic.html">Its Food, Your Food</a></p>
+                  <p class="p-media">Graphic Design, Print Booklet</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/illustration.html"><img src="img/projects/illo-cover-02.jpg"></a></div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/illustration.html">Graphic Design</a></p>
+                  <p class="p-media">Graphic Design, Illustration</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project interactive">
+            <div class="feature-img">
+               <a href="projects/memories.html"><img src="img/projects/int-memories-06.gif"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/memories.html">Pointless Mindscape</a></p>
+                  <p class="p-media">Platform-Adventure Game</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/typebook.html"><img src="img/projects/design-typebook/design-typebook-cover-01.jpg"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/typebook.html">Dan Yuan Ren Chang Jiu 但願人長久</a></p>
+                  <p class="p-media">Typography Book</p>
+               </div>
+            </div>
+         </li>
+
       </ul>
    </main>
 
    <footer>
-      <p>©2020 Designed & Developed by April Ding<br>
-         Made from Scratch with Lots of Love</p>
+      <p>©Developed from Sratch by April Ding</p>
    </footer>
    <script>
       document.getElementsByClassName('vid').play();
