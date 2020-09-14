@@ -89,9 +89,9 @@ nav {
   z-index: 5;
   position: absolute;
   top: 50px;
-  width: 85%;
-  margin-left: 10%;
-  height: 40px;
+  width: 90%;
+  margin-left: 5%;
+  height: 20px;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   nav {
@@ -130,7 +130,7 @@ nav #nav-inner #nav-web {
   color: black;
   display: flex;
   flex-flow: row wrap;
-  width: 30%;
+  width: 25%;
   justify-content: space-between;
 }
 @media only screen and (min-width: 1691px) {
@@ -161,11 +161,12 @@ nav #nav-inner #nav-web .web-dropbtn {
 }
 nav #nav-inner #nav-web .web-link {
   font-family: 'HKGrotesk', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 nav #nav-inner #nav-web .web-link:hover {
   color: #F8614C;
@@ -426,8 +427,8 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover
 main {
   margin-bottom: 100px;
   font-family: 'HKGrotesk', sans-serif;
-  width: 85%;
-  margin-left: 10%;
+  width: 70%;
+  margin-left: 15%;
   margin-top: 100px;
   -webkit-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
   -moz-animation: margin-intro 0.5s 0.5s ease-in-out 1 forwards;
@@ -591,7 +592,7 @@ main .overview .task-wrapper .task-line {
   font-family: 'HKGrotesk', sans-serif;
   font-weight: 600;
   width: 100%;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 44px;
   margin-bottom: 10px;
 }
@@ -662,11 +663,11 @@ main .small-titles {
   font-size: 16px;
 }
 main .p-normal {
-  width: 65%;
-  font-size: 16px;
-  line-height: 26px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   main .p-normal {
@@ -722,7 +723,7 @@ main .two-videos {
 }
 main .divider {
   width: 100%;
-  height: 80px;
+  height: 60px;
 }
 main .iframe-container {
   position: relative;
@@ -794,8 +795,8 @@ main .iframe-container iframe {
 footer {
   font-family: "HKGrotesk", sans-serif;
   font-weight: 400;
-  width: 85%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   margin-bottom: 50px;
   color: #636363;
 }
