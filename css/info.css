@@ -445,9 +445,9 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover
 main {
   top: 0;
   left: 0;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 200px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 150px;
   font-weight: 500;
   background-color: white;
 }
@@ -474,11 +474,11 @@ main {
 }
 main #bio {
   font-family: 'EB Garamond', serif;
-  font-weight: 400;
+  font-weight: 600;
   width: 60%;
-  margin-bottom: 120px;
-  font-size: 28px;
-  line-height: 34px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 24px;
   color: black;
   z-index: 4;
 }
