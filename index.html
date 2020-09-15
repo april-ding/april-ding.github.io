@@ -34,22 +34,21 @@
    <nav>
       <div id="nav-bg"></div>
       <div id="nav-inner">
-         <!-- <a id="name" href="index.html">April Ding</a> -->
-         <div class="svg-container"><a href="index.html">
-               <img id="logo" src="img/ui/logo.svg"></a>
-         </div>
          <div id="nav-web">
-            <div class="web-dropdown">
-               <p><a class="web-dropbtn web-link showAll" href="javascript:void(0);"><span id="nohover">Work</span><span id="onhover">All</span><i class="fa fa-caret-down" style="display:inline;"></i></a></p>
-               <div id="web-dropdown-content">
-                  <p><a href="#visual" class="web-link visualOnly">Visual Design</a></p>
-                  <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link interactiveOnly">Interactive</a></p>
-                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link motionOnly">Motion Design</a></p>
-               </div>
-            </div>
-            <p><a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a></p>
-            <p><a class="web-link" href="projects/contact.html">Contact</a></p>
-            <p><a class="web-link" href="projects/info.html">About</a></p>
+            <p>
+               <div class="web-dropdown">
+                  <p><a class="web-dropbtn web-link showAll" href="javascript:void(0);"><span id="nohover">Work</span><span id="onhover">All</span><i class="fa fa-caret-down"
+                          style="display:inline;"></i></a></p>
+                  <div id="web-dropdown-content">
+                     <p><a href="#visual" class="web-link visualOnly">Visual Design</a></p>
+                     <p style="animation-delay: 0.05s;"><a href="#interactive" class="web-link interactiveOnly">Interactive</a></p>
+                     <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link motionOnly">Motion Design</a></p>
+                  </div>
+               </div>&nbsp;/&nbsp;
+               <a class="web-link" href="../img/Resume.pdf" target=”_blank”>Resume</a> &nbsp;/ &nbsp;
+               <a class="web-link" href="projects/contact.html">Contact</a> &nbsp; / &nbsp;
+               <a class="web-link" href="projects/info.html">About</a>
+            </p>
          </div>
          <div id="nav-mobile">
             <div id="nav-mobile-links" class="nav-open">
@@ -73,7 +72,10 @@
    </nav>
 
    <main>
-      <p id="bio" style="margin-bottom: 40px;">April Ding is a <b>visual designer</b> dedicated to make ideas beautiful, and a <b>front-end web developer</b> loving building interactive emotional experiences.</p>
+      <div id="bio">
+         <div id="typewriter">
+         </div>
+      </div>
 
       <ul class="projects-wrapper">
          <li class="project interactive">
@@ -169,6 +171,7 @@
    </script>
    <script src="js/lightbox.js"></script>
    <!-- <script type="text/javascript" src="js/birds.js"></script> -->
+   <script type="text/javascript" src="../js/typewriter.js"></script>
    <script type="text/javascript" src="js/home.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 
