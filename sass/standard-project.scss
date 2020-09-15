@@ -168,16 +168,22 @@ nav {
             height: 30px;
          }
       }
+      #name{
+         //text styles
+         font-family: 'HKGrotesk', sans-serif;
+         font-size: 16px;
+         line-height: 20px;
+         letter-spacing: 1px;
+         font-weight: 600;
+         text-transform: none;
+         color: black;
+         @include bp-Xlarge{
+            font-size: 24px;
+            line-height: 28px;
+         }
+      }
       //web nav
       #nav-web {
-         color: black;
-         display: flex;
-         flex-flow: row wrap;
-         width: 25%;
-         justify-content: space-between;
-         @include bp-Xlarge {
-            width: 20%;
-         }
          @include bp-medium {
             display: none;
          }
@@ -196,17 +202,19 @@ nav {
          }
 
          .web-link {
-            //text styles
             font-family: 'HKGrotesk', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 20px;
+            letter-spacing: 1px;
             font-weight: 600;
             color: black;
             text-decoration: none;
-            text-transform: uppercase;
-
             &:hover {
                color: $color-red;
+            }
+            @include bp-Xlarge{
+               font-size: 24px;
+               line-height: 28px;
             }
          }
 

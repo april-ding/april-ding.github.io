@@ -171,20 +171,6 @@ nav {
       align-items: flex-start;
       justify-content: space-between;
 
-      #name {
-         font-family: 'HKGrotesk', sans-serif;
-         font-size: 20px;
-         line-height: 20px;
-         font-weight: 800;
-         color: black;
-         text-decoration: none;
-         text-transform: uppercase;
-
-         &:hover {
-            color: $color-red;
-         }
-      }
-
       .svg-container {
          height: 30px;
 
@@ -194,12 +180,6 @@ nav {
       }
       //web nav
       #nav-web {
-         //text styles
-         font-family: 'HKGrotesk', sans-serif;
-         font-size: 14px;
-         line-height: 20px;
-         letter-spacing: 1px;
-         font-weight: 600;
 
          padding-top: 10px;
          text-align: right;
@@ -229,7 +209,7 @@ nav {
             display: inline;
             //text styles
             font-family: 'HKGrotesk', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 20px;
             letter-spacing: 1px;
             font-weight: 600;

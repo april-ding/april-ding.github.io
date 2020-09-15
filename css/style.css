@@ -141,18 +141,6 @@ nav #nav-inner {
   align-items: flex-start;
   justify-content: space-between;
 }
-nav #nav-inner #name {
-  font-family: 'HKGrotesk', sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 800;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-nav #nav-inner #name:hover {
-  color: #F8614C;
-}
 nav #nav-inner .svg-container {
   height: 30px;
 }
@@ -160,11 +148,6 @@ nav #nav-inner .svg-container #logo {
   height: 30px;
 }
 nav #nav-inner #nav-web {
-  font-family: 'HKGrotesk', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  font-weight: 600;
   padding-top: 10px;
   text-align: right;
   width: 100%;
@@ -199,7 +182,7 @@ nav #nav-inner #nav-web .web-dropbtn {
 nav #nav-inner #nav-web .web-link {
   display: inline;
   font-family: 'HKGrotesk', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 1px;
   font-weight: 600;

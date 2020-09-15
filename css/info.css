@@ -100,7 +100,7 @@ nav {
   top: 50px;
   width: 90%;
   margin-left: 5%;
-  height: 40px;
+  height: 20px;
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
   nav {
@@ -135,16 +135,19 @@ nav #nav-inner .svg-container {
 nav #nav-inner .svg-container #logo {
   height: 30px;
 }
-nav #nav-inner #nav-web {
+nav #nav-inner #name {
+  font-family: 'HKGrotesk', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: none;
   color: black;
-  display: flex;
-  flex-flow: row wrap;
-  width: 30%;
-  justify-content: space-between;
 }
 @media only screen and (min-width: 1691px) {
-  nav #nav-inner #nav-web {
-    width: 20%;
+  nav #nav-inner #name {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 @media only all and (min-width: 768px) and (max-width: 1048px) {
@@ -170,14 +173,21 @@ nav #nav-inner #nav-web .web-dropbtn {
 }
 nav #nav-inner #nav-web .web-link {
   font-family: 'HKGrotesk', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
+  letter-spacing: 1px;
   font-weight: 600;
   color: black;
   text-decoration: none;
 }
 nav #nav-inner #nav-web .web-link:hover {
   color: #F8614C;
+}
+@media only screen and (min-width: 1691px) {
+  nav #nav-inner #nav-web .web-link {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 nav #nav-inner #nav-web .web-dropdown:hover #web-dropdown-content {
   display: block;
