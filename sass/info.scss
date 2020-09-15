@@ -140,7 +140,7 @@ nav {
    top: 50px;
    width: 90%;
    margin-left: 5%;
-   height: 40px;
+   height: 20px;
    @include bp-medium {
       width: 90%;
       margin-left: 5%;
@@ -155,28 +155,37 @@ nav {
       margin-left: 5%;
       top: 20px;
    }
+
    #nav-inner {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
+
       .svg-container {
          height: 30px;
+
          #logo {
             height: 30px;
          }
       }
+      #name{
+         //text styles
+         font-family: 'HKGrotesk', sans-serif;
+         font-size: 16px;
+         line-height: 20px;
+         letter-spacing: 1px;
+         font-weight: 600;
+         text-transform: none;
+         color: black;
+         @include bp-Xlarge{
+            font-size: 24px;
+            line-height: 28px;
+         }
+      }
       //web nav
       #nav-web {
-         color: black;
-         display: flex;
-         flex-flow: row wrap;
-         width: 30%;
-         justify-content: space-between;
-         @include bp-Xlarge{
-            width: 20%;
-         }
          @include bp-medium {
             display: none;
          }
@@ -186,30 +195,38 @@ nav {
          @include bp-Xsmall {
             display: none;
          }
-         .web-dropbtn{
+
+         .web-dropbtn {
             outline: none;
             border: none;
             background: none;
             padding: 0;
          }
+
          .web-link {
-            //text styles
             font-family: 'HKGrotesk', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 20px;
+            letter-spacing: 1px;
             font-weight: 600;
             color: black;
             text-decoration: none;
             &:hover {
                color: $color-red;
             }
+            @include bp-Xlarge{
+               font-size: 24px;
+               line-height: 28px;
+            }
          }
+
          .web-dropdown {
-            &:hover{
+            &:hover {
                #web-dropdown-content {
                   display: block;
                }
             }
+
             #web-dropdown-content {
                display: none;
                position: absolute;
@@ -244,6 +261,7 @@ nav {
                }
             }
          }
+
          .nav-close {
             @include animation('nav-close 0.3s ease-in-out 1 forwards');
             @include keyframes(nav-close) {
@@ -256,6 +274,7 @@ nav {
                }
             }
          }
+
          .fade-down {
             @include animation('fade-down 0.5s ease-in-out 1 forwards');
             @include keyframes(fade-down) {
@@ -270,6 +289,7 @@ nav {
                }
             }
          }
+
          #nav-mobile-links {
             display: none;
             position: fixed;
@@ -338,6 +358,7 @@ nav {
                   p {
                      display: block;
                   }
+
                   a {
                      padding-left: 30px;
                      //text styles
@@ -368,9 +389,9 @@ main {
    //position
    top: 0;
    left: 0;
-   width: 90%;
-   margin-left: 5%;
-   margin-top: 200px;
+   width: 70%;
+   margin-left: 15%;
+   margin-top: 150px;
    font-weight: 500;
    background-color: white;
    @include bp-Xsmall {
@@ -391,11 +412,11 @@ main {
 
    #bio {
       font-family: 'EB Garamond', serif;
-      font-weight: 400;
+      font-weight: 600;
       width: 60%;
-      margin-bottom: 120px;
-      font-size: 28px;
-      line-height: 34px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 24px;
       color: black;
       z-index: 4;
 
