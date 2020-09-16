@@ -595,7 +595,17 @@ main .overview {
   width: 100%;
 }
 main .overview .task-wrapper {
-  width: 65%;
+  width: 70%;
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .overview .task-wrapper {
+    width: 100%;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .overview .task-wrapper {
+    width: 100%;
+  }
 }
 main .overview .task-wrapper .task-line {
   font-family: 'HKGrotesk', sans-serif;
@@ -606,7 +616,19 @@ main .overview .task-wrapper .task-line {
   margin-bottom: 10px;
 }
 main .overview .role-wrapper {
-  width: 25%;
+  width: 20%;
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .overview .role-wrapper {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .overview .role-wrapper {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 main .medium-titles {
   font-family: 'HKGrotesk', sans-serif;
@@ -616,19 +638,16 @@ main .medium-titles {
   text-decoration: none;
   margin-bottom: 20px;
 }
-@media only all and (min-width: 768px) and (max-width: 1048px) {
-  main .medium-titles {
-    font-size: 20px;
-  }
-}
 @media only all and (min-width: 480px) and (max-width: 767px) {
   main .medium-titles {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 @media only all and (max-width: 479px) {
   main .medium-titles {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 main .button {
@@ -733,6 +752,16 @@ main .two-videos {
 main .divider {
   width: 100%;
   height: 60px;
+}
+@media only all and (min-width: 480px) and (max-width: 767px) {
+  main .divider {
+    height: 30px;
+  }
+}
+@media only all and (max-width: 479px) {
+  main .divider {
+    height: 30px;
+  }
 }
 main .iframe-container {
   position: relative;
