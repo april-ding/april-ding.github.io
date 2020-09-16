@@ -595,7 +595,7 @@ main .overview {
   width: 100%;
 }
 main .overview .task-wrapper {
-  width: 65%;
+  width: 70%;
 }
 main .overview .task-wrapper .task-line {
   font-family: 'HKGrotesk', sans-serif;
@@ -606,7 +606,7 @@ main .overview .task-wrapper .task-line {
   margin-bottom: 10px;
 }
 main .overview .role-wrapper {
-  width: 25%;
+  width: 20%;
 }
 main .medium-titles {
   font-family: 'HKGrotesk', sans-serif;
