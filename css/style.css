@@ -96,6 +96,7 @@
     opacity: 0;
   }
 }
+
 body {
   background-color: white;
   width: 100%;
@@ -103,7 +104,7 @@ body {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  font-family: 'HKGrotesk', sans-serif;
+  font-family: "HKGrotesk", sans-serif;
 }
 
 nav {
@@ -181,7 +182,7 @@ nav #nav-inner #nav-web .web-dropbtn {
 }
 nav #nav-inner #nav-web .web-link {
   display: inline;
-  font-family: 'HKGrotesk', sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 1px;
@@ -413,7 +414,7 @@ nav #nav-inner #nav-mobile #nav-mobile-links p {
   transform: translate3d(0, -25px, 0);
 }
 nav #nav-inner #nav-mobile #nav-mobile-links a {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 48px;
   line-height: 60px;
   font-weight: 600;
@@ -436,7 +437,7 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown .dropbtn {
   outline: none;
   background: none;
   cursor: pointer;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 48px;
   line-height: 60px;
   font-weight: 600;
@@ -456,7 +457,7 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content p {
 }
 nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a {
   padding-left: 30px;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 600;
@@ -823,8 +824,9 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover
     height: 0;
   }
 }
+
 #bio {
-  font-family: 'HKGrotesk', sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-weight: 600;
   width: 30%;
   font-size: 16px;
@@ -862,6 +864,12 @@ nav #nav-inner #nav-mobile #nav-mobile-links .dropdown #dropdown-content a:hover
     font-size: 24px;
     line-height: 30px;
   }
+}
+#bio a:visited {
+  color: #F8614C;
+}
+#bio a:hover {
+  color: #1289F6;
 }
 
 main {
@@ -1021,7 +1029,7 @@ main .projects-wrapper {
   justify-content: space-between;
 }
 main .projects-wrapper .large-titles {
-  font-family: 'HKGrotesk', sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   margin-top: 80px;
   margin-bottom: 40px;
   font-size: 56px;
@@ -1074,7 +1082,7 @@ main .projects-wrapper .project:hover .info-wrapper .info-text-wrapper {
   opacity: 1;
 }
 main .projects-wrapper .project .small-titles {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 40px;
   line-height: 48px;
   font-weight: 500;
@@ -1336,3 +1344,5 @@ data-title {
   font-family: "HKGrotesk", sans-serif;
   color: black;
 }
+
+/*# sourceMappingURL=style.css.map */
