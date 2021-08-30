@@ -2,24 +2,23 @@
 //CREDITS TO GEOFF GRAHAM: https://css-tricks.com/snippets/css/typewriter-effect/
 
 // set up text to print, each item in array is new line
-var infoText = new Array(
-    "April Ding is a visual designer dedicated to make ideas beautiful, and a front-end web developer loving building interactive emotional experiences. &#127773; "
-
+let infoText = new Array(
+    "This is the design portfolio of April Ding. For her work as a full stack web developer, please visit her Github. &#127773; "
 );
-var iSpeed = 50; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = infoText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
+let iSpeed = 50; // time delay of print out
+let iIndex = 0; // start printing array at this posision
+let iArrLength = infoText[0].length; // the length of the text array
+let iScrollAt = 20; // start scrolling up at this many lines
 
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
+let iTextPos = 0; // initialise text position
+let sContents = ''; // initialise contents variable
+let iRow; // initialise current row
 
 
 function typewriter() {
     sContents = ' ';
     iRow = Math.max(0, iIndex - iScrollAt);
-    var destination = document.getElementById("typewriter");
+    let destination = document.getElementById("typewriter");
 
     while (iRow < iIndex) {
         sContents += infoText[iRow++] + '<br />';
