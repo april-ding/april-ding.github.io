@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 font-sans;
+  }
+}
+
+@layer components {
+  .page-title {
+    @apply font-serif text-[2.1rem] font-normal tracking-tight text-neutral-900 sm:text-[2.625rem] lg:text-[3.15rem];
+  }
+}
