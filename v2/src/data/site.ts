@@ -36,6 +36,12 @@ export const collections: Collection[] = [
     ],
   },
   {
+    id: 'love',
+    title: 'Love',
+    slug: 'love',
+    photos: [],
+  },
+  {
     id: 'polaroids',
     title: 'Polaroids',
     slug: 'polaroids',
@@ -47,7 +53,12 @@ export const siteConfig = {
   name: 'April Ding',
   about: {
     headline: 'About',
-    description: 'Currently resides in New York City',
+    details: [
+      'b.1998 Hangzhou, China',
+      'UCLA Design Media Arts / Bachelor of Arts',
+    ],
+    description:
+      'Using the interplay of light and shadow to explore the rhythm of breath. Currently based in New York City.',
     email: 'apr.ding@gmail.com',
   },
 };
