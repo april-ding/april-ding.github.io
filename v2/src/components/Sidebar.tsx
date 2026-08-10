@@ -26,7 +26,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       <aside
         className={[
-          'fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-neutral-100 px-8 py-10 transition-transform lg:sticky lg:top-0 lg:z-auto lg:h-screen lg:w-48 lg:shrink-0 lg:self-start lg:translate-x-0 lg:px-10 lg:py-12 xl:w-56',
+          'fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-canvas px-8 py-10 transition-transform lg:sticky lg:top-0 lg:z-auto lg:h-screen lg:w-48 lg:shrink-0 lg:self-start lg:translate-x-0 lg:px-10 lg:py-12 xl:w-56',
           isOpen ? 'translate-x-0' : '-translate-x-full',
         ].join(' ')}
       >
@@ -69,15 +69,27 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
 export function MobileHeader({ onMenuOpen }: { onMenuOpen: () => void }) {
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between border-b border-neutral-200 bg-neutral-100/95 px-6 py-4 backdrop-blur-sm lg:hidden">
+    <header className="sticky top-0 z-30 flex items-center justify-between border-b border-neutral-200 bg-canvas/95 px-6 py-4 backdrop-blur-sm lg:hidden">
       <span className="text-sm tracking-tight">{siteConfig.name}</span>
       <button
         type="button"
-        className="text-sm text-neutral-600"
+        className="flex h-8 w-8 items-center justify-center text-neutral-600 hover:text-neutral-900"
         onClick={onMenuOpen}
         aria-label="Open menu"
       >
-        Menu
+        <svg
+          width="20"
+          height="14"
+          viewBox="0 0 20 14"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 1h20M0 7h20M0 13h20"
+            stroke="currentColor"
+            strokeWidth="1.25"
+          />
+        </svg>
       </button>
     </header>
   );
