@@ -7,10 +7,14 @@ export function Layout() {
 
   return (
     <div className="min-h-screen lg:flex">
-      <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <Sidebar />
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
-        <MobileHeader onMenuOpen={() => setIsMenuOpen(true)} />
+        <MobileHeader
+          isOpen={isMenuOpen}
+          onToggle={() => setIsMenuOpen((open) => !open)}
+          onClose={() => setIsMenuOpen(false)}
+        />
         <main className="flex-1">
           <Outlet />
         </main>
