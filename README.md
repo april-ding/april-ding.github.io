@@ -1,6 +1,26 @@
 # April Ding Portfolio
 
-Hey! April here.
-UCLA Design Media Arts alum who ditched the canvas for the codebase. Now I spend my time building slick, functional interfaces as a Frontend Developer. If I'm not debugging, I'm probably out taking pictures.
+Photography portfolio at [aprilding.com](https://aprilding.com).
 
-Contact: apr.ding@gmail.com
+## Structure
+
+- **Root** — current site (built from `v2/`)
+- **`v2/`** — React source for the current site
+- **`v1/`** — archived previous portfolio at [aprilding.com/v1](https://aprilding.com/v1/)
+
+## Local development
+
+```bash
+cd v2
+npm install --registry=https://registry.npmjs.org
+npm run dev
+```
+
+## Publish the current site
+
+```bash
+cd v2
+npm run publish:root
+```
+
+Then commit and push this repo (keeps `CNAME`, `v1/`, and `v2/`).

@@ -12,7 +12,6 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<CollectionPage slug="light" />} />
-          <Route path="polaroids" element={<CollectionPage slug="polaroids" />} />
           <Route path="love" element={<CollectionPage slug="love" />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

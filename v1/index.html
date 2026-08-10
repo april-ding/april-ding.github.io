@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <title>April Ding</title>
+   <link rel="icon" href="img/ui/favicon.png">
+   <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet">
+   <!-- css stylesheets -->
+   <link href="css/reset.css" rel="stylesheet"><!-- DO NOT EDIT THIS LINE. -->
+   <link href="css/global.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/animate.css" />
+   <link href="css/lightbox.css" rel="stylesheet" />
+   <link href="css/aos.css" rel="stylesheet" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- js -->
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+   <script scr="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
+
+   <script type="text/javascript" src="js/wow.min.js"></script>
+   <script type="text/javascript" src="js/aos.js"></script>
+
+
+</head>
+
+<body>
+
+   <nav>
+      <div id="nav-bg"></div>
+      <div id="nav-inner">
+         <div id="nav-web">
+            <p>
+            <div class="web-dropdown">
+               <p><a class="web-dropbtn web-link showAll" href="javascript:void(0);"><span id="nohover">Work</span><span
+                        id="onhover">All</span><i class="fa fa-caret-down" style="display:inline;"></i></a></p>
+               <div id="web-dropdown-content">
+                  <p><a href="#visual" class="web-link visualOnly">Visual Design</a></p>
+                  <p style="animation-delay: 0.05s;"><a href="#interactive"
+                        class="web-link interactiveOnly">Interactive</a></p>
+                  <p style="animation-delay: 0.1s;"><a href="#motion" class="web-link motionOnly">Motion Design</a></p>
+               </div>
+            </div>&nbsp;/&nbsp;
+            <a class="web-link" href="img/Resume.pdf" target=”_blank”>Resume</a> &nbsp;/ &nbsp;
+            <a class="web-link" href="projects/contact.html">Contact</a> &nbsp; / &nbsp;
+            <a class="web-link" href="projects/info.html">About</a>
+            </p>
+         </div>
+         <div id="nav-mobile">
+            <div id="nav-mobile-links" class="nav-open">
+               <div class="dropdown">
+                  <p class="fade-down"><button class="dropbtn showAll" onclick="openNav()">All Work</button></p>
+                  <div id="dropdown-content">
+                     <p class="fade-down"><a href="#visual" class="visualOnly" onclick="openNav()">Visual Design</a></p>
+                     <p class="fade-down" style="animation-delay: 0.05s;"><a href="#interactive" class="interactiveOnly"
+                           onclick="openNav()">Interactive</a></p>
+                     <p class="fade-down" style="animation-delay: 0.1s;"><a href="#motion" class="motionOnly"
+                           onclick="openNav()">Motion Design</a></p>
+                  </div>
+               </div>
+               <p class="fade-down" style="animation-delay: 0.1s;"><a href="img/Resume.pdf"
+                     target=”_blank”>Resume</a></p>
+               <p class="fade-down" style="animation-delay: 0.2s;"><a href="projects/contact.html">Contact</a></p>
+               <p class="fade-down" style="animation-delay: 0.3s;"><a href="projects/info.html">About</a></p>
+            </div>
+            <a href="javascript:void(0);" class="icon">
+               <i class="fa fa-bars" style="color: black; font-size: 24px; font-weight: 400; z-index: 2;"></i>
+            </a>
+         </div>
+      </div>
+   </nav>
+
+   <main>
+      <div id="bio">
+         <p>This is the design portfolio of April Ding.</p>
+         <p>For her work as a full stack web developer, please visit her
+            <a href="https://github.com/april-ding" target="_blank">Github</a>. &#127773;
+         </p>
+      </div>
+      </div>
+
+      <ul class="projects-wrapper">
+         <li class="project interactive">
+            <div class="feature-img">
+               <a href="projects/indoors.html"><img src="img/projects/int-indoors-cover-01.jpg"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/indoors.html">Happy Indoors</a></p>
+                  <p class="p-media">Voice-Triggered Web Experience</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project motion">
+            <div class="feature-img">
+               <a href="projects/shanhai.html"><img src="img/projects/motion-shanhai-cover-01.gif"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/shanhai.html">Shanhai 山海</a></p>
+                  <p class="p-media">3D Animation Video</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project motion">
+            <div class="feature-img">
+               <a href="projects/motion.html"><img src="img/projects/flower-cover-01.gif"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/motion.html">Motion Design Collection</a></p>
+                  <p class="p-media">Motion Graphics</p>
+               </div>
+            </div>
+         </li>
+
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/plastic.html"><img src="img/projects/design-plastic-cover-01.jpg"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/plastic.html">Its Food, Your Food</a></p>
+                  <p class="p-media">Graphic Design, Print Booklet</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/illustration.html"><img src="img/projects/illo-cover-02.jpg"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/illustration.html">Graphic Design</a></p>
+                  <p class="p-media">Graphic Design, Illustration</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project interactive">
+            <div class="feature-img">
+               <a href="projects/memories.html"><video class="vid" autoplay muted loop playsinline>
+                     <source src="img/projects/int-memories-21.mp4" type="video/mp4" />
+                     Pointless Mindscape image
+                  </video></a>
+            </div>
+
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/memories.html">Pointless Mindscape</a></p>
+                  <p class="p-media">Platform-Adventure Game</p>
+               </div>
+            </div>
+         </li>
+
+         <li class="project visual">
+            <div class="feature-img">
+               <a href="projects/typebook.html"><img
+                     src="img/projects/design-typebook/design-typebook-cover-01.jpg"></a>
+            </div>
+            <div class="info-wrapper">
+               <div class="info-text-wrapper">
+                  <p class="small-titles"><a href="projects/typebook.html">Dan Yuan Ren Chang Jiu 但願人長久</a></p>
+                  <p class="p-media">Typography Book</p>
+               </div>
+            </div>
+         </li>
+
+      </ul>
+   </main>
+
+   <footer>
+      <p>©Developed from Sratch by April Ding</p>
+   </footer>
+   <script>
+      document.getElementsByClassName('vid').play();
+   </script>
+   <script src="js/lightbox.js"></script>
+   <!-- <script type="text/javascript" src="js/birds.js"></script> -->
+   <!-- <script type="text/javascript" src="../js/typewriter.js"></script> -->
+   <script type="text/javascript" src="js/home.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+
+</body>
+
+</html>
