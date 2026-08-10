@@ -55,12 +55,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <NavLink to="/love" className={navLinkClass} onClick={onClose}>
             Love
           </NavLink>
-          <NavLink to="/polaroids" className={navLinkClass} onClick={onClose}>
-            Polaroids
-          </NavLink>
           <NavLink to="/about" className={navLinkClass} onClick={onClose}>
             About
           </NavLink>
+          <a
+            href="/v1/"
+            className={navLinkClass({ isActive: false })}
+            onClick={onClose}
+          >
+            Archive
+          </a>
         </nav>
       </aside>
     </>

@@ -238,12 +238,6 @@ export const collections: Collection[] = [
       },
     ],
   },
-  {
-    id: 'polaroids',
-    title: 'Polaroids',
-    slug: 'polaroids',
-    photos: [],
-  },
 ];
 
 export const siteConfig = {

@@ -1,12 +1,7 @@
 .DS_Store
-!projects
-!img
-!js
-!fonts
-!css
-!*.jpg
-!*.pdf
+.sass-cache
 
-# v2 React app — local dev only for now
+# v2 source tooling
 v2/node_modules
 v2/dist
+v2/.vite
