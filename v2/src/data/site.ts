@@ -251,12 +251,12 @@ export const siteConfig = {
   name: 'April Ding',
   about: {
     headline: 'About',
-    details: [
-      'b.1998 Hangzhou, China',
-      'UCLA Design Media Arts / Bachelor of Arts',
+    paragraphs: [
+      'April Ding (b. 1998, Hangzhou, China) currently lives and works in New York City. She holds a Bachelor of Arts degree from UCLA Design Media Arts.',
+      'Early in her practice, she believed art needed to express something inherently sophisticated. Over time, however, she became less interested in prescribing what art should be, and more deeply invested in the simple act of paying attention.',
+      'Reflecting on her recent archive, she found herself returning to the same enduring subjects: light and love. She considers herself less a creator than an observer. Her photographs are dedicated to preserving what feels calm, intimate, and pure.',
+      'For Ding, image making is a method of thinking and communicating—a means of breathing, noticing, and remembering. Yet, the more she photographs, the more she interrogates the act of making itself, acknowledging the inherent futility of attempting to hold onto a moment that is meant to pass. Still, she continues to look.',
     ],
-    description:
-      'Using the interplay of light and shadow to explore the rhythm of breath. Currently based in New York City.',
     email: 'apr.ding@gmail.com',
   },
 };

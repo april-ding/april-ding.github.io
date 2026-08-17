@@ -7,16 +7,10 @@ export function AboutPage() {
         {siteConfig.about.headline}
       </h1>
 
-      <div className="mt-10 text-sm leading-relaxed text-neutral-600 sm:mt-12 sm:text-base">
-        <div>
-          {siteConfig.about.details.map((line) => (
-            <p key={line} className="m-0">
-              {line}
-            </p>
-          ))}
-        </div>
-
-        <p className="mt-6">{siteConfig.about.description}</p>
+      <div className="mt-10 space-y-6 text-sm leading-relaxed text-neutral-600 sm:mt-12 sm:text-base">
+        {siteConfig.about.paragraphs.map((paragraph) => (
+          <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+        ))}
       </div>
 
       <p className="mt-10 text-sm text-neutral-500">
