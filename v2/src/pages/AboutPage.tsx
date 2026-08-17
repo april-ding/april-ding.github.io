@@ -2,12 +2,8 @@ import { siteConfig } from '../data/site';
 
 export function AboutPage() {
   return (
-    <div className="mx-auto max-w-2xl px-6 py-10 sm:px-10 sm:py-14 lg:px-12 lg:py-16">
-      <h1 className="page-title">
-        {siteConfig.about.headline}
-      </h1>
-
-      <div className="mt-10 space-y-6 text-sm leading-relaxed text-neutral-600 sm:mt-12 sm:text-base">
+    <div className="mx-auto max-w-2xl px-6 pb-10 pt-16 sm:px-10 sm:pb-14 sm:pt-20 lg:px-12 lg:pb-16 lg:pt-[calc(3rem+1.25rem+6rem)]">
+      <div className="space-y-6 text-sm leading-relaxed text-neutral-600 sm:text-base">
         {siteConfig.about.paragraphs.map((paragraph) => (
           <p key={paragraph.slice(0, 32)}>{paragraph}</p>
         ))}
