@@ -10,7 +10,9 @@ type MobileHeaderProps = {
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
     'block text-sm tracking-wide transition-colors',
-    isActive ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-900',
+    isActive
+      ? "text-neutral-900 before:mr-1.5 before:inline-block before:content-['→']"
+      : 'text-neutral-500 hover:text-neutral-900',
   ].join(' ');
 
 export function Sidebar() {
@@ -42,7 +44,14 @@ export function Sidebar() {
 
 export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
   return (
-    <header className="sticky top-0 z-30 border-b border-neutral-200 bg-canvas/95 backdrop-blur-sm lg:hidden">
+    <header
+      className={[
+        'sticky top-0 z-30 border-b border-neutral-200 backdrop-blur-sm lg:hidden',
+        isOpen
+          ? 'bg-gradient-to-b from-[#c5cbc9] to-canvas'
+          : 'bg-canvas/95',
+      ].join(' ')}
+    >
       <div className="flex w-full items-center justify-between px-4 py-4">
         <span className="font-sans text-sm tracking-tight text-neutral-900">
           {siteConfig.name}

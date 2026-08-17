@@ -27,7 +27,7 @@ export function PhotoCard({ photo }: PhotoCardProps) {
           className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
         />
       </div>
-      <figcaption className="mt-1 flex justify-end font-serif text-sm text-neutral-500">
+      <figcaption className="mt-1 flex justify-end pr-4 font-serif text-sm text-neutral-500 lg:pr-0">
         <span className="tabular-nums">{photo.date}</span>
       </figcaption>
     </figure>
