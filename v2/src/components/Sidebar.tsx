@@ -43,13 +43,13 @@ export function Sidebar() {
 export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-neutral-200 bg-canvas/95 backdrop-blur-sm lg:hidden">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex w-full items-center justify-between px-4 py-4">
         <span className="font-sans text-sm tracking-tight text-neutral-900">
           {siteConfig.name}
         </span>
         <button
           type="button"
-          className="font-serif text-base tracking-wide text-neutral-600 hover:text-neutral-900"
+          className="ml-auto shrink-0 font-serif text-base tracking-wide text-neutral-600 hover:text-neutral-900"
           onClick={onToggle}
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
@@ -66,7 +66,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
         ].join(' ')}
       >
         <div className="overflow-hidden">
-          <nav className="flex flex-col gap-4 px-6 pb-6 pt-1">
+          <nav className="flex flex-col gap-4 px-4 pb-6 pt-1">
             <NavLink to="/" end className={navLinkClass} onClick={onClose}>
               Light
             </NavLink>
