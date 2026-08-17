@@ -10,10 +10,23 @@ type MobileHeaderProps = {
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
     'block text-sm tracking-wide transition-colors',
-    isActive
-      ? "text-neutral-900 before:mr-1.5 before:inline-block before:content-['→']"
-      : 'text-neutral-500 hover:text-neutral-900',
+    isActive ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-900',
   ].join(' ');
+
+function NavLabel({
+  isActive,
+  children,
+}: {
+  isActive: boolean;
+  children: string;
+}) {
+  return (
+    <>
+      {isActive ? <span className="mr-1.5 inline-block">→</span> : null}
+      {children}
+    </>
+  );
+}
 
 export function Sidebar() {
   return (
@@ -26,13 +39,13 @@ export function Sidebar() {
 
       <nav className="flex flex-col gap-4">
         <NavLink to="/" end className={navLinkClass}>
-          Light
+          {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
         </NavLink>
         <NavLink to="/love" className={navLinkClass}>
-          Love
+          {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
         </NavLink>
         <NavLink to="/about" className={navLinkClass}>
-          About
+          {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
         </NavLink>
         <a href="/v1/" className={navLinkClass({ isActive: false })}>
           Archive
@@ -77,13 +90,13 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
         <div className="overflow-hidden">
           <nav className="flex flex-col gap-4 px-4 pb-6 pt-1">
             <NavLink to="/" end className={navLinkClass} onClick={onClose}>
-              Light
+              {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
             </NavLink>
             <NavLink to="/love" className={navLinkClass} onClick={onClose}>
-              Love
+              {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
             </NavLink>
             <NavLink to="/about" className={navLinkClass} onClick={onClose}>
-              About
+              {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
             </NavLink>
             <a
               href="/v1/"
