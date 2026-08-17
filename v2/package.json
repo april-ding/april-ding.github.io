@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "publish:root": "npm run build && rm -rf ../assets ../photos ../index.html ../404.html && cp -R dist/assets dist/photos dist/index.html .. && cp ../index.html ../404.html"
+    "publish:root": "npm run build && rm -rf ../assets ../photos ../index.html ../404.html ../favicon.svg && cp -R dist/assets dist/photos dist/index.html dist/favicon.svg .. && cp ../index.html ../404.html"
   },
   "dependencies": {
     "react": "^19.1.0",
