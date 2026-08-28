@@ -56,7 +56,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
       className={[
         'sticky top-0 z-30 border-b border-neutral-200 backdrop-blur-sm lg:hidden',
         isOpen
-          ? 'bg-gradient-to-b from-[#c5cbc9] to-canvas'
+          ? 'bg-gradient-to-b from-canvas to-[#f5f8fc]'
           : 'bg-canvas/95',
       ].join(' ')}
     >
