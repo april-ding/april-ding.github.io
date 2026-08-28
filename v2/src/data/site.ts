@@ -118,13 +118,6 @@ export const collections: Collection[] = [
         date: '2026',
       },
       {
-        id: 'light-8',
-        src: '/photos/light/light-8.jpg',
-        alt: 'Light photography at Mono Lake, California',
-        location: 'Mono Lake, California',
-        date: '2023',
-      },
-      {
         id: 'light-15',
         src: '/photos/light/light-15.jpg',
         alt: 'Light photography at Tuileries, Paris',
@@ -137,13 +130,6 @@ export const collections: Collection[] = [
         alt: 'Light photography at The Met, New York',
         location: 'The Met, New York',
         date: '2026',
-      },
-      {
-        id: 'light-11',
-        src: '/photos/light/light-11.jpg',
-        alt: 'Light photography at Mono Lake, California',
-        location: 'Mono Lake, California',
-        date: '2023',
       },
       {
         id: 'light-10',
