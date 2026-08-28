@@ -10,14 +10,27 @@ type MobileHeaderProps = {
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
     'block text-sm tracking-wide transition-colors',
-    isActive
-      ? "text-neutral-900 before:mr-1.5 before:inline-block before:content-['→']"
-      : 'text-neutral-500 hover:text-neutral-900',
+    isActive ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-900',
   ].join(' ');
 
 const scrollToTop = () => {
   window.scrollTo(0, 0);
 };
+
+function NavLabel({
+  isActive,
+  children,
+}: {
+  isActive: boolean;
+  children: string;
+}) {
+  return (
+    <>
+      {isActive ? <span className="mr-1.5 inline-block">→</span> : null}
+      {children}
+    </>
+  );
+}
 
 export function Sidebar() {
   return (
@@ -34,13 +47,13 @@ export function Sidebar() {
 
       <nav className="flex flex-col gap-4">
         <NavLink to="/" end className={navLinkClass} onClick={scrollToTop}>
-          Light
+          {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
         </NavLink>
         <NavLink to="/love" className={navLinkClass} onClick={scrollToTop}>
-          Love
+          {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
         </NavLink>
         <NavLink to="/about" className={navLinkClass} onClick={scrollToTop}>
-          About
+          {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
         </NavLink>
         <a href="/v1/" className={navLinkClass({ isActive: false })}>
           Archive
@@ -93,7 +106,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
                 onClose();
               }}
             >
-              Light
+              {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
             </NavLink>
             <NavLink
               to="/love"
@@ -103,7 +116,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
                 onClose();
               }}
             >
-              Love
+              {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
             </NavLink>
             <NavLink
               to="/about"
@@ -113,7 +126,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
                 onClose();
               }}
             >
-              About
+              {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
             </NavLink>
             <a
               href="/v1/"
