@@ -13,6 +13,10 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? 'text-neutral-900' : 'text-neutral-500 hover:text-neutral-900',
   ].join(' ');
 
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
 function NavLabel({
   isActive,
   children,
@@ -32,19 +36,23 @@ export function Sidebar() {
   return (
     <aside className="sticky top-0 hidden h-screen w-48 shrink-0 flex-col self-start bg-canvas px-10 py-12 lg:flex xl:w-56">
       <div className="mb-24">
-        <NavLink to="/" className="text-sm tracking-tight text-neutral-900">
+        <NavLink
+          to="/"
+          className="text-sm tracking-tight text-neutral-900"
+          onClick={scrollToTop}
+        >
           {siteConfig.name}
         </NavLink>
       </div>
 
       <nav className="flex flex-col gap-4">
-        <NavLink to="/" end className={navLinkClass}>
+        <NavLink to="/" end className={navLinkClass} onClick={scrollToTop}>
           {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
         </NavLink>
-        <NavLink to="/love" className={navLinkClass}>
+        <NavLink to="/love" className={navLinkClass} onClick={scrollToTop}>
           {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
         </NavLink>
-        <NavLink to="/about" className={navLinkClass}>
+        <NavLink to="/about" className={navLinkClass} onClick={scrollToTop}>
           {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
         </NavLink>
         <a href="/v1/" className={navLinkClass({ isActive: false })}>
@@ -61,7 +69,7 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
       className={[
         'sticky top-0 z-30 border-b border-neutral-200 backdrop-blur-sm lg:hidden',
         isOpen
-          ? 'bg-gradient-to-b from-[#c5cbc9] to-canvas'
+          ? 'bg-gradient-to-b from-canvas to-[#f5f8fc]'
           : 'bg-canvas/95',
       ].join(' ')}
     >
@@ -89,13 +97,35 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
       >
         <div className="overflow-hidden">
           <nav className="flex flex-col gap-4 px-4 pb-6 pt-1">
-            <NavLink to="/" end className={navLinkClass} onClick={onClose}>
+            <NavLink
+              to="/"
+              end
+              className={navLinkClass}
+              onClick={() => {
+                scrollToTop();
+                onClose();
+              }}
+            >
               {({ isActive }) => <NavLabel isActive={isActive}>Light</NavLabel>}
             </NavLink>
-            <NavLink to="/love" className={navLinkClass} onClick={onClose}>
+            <NavLink
+              to="/love"
+              className={navLinkClass}
+              onClick={() => {
+                scrollToTop();
+                onClose();
+              }}
+            >
               {({ isActive }) => <NavLabel isActive={isActive}>Love</NavLabel>}
             </NavLink>
-            <NavLink to="/about" className={navLinkClass} onClick={onClose}>
+            <NavLink
+              to="/about"
+              className={navLinkClass}
+              onClick={() => {
+                scrollToTop();
+                onClose();
+              }}
+            >
               {({ isActive }) => <NavLabel isActive={isActive}>About</NavLabel>}
             </NavLink>
             <a

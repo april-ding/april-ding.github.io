@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { ScrollToTop } from './ScrollToTop';
 import { MobileHeader, Sidebar } from './Sidebar';
 
 export function Layout() {
@@ -7,6 +8,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen lg:flex">
+      <ScrollToTop />
       <Sidebar />
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
