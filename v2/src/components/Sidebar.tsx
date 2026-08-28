@@ -74,9 +74,17 @@ export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
       ].join(' ')}
     >
       <div className="flex w-full items-center justify-between px-4 py-4">
-        <span className="font-sans text-sm tracking-tight text-neutral-900">
+        <NavLink
+          to="/"
+          end
+          className="font-sans text-sm tracking-tight text-neutral-900"
+          onClick={() => {
+            scrollToTop();
+            onClose();
+          }}
+        >
           {siteConfig.name}
-        </span>
+        </NavLink>
         <button
           type="button"
           className="ml-auto shrink-0 font-serif text-base tracking-wide text-neutral-600 hover:text-neutral-900"
