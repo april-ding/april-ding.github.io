@@ -116,6 +116,17 @@
         toggle.textContent = isOpen ? 'Close' : 'Menu';
       });
 
+      document.addEventListener('pointerdown', function (event) {
+        if (!header.classList.contains('is-open')) {
+          return;
+        }
+        if (!header.contains(event.target)) {
+          header.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        }
+      });
+
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         var value = input.value.trim();

@@ -62,6 +62,13 @@ export const collections: Collection[] = [
         date: '2022',
       },
       {
+        id: 'light-8',
+        src: '/photos/light/light-8.jpg',
+        alt: 'Light photography at Mono Lake, California',
+        location: 'Mono Lake, California',
+        date: '2023',
+      },
+      {
         id: 'light-17',
         src: '/photos/light/light-17.jpg',
         alt: 'Light photography at ICP, New York',
@@ -239,9 +246,8 @@ export const siteConfig = {
     headline: 'About',
     paragraphs: [
       'April Ding (b. 1998, Hangzhou, China) currently lives and works in New York City. She holds a Bachelor of Arts degree from UCLA Design Media Arts.',
-      'Early in her practice, she believed art needed to express something inherently sophisticated. Over time, however, she became less interested in prescribing what art should be, and more deeply invested in the simple act of paying attention.',
-      'Reflecting on her recent archive, she found herself returning to the same enduring subjects: light and love. She considers herself less a creator than an observer. Her photographs are dedicated to preserving what feels calm, intimate, and pure.',
-      'For Ding, image making is a method of thinking and communicating—a means of breathing, noticing, and remembering. Yet, the more she photographs, the more she interrogates the act of making itself, acknowledging the inherent futility of attempting to hold onto a moment that is meant to pass. Still, she continues to look.',
+      'For Ding, image-making is a method of thinking and communicating—a means of breathing, noticing, and remembering. Over time, she became less interested in prescribing what art should be, and more deeply invested in the simple act of paying attention. Reflecting on her recent archive, she found herself returning to the same enduring subjects: light and love.',
+      'She considers herself less a creator than an observer. Her photographs preserve what feels calm, intimate, and pure—moments that might otherwise pass unnoticed.',
     ],
     email: 'apr.ding@gmail.com',
   },

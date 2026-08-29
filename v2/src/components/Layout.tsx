@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ScrollToTop } from './ScrollToTop';
 import { MobileHeader, Sidebar } from './Sidebar';
 
 export function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
   return (
     <div className="min-h-screen lg:flex">
@@ -15,7 +16,7 @@ export function Layout() {
         <MobileHeader
           isOpen={isMenuOpen}
           onToggle={() => setIsMenuOpen((open) => !open)}
-          onClose={() => setIsMenuOpen(false)}
+          onClose={closeMenu}
         />
         <main className="flex-1">
           <Outlet />
