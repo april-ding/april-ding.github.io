@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { siteConfig } from '../data/site';
 
@@ -64,8 +65,26 @@ export function Sidebar() {
 }
 
 export function MobileHeader({ isOpen, onToggle, onClose }: MobileHeaderProps) {
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => document.removeEventListener('pointerdown', handlePointerDown);
+  }, [isOpen, onClose]);
+
   return (
     <header
+      ref={headerRef}
       className={[
         'sticky top-0 z-30 border-b border-neutral-200 backdrop-blur-sm lg:hidden',
         isOpen
